@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 77e2ffc744272204d98baa82cf62fbc1
+guid: 513558d783321944db6f9d209b840430
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5457705516247514051
-    second: Bear_Punch_0
-  - first:
-      213: 6672063002006416605
-    second: Bear_Punch_1
-  - first:
-      213: -3568796683904895040
-    second: Bear_Punch_2
-  - first:
-      213: -5619742345136698621
-    second: Bear_Punch_3
-  - first:
-      213: -9021034758822685001
-    second: Bear_Punch_4
+      213: 8591533231565066105
+    second: plant_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -122,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -138,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bear_Punch_0
+      name: plant_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 34
-        width: 170
-        height: 218
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,96 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cb7f98304aadbb40800000000000000
-      internalID: 5457705516247514051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_Punch_1
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 37
-        width: 174
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddc6e9143fde79c50800000000000000
-      internalID: 6672063002006416605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_Punch_2
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 37
-        width: 192
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c7b1440356197ec0800000000000000
-      internalID: -3568796683904895040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_Punch_3
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 38
-        width: 156
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30b08ec9c1aa202b0800000000000000
-      internalID: -5619742345136698621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_Punch_4
-      rect:
-        serializedVersion: 2
-        x: 990
-        y: 34
-        width: 170
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b61cedaea8dec280800000000000000
-      internalID: -9021034758822685001
+      spriteID: 97f466744f14b3770800000000000000
+      internalID: 8591533231565066105
       vertices: []
       indices: 
       edges: []
@@ -260,12 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bear_Punch_0: 5457705516247514051
-      Bear_Punch_1: 6672063002006416605
-      Bear_Punch_2: -3568796683904895040
-      Bear_Punch_3: -5619742345136698621
-      Bear_Punch_4: -9021034758822685001
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
