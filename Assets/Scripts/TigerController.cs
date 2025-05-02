@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum PlayerState
+public enum TigerState
 {
     Idle,
     Walk,
@@ -10,21 +10,21 @@ public enum PlayerState
     Down,
     Special
 }
-
-public class PlayerController : MonoBehaviour
+public class TigerController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public float speed = 3.0f;
-    public float jumpForce = 5.0f;
+    public float speed = 6.0f;
+    public float jumpForce = 8.0f;
     public UnityEvent special;
+    public GameObject tagPlayer;
 
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
 
     Rigidbody2D rb2d;
     float axisH = 0.0f;
-    PlayerState currentState = PlayerState.Idle;
+    public TigerState currentState = TigerState.Idle;
     private float onGroundTimer = 0.1f;
     int jumpCount = 0;
 
@@ -40,38 +40,40 @@ public class PlayerController : MonoBehaviour
         GameManager.gameState = "playing";
     }
 
-    public void ChangeState(PlayerState newState)
+    public void ChangeState(TigerState newState)
     {
         switch (currentState)
         {
-            case PlayerState.Idle:
+            case TigerState.Idle:
                 break;
-            case PlayerState.Walk:
+            case TigerState.Walk:
                 break;
-            case PlayerState.Up:
+            case TigerState.Up:
+                animator.SetInteger("ySpeed", 0);
                 break;
-            case PlayerState.Down:
+            case TigerState.Down:
+                animator.SetInteger("ySpeed", 0);
                 break;
-            case PlayerState.Special:
+            case TigerState.Special:
                 animator.SetBool("Special", false);
                 break;
         }
 
         switch (newState)
         {
-            case PlayerState.Idle:
+            case TigerState.Idle:
                 animator.SetBool("isMoving", false);
                 break;
-            case PlayerState.Walk:
+            case TigerState.Walk:
                 animator.SetBool("isMoving", true);
                 break;
-            case PlayerState.Up:
+            case TigerState.Up:
                 animator.SetInteger("ySpeed", 1);
                 break;
-            case PlayerState.Down:
+            case TigerState.Down:
                 animator.SetInteger("ySpeed", -1);
                 break;
-            case PlayerState.Special:
+            case TigerState.Special:
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
                 break;
@@ -103,10 +105,18 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && onGroundTimer > 0 && jumpCount > 0)
         {
             rb2d.linearVelocityY = jumpForce;
             jumpCount -= 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            tagPlayer.SetActive(true);
+            tagPlayer.transform.position = transform.position;
+            tagPlayer.transform.localScale = transform.localScale;
+            gameObject.SetActive(false);
         }
     }
 
@@ -115,7 +125,7 @@ public class PlayerController : MonoBehaviour
         onGround = false;
         if (Physics2D.OverlapBox(transform.position - new Vector3(0, 1, 0), groundSize, 0f, groundLayer))
         {
-            onGroundTimer = 0.3f;
+            onGroundTimer = 0.1f;
             onGround = true;
         }
         else if (onGroundTimer > 0)
@@ -129,7 +139,7 @@ public class PlayerController : MonoBehaviour
         }
 
         wasGround = onGround;
-        if (currentState != PlayerState.Special)
+        if (currentState != TigerState.Special)
         {
             rb2d.linearVelocity = new Vector2(axisH * speed, rb2d.linearVelocity.y);
         }
@@ -139,40 +149,42 @@ public class PlayerController : MonoBehaviour
 
         if (onGroundTimer > 0)
         {
-            if (currentState.Equals(PlayerState.Down) || currentState.Equals(PlayerState.Up))
+            if (currentState.Equals(TigerState.Down) || currentState.Equals(TigerState.Up))
             {
-                animator.SetInteger("ySpeed", 0);
-                ChangeState(PlayerState.Idle);
+                ChangeState(TigerState.Idle);
             }
 
             if (axisH != 0.0f)
             {
-                if (currentState.Equals(PlayerState.Idle))
+                if (currentState.Equals(TigerState.Idle))
                 {
-                    ChangeState(PlayerState.Walk);
+                    ChangeState(TigerState.Walk);
                 }
             }
             else
             {
-                if (!currentState.Equals(PlayerState.Idle))
+                if (!currentState.Equals(TigerState.Idle))
                 {
-                    ChangeState(PlayerState.Idle);
+                    ChangeState(TigerState.Idle);
                 }
             }
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                ChangeState(PlayerState.Special);
+                ChangeState(TigerState.Special);
             }
         }
 
-        if (rb2d.linearVelocity.y > 0.0f)
+        else
         {
-            ChangeState(PlayerState.Up);
-        }
-        else if (rb2d.linearVelocity.y < 0.0f)
-        {
-            ChangeState(PlayerState.Down);
+            if (rb2d.linearVelocity.y > 0.0f)
+            {
+                ChangeState(TigerState.Up);
+            }
+            else if (rb2d.linearVelocity.y <= 0.0f)
+            {
+                ChangeState(TigerState.Down);
+            }
         }
     }
 }

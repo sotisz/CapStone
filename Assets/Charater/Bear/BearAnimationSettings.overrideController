@@ -6,6 +6,6 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Animator Override Controller
+  m_Name: BearAnimationSettings
   m_Controller: {fileID: 9100000, guid: a233a1bf36a50f242b9b6980bc478fdb, type: 2}
   m_Clips: []
