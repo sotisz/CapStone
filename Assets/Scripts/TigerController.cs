@@ -85,7 +85,7 @@ public class TigerController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position - new Vector3(0, 1, 0), groundSize);
+        Gizmos.DrawWireCube(transform.position - new Vector3(-0.4f, 0.73f, 0), groundSize);
     }
 
     // Update is called once per frame
