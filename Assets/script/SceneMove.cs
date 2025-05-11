@@ -1,9 +1,13 @@
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneMove : MonoBehaviour
 {
+
+    public GameObject SettingPanel;
+
     public void MoveToGameScene()
     {
         SceneManager.LoadScene("SampleScene");
@@ -18,4 +22,12 @@ public class SceneMove : MonoBehaviour
 #endif
     }
 
+    public void OnSettingIn()
+    {
+        SettingPanel.SetActive(true);
+    }
+    public void OnSettingExit()
+    {
+        SettingPanel.SetActive(false);
+    }
 }
