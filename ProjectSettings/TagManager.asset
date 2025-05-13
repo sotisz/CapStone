@@ -42,10 +42,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Block
+  - name: GaugeBarEmpty
     uniqueID: 147250121
     locked: 0
-  - name: Player
+  - name: GaugeBarFIll
     uniqueID: 1446733019
     locked: 0
   m_RenderingLayers:
