@@ -223,14 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< HEAD:Assets/Charater/Tiger/jump/jump2.png.meta
-      jump2_0: 6137212783605098422
-=======
       Bear_Walk_0: -1367180640349734266
       Bear_Walk_1: -3473756287870756920
       Bear_Walk_2: 4620214514221449823
       Bear_Walk_3: -4196887084118192232
->>>>>>> parent of 3b6980a (Merge branch 'LJH' into 진상현):Assets/Charater/Player/Bear_Walk.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
