@@ -1,5 +1,7 @@
 using System;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using Image = UnityEngine.UI.Image;
 
 public enum PlayerState
 {
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
     bool onGround = false;
     public PlayerState currentState = PlayerState.Idle;
     public static string gameState = "playing";
+    
+    public GameObject gaugeBarbackground;
 
     Animator animator;
 
@@ -33,7 +37,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         gameState = "playing";
     }
-
+    
     void ChangeState(PlayerState newState)
     {
         switch (newState)
@@ -76,11 +80,15 @@ public class PlayerController : MonoBehaviour
         if (axisH > 0.0f)
         {
             transform.localScale = new Vector2(1, 1);
+    
         }
         else if (axisH < 0.0f)
         {
             transform.localScale = new Vector2(-1, 1);
+         
         }
+            
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && onGround && !currentState.Equals(PlayerState.Punch))
         {
@@ -135,6 +143,7 @@ public class PlayerController : MonoBehaviour
                 ChangeState(PlayerState.Down);
             }
         }
-
     }
+  
+
 }
