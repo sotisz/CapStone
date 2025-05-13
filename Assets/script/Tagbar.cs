@@ -10,7 +10,8 @@ public class Tagebar : MonoBehaviour
     public Image gaugeBarFillBackground;
     
     void Start()
-    {
+    {   
+        
         gaugeBarFill.fillAmount = 0f;
         gaugeBarFill.enabled = false;
         gaugeBarFillBackground.enabled = false;
@@ -19,7 +20,8 @@ public class Tagebar : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        
         if (Input.GetKeyDown(KeyCode.R) && !gaugeBarFilling)
         {
             gaugeBarFill.enabled = true;
