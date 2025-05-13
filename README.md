@@ -1,2 +1,2 @@
-# CapStoneExp
-실험용 리포지토리
+# CapStone
+Unity Project : 웅장하고 비범하게

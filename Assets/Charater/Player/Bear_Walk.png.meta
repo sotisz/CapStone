@@ -125,10 +125,10 @@ TextureImporter:
       name: Bear_Walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 34
+        y: 32
+        width: 158
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,6 +139,72 @@ TextureImporter:
       bones: []
       spriteID: 68ab924837cc60de0800000000000000
       internalID: -1367180640349734266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 34
+        width: 148
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c71f299f0dbacfc0800000000000000
+      internalID: -3473756287870756920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 32
+        width: 158
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52064a2f9c4e1040800000000000000
+      internalID: 4620214514221449823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 33
+        width: 180
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89fc5bcde69a1c5c0800000000000000
+      internalID: -4196887084118192232
       vertices: []
       indices: 
       edges: []
@@ -158,6 +224,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Bear_Walk_0: -1367180640349734266
+      Bear_Walk_1: -3473756287870756920
+      Bear_Walk_2: 4620214514221449823
+      Bear_Walk_3: -4196887084118192232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
