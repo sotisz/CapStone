@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2f024a28127c49f47ba3860878e9ae36
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Player Character/Player_Attack_Heavy.anim
+  uploadId: 566792

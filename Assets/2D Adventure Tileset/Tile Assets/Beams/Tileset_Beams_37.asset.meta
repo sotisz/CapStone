@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43e482b3404d854469e429db53fe91a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Assets/Beams/Tileset_Beams_37.asset
+  uploadId: 566792

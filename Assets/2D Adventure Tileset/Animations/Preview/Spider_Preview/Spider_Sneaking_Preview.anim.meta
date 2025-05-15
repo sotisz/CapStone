@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f99ca842193293b4e96d3d43aa4dd611
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Spider_Preview/Spider_Sneaking_Preview.anim
+  uploadId: 566792
