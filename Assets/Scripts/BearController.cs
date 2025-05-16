@@ -115,8 +115,9 @@ public class BearController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             tagPlayer.SetActive(true);
-            tagPlayer.transform.position = transform.position;
+            tagPlayer.transform.position = transform.position - new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
+            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;//속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
         }
     }

@@ -18,9 +18,11 @@ public class TigerController : MonoBehaviour
     public float jumpForce = 8.0f;
     public UnityEvent special;
     public GameObject tagPlayer;
+    public GameObject Renderer;
 
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
+    public Vector2 groundOffset = new Vector2(0.4f, -0.73f);
 
     Rigidbody2D rb2d;
     float axisH = 0.0f;
@@ -36,7 +38,7 @@ public class TigerController : MonoBehaviour
     protected void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         GameManager.gameState = "playing";
     }
 
@@ -85,7 +87,12 @@ public class TigerController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position - new Vector3(-0.4f, 0.73f, 0), groundSize);
+        Vector2 offset = groundOffset;
+        if (transform.localScale.x < 0)
+        {
+            offset.x = -offset.x;
+        }
+        Gizmos.DrawWireCube(transform.position + (Vector3)offset, groundSize);
     }
 
     // Update is called once per frame
@@ -114,16 +121,23 @@ public class TigerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             tagPlayer.SetActive(true);
-            tagPlayer.transform.position = transform.position;
+            tagPlayer.transform.position = transform.position + new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
+            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;//속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
         }
+
     }
 
     private void FixedUpdate()
     {
         onGround = false;
-        if (Physics2D.OverlapBox(transform.position - new Vector3(0, 1, 0), groundSize, 0f, groundLayer))
+        Vector2 offset = groundOffset;
+        if (transform.localScale.x < 0)
+        {
+            offset.x = -offset.x;
+        }
+        if (Physics2D.OverlapBox(transform.position + (Vector3)offset, groundSize, 0f, groundLayer))
         {
             onGroundTimer = 0.1f;
             onGround = true;
