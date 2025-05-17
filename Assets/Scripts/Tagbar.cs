@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tagebar : MonoBehaviour
+public class Tagbar : MonoBehaviour
 {
     public Image gaugeBarFill;
     public float gaugeBarFillCooldown = 0f;
