@@ -10,6 +10,10 @@ public class SceneMove : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+    public void MoveToIntroScene()
+    {
+        SceneManager.LoadScene("Intro");
+    }
     public void OnExitButton()
     {
 #if UNITY_EDITOR
