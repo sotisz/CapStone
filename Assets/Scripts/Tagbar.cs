@@ -34,7 +34,6 @@ public class Tagebar : MonoBehaviour
            
             gaugeBarFill.fillAmount = Ratio;
             
-            Debug.Log("fillAmount: " + gaugeBarFill.fillAmount);
             if (gaugeBarFillCooldown >= gaugeBarFillSpeed)
             {
                 gaugeBarFilling = false;
@@ -48,7 +47,6 @@ public class Tagebar : MonoBehaviour
     }
     void StartCooldown()
     {
-        Debug.Log("StartCooldown");
         gaugeBarFillCooldown = 0f;
             
         gaugeBarFilling = true;
