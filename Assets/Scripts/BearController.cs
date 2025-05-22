@@ -8,7 +8,8 @@ public enum BearState
     Walk,
     Up,
     Down,
-    Special
+    Special,
+    Dead
 }
 
 public class BearController : MonoBehaviour
@@ -24,6 +25,7 @@ public class BearController : MonoBehaviour
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
 
     Rigidbody2D rb2d;
+    Collider2D c2d;
     float axisH = 0.0f;
     public BearState currentState = BearState.Idle;
     private float onGroundTimer = 0.1f;
@@ -38,6 +40,7 @@ public class BearController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        c2d = GetComponent<Collider2D>();
         GameManager.gameState = "playing";
     }
 
@@ -78,6 +81,11 @@ public class BearController : MonoBehaviour
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
                 break;
+            case BearState.Dead:
+                animator.SetBool("Dead", true);
+                rb2d.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
+                c2d.enabled = false;
+                break;
         }
 
         currentState = newState;
@@ -117,7 +125,7 @@ public class BearController : MonoBehaviour
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position - new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
-            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;//속도 공유(캐릭터가 움직이고 있을때 태그시)
+            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity; //속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
         }
     }
@@ -188,5 +196,10 @@ public class BearController : MonoBehaviour
                 ChangeState(BearState.Down);
             }
         }
+    }
+
+    protected void Dead()
+    {
+        ChangeState(BearState.Dead);
     }
 }

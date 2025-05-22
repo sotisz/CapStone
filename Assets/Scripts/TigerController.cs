@@ -8,8 +8,10 @@ public enum TigerState
     Walk,
     Up,
     Down,
-    Special
+    Special,
+    Dead
 }
+
 public class TigerController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +27,7 @@ public class TigerController : MonoBehaviour
     public Vector2 groundOffset = new Vector2(0.4f, -0.73f);
 
     Rigidbody2D rb2d;
+    Collider2D c2d;
     float axisH = 0.0f;
     public TigerState currentState = TigerState.Idle;
     private float onGroundTimer = 0.1f;
@@ -39,6 +42,7 @@ public class TigerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        c2d = GetComponent<Collider2D>();
         GameManager.gameState = "playing";
     }
 
@@ -79,6 +83,11 @@ public class TigerController : MonoBehaviour
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
                 break;
+            case TigerState.Dead:
+                animator.SetBool("Dead", true);
+                rb2d.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
+                c2d.enabled = false;
+                break;
         }
 
         currentState = newState;
@@ -92,6 +101,7 @@ public class TigerController : MonoBehaviour
         {
             offset.x = -offset.x;
         }
+
         Gizmos.DrawWireCube(transform.position + (Vector3)offset, groundSize);
     }
 
@@ -123,10 +133,9 @@ public class TigerController : MonoBehaviour
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position + new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
-            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;//속도 공유(캐릭터가 움직이고 있을때 태그시)
+            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity; //속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
         }
-
     }
 
     private void FixedUpdate()
@@ -137,6 +146,7 @@ public class TigerController : MonoBehaviour
         {
             offset.x = -offset.x;
         }
+
         if (Physics2D.OverlapBox(transform.position + (Vector3)offset, groundSize, 0f, groundLayer))
         {
             onGroundTimer = 0.1f;
@@ -200,5 +210,10 @@ public class TigerController : MonoBehaviour
                 ChangeState(TigerState.Down);
             }
         }
+    }
+
+    protected void Dead()
+    {
+        ChangeState(TigerState.Dead);
     }
 }
