@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f3318a7a686f27e47a05874698f5dc34
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Player Character/Player_Character_Controller.controller
+  uploadId: 566792

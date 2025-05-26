@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d63ce8a22b6bf454c9dadb31b0aeacbe
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4343727234628468602
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Sprites/Tilesets/Sprite Atlas 2.spriteatlas
+  uploadId: 566792

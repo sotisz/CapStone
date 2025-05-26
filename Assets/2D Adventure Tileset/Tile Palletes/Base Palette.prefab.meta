@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1294ddb968d7d144388933216bec7f4a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Palletes/Base Palette.prefab
+  uploadId: 566792

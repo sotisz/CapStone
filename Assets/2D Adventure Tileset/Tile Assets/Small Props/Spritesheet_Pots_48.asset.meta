@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: de2c56b6024de0943b4adce8c61ed13a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Assets/Small Props/Spritesheet_Pots_48.asset
+  uploadId: 566792

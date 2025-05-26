@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e10d36284713f0e47b735c8a2e1b69d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Assets/Props/Cobweb_4.asset
+  uploadId: 566792

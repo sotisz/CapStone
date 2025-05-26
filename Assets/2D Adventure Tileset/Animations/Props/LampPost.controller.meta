@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d909a746216a1a14dab865647cc18a2e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Props/LampPost.controller
+  uploadId: 566792

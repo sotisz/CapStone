@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d4bae9c191fe0c9469e358d650ded3f0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Assets/Minerals/Spritesheet_Minerals_16.asset
+  uploadId: 566792
