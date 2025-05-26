@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Block
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Block
+  - 
   - 
   - 
   - 
@@ -41,12 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: GaugeBarEmpty
-    uniqueID: 147250121
-    locked: 0
-  - name: GaugeBarFIll
-    uniqueID: 1446733019
     locked: 0
   m_RenderingLayers:
   - Default

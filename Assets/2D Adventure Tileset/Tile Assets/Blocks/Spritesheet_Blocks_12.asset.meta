@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 086fe9fa0cc5b0c46b9502e42068b8e4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Tile Assets/Blocks/Spritesheet_Blocks_12.asset
+  uploadId: 566792

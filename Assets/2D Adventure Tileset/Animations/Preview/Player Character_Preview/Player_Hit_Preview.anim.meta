@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a3974f888074e6439c32a9558b584a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Player Character_Preview/Player_Hit_Preview.anim
+  uploadId: 566792
