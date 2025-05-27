@@ -1,14 +1,4 @@
 using UnityEngine;
-<<<<<<< Updated upstream
-
-public class GameManager : MonoBehaviour
-{
-    public static string gameState = "playing";
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-=======
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -31,7 +21,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
