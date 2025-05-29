@@ -120,7 +120,7 @@ public class BearController : MonoBehaviour
             jumpCount -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position - new Vector3(0, 0.31f, 0);
