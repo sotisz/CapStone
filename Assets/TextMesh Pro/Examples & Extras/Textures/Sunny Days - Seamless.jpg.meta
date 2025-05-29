@@ -124,16 +124,7 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-<<<<<<<< HEAD:Assets/TextMesh Pro/Examples & Extras/Textures/Sunny Days - Seamless.jpg.meta
   spritePackingTag: 
-========
-    secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
-    nameFileIdTable:
-      jump7_0: 8916056987257399310
-  mipmapLimitGroupName: 
->>>>>>>> 진상현:Assets/Charater/Tiger/jump/jump7.png.meta
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 

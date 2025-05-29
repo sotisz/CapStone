@@ -7,17 +7,9 @@ public class SceneMove : MonoBehaviour
 {
     public void MoveToGameScene()
     {
-<<<<<<< Updated upstream
         SceneManager.LoadScene("SampleScene");
-=======
-        SceneManager.LoadScene("Game Scene");
->>>>>>> Stashed changes
     }
 
-    public void MoveToIntroScene()
-    {
-        SceneManager.LoadScene("Intro");
-    }
     public void OnExitButton()
     {
 #if UNITY_EDITOR

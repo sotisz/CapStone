@@ -2463,25 +2463,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 3945305057216463085}
   m_HandleRect: {fileID: 8997687354624022542}
   m_Direction: 0
-  m_MinValue: 0.0001
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5182763739616382961
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,7 +3886,7 @@ GameObject:
   - component: {fileID: 4137323003227084760}
   - component: {fileID: 6447981857476835890}
   m_Layer: 5
-  m_Name: BackGround Music Slider
+  m_Name: Enviroment Sound Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
