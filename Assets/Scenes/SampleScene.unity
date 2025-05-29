@@ -314,8 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be88823a28689a428aa95e9a2d708ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target1: {fileID: 921016837}
-  target2: {fileID: 1093758088}
+  target1: {fileID: 3545909282894604306, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+  target2: {fileID: 842753589680736966, guid: 93569a77b04144c499eada9859c84f47, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
