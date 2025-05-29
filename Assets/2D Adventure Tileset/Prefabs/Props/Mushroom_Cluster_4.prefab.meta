@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 745cb5c1cebf1554499cc60f1b8fd979
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Prefabs/Props/Mushroom_Cluster_4.prefab
+  uploadId: 566792

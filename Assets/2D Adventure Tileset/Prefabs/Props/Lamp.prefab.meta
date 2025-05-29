@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8da384497d3a2d4c8a9837edb7149ca
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Prefabs/Props/Lamp.prefab
+  uploadId: 566792

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b819d94140c4b8d4aa0fc7f48a3cdfb6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Rat_Preview/Rat_Hurt_Preview.anim
+  uploadId: 566792

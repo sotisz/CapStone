@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c777b30542c0e9d47bebe131d22f7388
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Spider/Spider_Jumping.anim
+  uploadId: 566792

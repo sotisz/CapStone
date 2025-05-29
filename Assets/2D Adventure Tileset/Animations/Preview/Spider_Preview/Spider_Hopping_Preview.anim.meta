@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2a9a7c810f16b4c46bb45c5f0462f9c7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Spider_Preview/Spider_Hopping_Preview.anim
+  uploadId: 566792

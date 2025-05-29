@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70c6cee2819455c4893993db2538795d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Materials/MT_Base.mat
+  uploadId: 566792

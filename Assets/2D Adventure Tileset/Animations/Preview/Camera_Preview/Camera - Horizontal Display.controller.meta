@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 52884edbc77690e478ecfb441eddc57c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Camera_Preview/Camera
+    - Horizontal Display.controller
+  uploadId: 566792

@@ -1,0 +1,3558 @@
+fileFormatVersion: 2
+guid: aed293ae45cb0c7479120ef306cecc94
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 682
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c49652283a70a40bb558eee6df032f
+      internalID: -493706560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 690
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627e783162ddbb04cae28b4f8f7e39a3
+      internalID: -1020200116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 680
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cccffb96d1f19e41a000fad7ad525f2
+      internalID: -1314780552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 671
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3cdf4647d009541ac12ffefcd1da15
+      internalID: 1638501939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 672
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cf23fb03033fb43b2dc79e233ba26b
+      internalID: -1791015401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_6
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 677
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71fa34d87060bb47b8038cd7b321230
+      internalID: -2127720219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_7
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 680
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4479da68394e00a419e5c7ed83451983
+      internalID: 1383332762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 676
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97356a81d2ba25b408bbc0227f2d58d9
+      internalID: -736538689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_9
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 652
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dc14f86e32ed24784d069145fc71b6
+      internalID: -1936188420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_10
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 663
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05af24e6fc6e244191c6afcb5d653df
+      internalID: 907085819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_11
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 673
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1c9aa5dc1c78645b10867a900804dc
+      internalID: 9709917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_12
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 666
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c486015476492944826e677b726805f
+      internalID: 784633260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_13
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 682
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a51662b6440f64ba1c715a9bf4a043
+      internalID: 856621487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_14
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 661
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f525a3a208ce2747b0a77c2465893bc
+      internalID: -710840741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_15
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 683
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a09bef5b7136843876ee0e9e28211a
+      internalID: 591014182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_16
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 682
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a361ee22ac701e04bb75ded129a98335
+      internalID: -1023628267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_17
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 690
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c945ff282f5c940a15b1487bc21685
+      internalID: -1393450355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_18
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 680
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586755af6e3233945b8758e3b2672434
+      internalID: -887076899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_19
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 671
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82bea83475b23a47a4c23239d731085
+      internalID: -2040576292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_20
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 672
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15b8fe466c7a2e41873e4c0f0524359
+      internalID: -772990552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_22
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 678
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856950a456877ec4386a5ec2c9b5eda1
+      internalID: 524835502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_23
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 680
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8f713f86e2a63408eea4e60fa8dcbe
+      internalID: -1772922803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_24
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 676
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff00ceadf74d54d4db312edca5165201
+      internalID: 1619611767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_25
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 652
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585feb93043689c4d84ed901881b5cf8
+      internalID: 2097939592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_26
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 663
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bc6aac4db876942a5df17a75093aaf
+      internalID: -707625726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_27
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 580
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbdb885e1a4f7b4dbc7b7c0f63cfa3b
+      internalID: 2145356878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_28
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 573
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddd9527ebded90478b86a287e22e115
+      internalID: 19946663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_29
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 589
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b7cfd11ce3fda4c973de133a3685b7
+      internalID: 1849777575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_30
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 568
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f7a914a6cea5846819019b658299f8
+      internalID: -622379997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_31
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 590
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d8db1ca0366d144af1850f2a05b3ee
+      internalID: -1284313619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_32
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 575
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41c63e69cd6ac5468d96d73c239f2b7
+      internalID: 1954626183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_33
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 583
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe1b4eaffc1cbd46a03c464a45accc3
+      internalID: -1917597040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_34
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 573
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afb98836469c5c47b720adbbdf8c31d
+      internalID: 1813578466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_35
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 564
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352a55b73a4c58241bc45fa7b2beacc5
+      internalID: -1783945574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_36
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 565
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedaf17ee25051c4e9d2a243662f95b2
+      internalID: 317711804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_37
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 571
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8438b9075e6ead4ea3dce4ca5af4062
+      internalID: 2093193848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_38
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 573
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359a48b6958a69342b8b09fca862f72e
+      internalID: -909234466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_39
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 569
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1861953769f2eef419f7da013b1a0ce0
+      internalID: -464260923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_40
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 545
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3740430e05189242b4f386453e3db23
+      internalID: -333644217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_41
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 556
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc79242514b8fe8409a5c22f63eca13f
+      internalID: 1520935651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_42
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 566
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da55837cbf0be0d40a56a6e82d3b60c1
+      internalID: 795323504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_43
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 559
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145b68f3ff3284d45b7a6bd00ca32bd4
+      internalID: -1490409613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_44
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 575
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5d386e50fb4c7429ee48745c5189c8
+      internalID: 426152437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_45
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 554
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3d2774240ea3c4aad2ba2e2c49ee49
+      internalID: -672119479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_46
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 576
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9ab020204b4474084e09753d7025c4
+      internalID: -1152412896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_47
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 575
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33928fe912e0ad746a3df66e98277f9f
+      internalID: -1017863759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_48
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 583
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2c56789f5944e409bc31e9bf6861da
+      internalID: -1388352939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_49
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 573
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c303aa493d33c347832440935bf5d65
+      internalID: 917859742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_50
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 564
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f245036ec1791b4885480c84273aafb
+      internalID: 1378197791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_51
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 565
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699190f914ce78a4db8007438bf5eeeb
+      internalID: -1189650642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_52
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 571
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cd13c4dc6e268468c060439f49a991
+      internalID: 1285301464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_55
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 480
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0689a27d802028043881f03afc0d95f7
+      internalID: 1172940160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_56
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 476
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2afe08deab0d0246adaab14a314eb20
+      internalID: -1766949949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_57
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 452
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c31cc41d1f87049bf766ec864b55bc
+      internalID: -323891886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_58
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 463
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1806991f8154a94478e1fc06691a6511
+      internalID: -156414840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_59
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 473
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d74977320ce534382a4871ca98a17b
+      internalID: 1810405762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_60
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 466
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57684c3d3542f794f94afa4b55246faf
+      internalID: 215386676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_61
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 482
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1661e1557c22d62449e431dd4d235af4
+      internalID: 347402346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_62
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 461
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d69554297aafb468e3f36bb13cb5a9
+      internalID: 1484755389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_63
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 483
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e5a6256cddd2b4e93f6ac7e0c260f5
+      internalID: -103823932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_64
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 470
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22918e02c77c61d46b2e1751fbfee984
+      internalID: -141167641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_65
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 478
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51dec7e219a56b44bda5e21db6edca3
+      internalID: -1023212275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_66
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 468
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cb51c99c7b41e46b47a990ef9265b2
+      internalID: 470472337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_67
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 459
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a1dab808ac9334985c638ebca274c8
+      internalID: -300346023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_68
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 460
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d7fa997c289854ba6e482751efd3ce
+      internalID: 1391802174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_69
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 466
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f893a744a4d0a4091233125ec881a2
+      internalID: -905485353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_70
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 468
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4fcf4c5cee2474794b7c598cf1ddda
+      internalID: 2065198190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_71
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 464
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21d92d1885345c4b87d815b42f5abfc
+      internalID: -1404142678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_72
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 440
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92f8456b6d32f74f8d81dbe46c5f8f3
+      internalID: -921964896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_73
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 451
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d30b25682e8e64abbe5c5d1952101f
+      internalID: -1360647757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_74
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 461
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5709d364c8130b84d841ed9d721cce47
+      internalID: 1680990691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_75
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 454
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bcf8a236cbbe542af3c831a3348931
+      internalID: 1115261761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_76
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 470
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2da21556d6e944f9c1d782f27e28e8
+      internalID: -844116620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_77
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 449
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e521895d631169d4fab4017b957109b7
+      internalID: 201816266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_78
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 471
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a256c18a21059e4da9f7129900bc5f4
+      internalID: 1689048354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_80
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 374
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf78b6e02f8992940a2bfea853c1446c
+      internalID: 944735995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_81
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 382
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd57e48af751b9408b4144a23a7862c
+      internalID: -384751858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_82
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 372
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0a58f700300b445bb6e60fcbfd7b46
+      internalID: -168308820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_83
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 363
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a1f0901e804b842bc495f5d6f92591
+      internalID: 484494941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_84
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 364
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f66fc16fdb5704ca9b6aedbd26d797
+      internalID: 1941767929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_86
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 370
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb3592922f839b4eba4e54e27b48954
+      internalID: 1455115229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_87
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 372
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7bbdf0c7fafce4ba468a2e6e5d36cb
+      internalID: 1790057654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_88
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 368
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf8f7319924d0047a021e9f157c09a3
+      internalID: 34536820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_89
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 344
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3dcc3750bb4374bad33c85086315cd
+      internalID: -424024836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_90
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 355
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0361bc537f2313248b5cc04f81f4559b
+      internalID: 169312543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_91
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 365
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22d2875073c0ed4a942b2ec760fa8e0
+      internalID: -1702990482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_92
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 358
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567922ce156651b49928218b6091b239
+      internalID: 1836373011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_93
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 374
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71e2beb5bcfb014ca6dccc8a6919842
+      internalID: 980467041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_94
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 353
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d0f9386c312904b925e7709eb7559d
+      internalID: 163110339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_95
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 375
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcf702293ac41941b393f3453b1b4bf
+      internalID: -1996380638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_96
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 366
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17193eadec504a4b9a89896f807cee5
+      internalID: -1596278244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_97
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 374
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91f6af31b1150245b19593c9803a14a
+      internalID: -853920875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_98
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 364
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c021c8d8478f5a49af02019a137004e
+      internalID: 885529697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_99
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 355
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ede9980869d7442944713e7a8884b9
+      internalID: -1198985612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_100
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 356
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2394f8417c02c2c48871e9e380c4b11e
+      internalID: 105940709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_101
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 363
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae3686f89e4e734eb6393e9ee0571d6
+      internalID: 278397746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_102
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 364
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a633609bca825842b074a9a6b329819
+      internalID: -314997806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_103
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 360
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aab9146cd9d2484fb6566ba11c7f80d
+      internalID: -1599729525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_104
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 336
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a6c2a27cbc4bd4ba01cbd319ae067c
+      internalID: 593829493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_105
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 347
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d478471fbb618ed42a899774bf505a3b
+      internalID: -2083144557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_107
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72418c40021383c4186628c254f5a897
+      internalID: -1138627005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_108
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 263
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709f2753f2fa3d542b29bc57e9cf2479
+      internalID: 641560384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_109
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 279
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c125c67cf64b941b0ccf1798ba5381
+      internalID: 1568938467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_110
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 258
+        width: 30
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c16b8df0e417e4b91fbd597105b55f
+      internalID: 1858575995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_111
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 280
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5627374188dd6418688b26ed48b72b
+      internalID: -770793029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_112
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 249
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b9e2c9fc87470489a8dcee3a058d94
+      internalID: -1070320040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_113
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 269
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a99247f0c9df44fbe7d1eb29af18b3
+      internalID: 1541116533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_114
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 257
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477f6e97adffcce4a99abf78ea08f959
+      internalID: 511530786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_115
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 284
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea4b2e2d04b7b44b8fd1947c7c249d5
+      internalID: -1516373111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_116
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 286
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9487b5d146dbfd745a376fe2b1b04df0
+      internalID: -1266644029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_117
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 266
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765b9b3261ec6484ca031f7963fd67e5
+      internalID: 1897906711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_118
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 282
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa21985ad0737494c8982630a72b35bd
+      internalID: -607828775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_119
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 263
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830cde4ef9b3318459ae46b1af076197
+      internalID: 2120738252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_120
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 274
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e81af65910af7d42a81b686f5a22ab6
+      internalID: -749830262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_121
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 257
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71574e296b7092e4d99d17017db6e484
+      internalID: -2055526717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_122
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 249
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3755ef1c898b27d4da3c80355b388b78
+      internalID: -1035389085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_123
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 269
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93df7551997872346bfe749358296f91
+      internalID: 1002012343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_124
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 257
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dba9bb2ffacf9429987a8fc55673d7
+      internalID: 1662138166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_125
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 284
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0d99052478968409e71df8367cabde
+      internalID: -330179750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_126
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 286
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8d3740ef20e9f4b8cedd96814883e3
+      internalID: 1173133697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_127
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 266
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86371a0be6306414b8f25e6141f12240
+      internalID: -657791563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_128
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 282
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c1203453ca7864cbb2940a5d30e83a
+      internalID: -84671906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_129
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 263
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193e69b6cb7f03348996a695597c4ddd
+      internalID: 602765668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_130
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 274
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a29ed6601bd3d45817f09e89506cea
+      internalID: -45751963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_131
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 257
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62cd43d9c17bb74290196e6c12f5267
+      internalID: 743580421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_132
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 238
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f5dbb332a8a0e42b91cee681c16674
+      internalID: -42497116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_133
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 258
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7674dda8d0ec134db23dbefa409f899
+      internalID: 1078920853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_134
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 153
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50facb27c4acf94cb550935cf7d5358
+      internalID: -1108111324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_135
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 180
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8fe220ca4f8a548a1db9c93abed0f5
+      internalID: -825482808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_136
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 182
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e9224f2d0e97c438cc0a4ad9acf39d
+      internalID: -1516453749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_137
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 162
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14db1ff3fd44e334c881f668e4ee6abc
+      internalID: -1577207712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_138
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 178
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b26042b40042e459a3a3bde2d88572
+      internalID: 567930716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_139
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 159
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bab313efc5c14f4799b411431fa575a
+      internalID: -1840179407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_140
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 170
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ec29a03262ff44983882874e18756a
+      internalID: 1267355487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_141
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 153
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb60f30b24074742acea4b5d28a0116
+      internalID: -752056966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_142
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 145
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176b58957f250b548b7119dd27116176
+      internalID: 1587762112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_143
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 165
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6b5328de88b3b4b833919966455cef
+      internalID: 1473049004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_144
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 153
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58842920f3e63f49b826f0baf27ea6f
+      internalID: -800011674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_145
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 180
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcf969829c422f48b537ac8f01d6484
+      internalID: 1131628658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_146
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 182
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb85e2a883d94f24c80f22a54de140aa
+      internalID: -1438446756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_147
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 162
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292d77bbcc873bd4c98d7fe604d2f723
+      internalID: 1824505098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_148
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 178
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccc6f7ca41de134f94d354d261b2ad9
+      internalID: 1936680199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_149
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 159
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead3fad1dd0a3424ca013b22117d5153
+      internalID: -1119246122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_150
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 170
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274f28e008078ce44a8244e51900fbb1
+      internalID: 1449227455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_151
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 153
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e9893692d21bc4aa5856d6751655f5
+      internalID: 1400586628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_152
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 137
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e903fec6c0be04b962a0520d74a4b5
+      internalID: -1200656895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_153
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 157
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb7e62533e75a54fb5c70b73717dcd8
+      internalID: -639888384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_154
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 145
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf0a67262e1d4a46b8a7d4454553dfd
+      internalID: 1697705048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_155
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 172
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c66294de79c5bc4d9362bec9ad752ed
+      internalID: 1428807595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_156
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 174
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7313b1f7ddf8efc41b6f7c42de29f274
+      internalID: 1334157582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_157
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 154
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7ce2db66605294096fe79f3a9f0e84
+      internalID: -179081108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_158
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 170
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb394b7e76437854bbf7d092189512cb
+      internalID: 1448884293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_159
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 151
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a7b8c6268f7b04084ebaf2a5dbf11f
+      internalID: -1228285077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_160
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 162
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12b16f416b96154db5d6cd44c195164
+      internalID: -1825998565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Mineral_Chunks_161
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 145
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0543082db7c1c2445bde4247ac826ae5
+      internalID: 73342808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spritesheet_Mineral_Chunks_6: -2127720219
+      Spritesheet_Mineral_Chunks_117: 1897906711
+      Spritesheet_Mineral_Chunks_115: -1516373111
+      Spritesheet_Mineral_Chunks_89: -424024836
+      Spritesheet_Mineral_Chunks_108: 641560384
+      Spritesheet_Mineral_Chunks_137: -1577207712
+      Spritesheet_Mineral_Chunks_34: 1813578466
+      Spritesheet_Mineral_Chunks_8: -736538689
+      Spritesheet_Mineral_Chunks_84: 1941767929
+      Spritesheet_Mineral_Chunks_57: -323891886
+      Spritesheet_Mineral_Chunks_100: 105940709
+      Spritesheet_Mineral_Chunks_45: -672119479
+      Spritesheet_Mineral_Chunks_85: -78571919
+      Spritesheet_Mineral_Chunks_28: 19946663
+      Spritesheet_Mineral_Chunks_70: 2065198190
+      Spritesheet_Mineral_Chunks_124: 1662138166
+      Spritesheet_Mineral_Chunks_36: 317711804
+      Spritesheet_Mineral_Chunks_15: 591014182
+      Spritesheet_Mineral_Chunks_152: -1200656895
+      Spritesheet_Mineral_Chunks_127: -657791563
+      Spritesheet_Mineral_Chunks_110: 1858575995
+      Spritesheet_Mineral_Chunks_144: -800011674
+      Spritesheet_Mineral_Chunks_11: 9709917
+      Spritesheet_Mineral_Chunks_160: -1825998565
+      Spritesheet_Mineral_Chunks_26: -707625726
+      Spritesheet_Mineral_Chunks_61: 347402346
+      Spritesheet_Mineral_Chunks_41: 1520935651
+      Spritesheet_Mineral_Chunks_136: -1516453749
+      Spritesheet_Mineral_Chunks_118: -607828775
+      Spritesheet_Mineral_Chunks_42: 795323504
+      Spritesheet_Mineral_Chunks_91: -1702990482
+      Spritesheet_Mineral_Chunks_74: 1680990691
+      Spritesheet_Mineral_Chunks_130: -45751963
+      Spritesheet_Mineral_Chunks_133: 1078920853
+      Spritesheet_Mineral_Chunks_53: 596542252
+      Spritesheet_Mineral_Chunks_90: 169312543
+      Spritesheet_Mineral_Chunks_95: -1996380638
+      Spritesheet_Mineral_Chunks_68: 1391802174
+      Spritesheet_Mineral_Chunks_126: 1173133697
+      Spritesheet_Mineral_Chunks_5: 1995635704
+      Spritesheet_Mineral_Chunks_55: 1172940160
+      Spritesheet_Mineral_Chunks_7: 1383332762
+      Spritesheet_Mineral_Chunks_122: -1035389085
+      Spritesheet_Mineral_Chunks_149: -1119246122
+      Spritesheet_Mineral_Chunks_93: 980467041
+      Spritesheet_Mineral_Chunks_123: 1002012343
+      Spritesheet_Mineral_Chunks_24: 1619611767
+      Spritesheet_Mineral_Chunks_29: 1849777575
+      Spritesheet_Mineral_Chunks_82: -168308820
+      Spritesheet_Mineral_Chunks_107: -1138627005
+      Spritesheet_Mineral_Chunks_64: -141167641
+      Spritesheet_Mineral_Chunks_112: -1070320040
+      Spritesheet_Mineral_Chunks_159: -1228285077
+      Spritesheet_Mineral_Chunks_139: -1840179407
+      Spritesheet_Mineral_Chunks_77: 201816266
+      Spritesheet_Mineral_Chunks_3: 1638501939
+      Spritesheet_Mineral_Chunks_33: -1917597040
+      Spritesheet_Mineral_Chunks_14: -710840741
+      Spritesheet_Mineral_Chunks_96: -1596278244
+      Spritesheet_Mineral_Chunks_104: 593829493
+      Spritesheet_Mineral_Chunks_40: -333644217
+      Spritesheet_Mineral_Chunks_23: -1772922803
+      Spritesheet_Mineral_Chunks_72: -921964896
+      Spritesheet_Mineral_Chunks_111: -770793029
+      Spritesheet_Mineral_Chunks_17: -1393450355
+      Spritesheet_Mineral_Chunks_120: -749830262
+      Spritesheet_Mineral_Chunks_138: 567930716
+      Spritesheet_Mineral_Chunks_25: 2097939592
+      Spritesheet_Mineral_Chunks_81: -384751858
+      Spritesheet_Mineral_Chunks_0: -493706560
+      Spritesheet_Mineral_Chunks_60: 215386676
+      Spritesheet_Mineral_Chunks_65: -1023212275
+      Spritesheet_Mineral_Chunks_161: 73342808
+      Spritesheet_Mineral_Chunks_135: -825482808
+      Spritesheet_Mineral_Chunks_9: -1936188420
+      Spritesheet_Mineral_Chunks_146: -1438446756
+      Spritesheet_Mineral_Chunks_156: 1334157582
+      Spritesheet_Mineral_Chunks_47: -1017863759
+      Spritesheet_Mineral_Chunks_88: 34536820
+      Spritesheet_Mineral_Chunks_78: 1689048354
+      Spritesheet_Mineral_Chunks_18: -887076899
+      Spritesheet_Mineral_Chunks_39: -464260923
+      Spritesheet_Mineral_Chunks_75: 1115261761
+      Spritesheet_Mineral_Chunks_19: -2040576292
+      Spritesheet_Mineral_Chunks_129: 602765668
+      Spritesheet_Mineral_Chunks_67: -300346023
+      Spritesheet_Mineral_Chunks_66: 470472337
+      Spritesheet_Mineral_Chunks_22: 524835502
+      Spritesheet_Mineral_Chunks_44: 426152437
+      Spritesheet_Mineral_Chunks_49: 917859742
+      Spritesheet_Mineral_Chunks_12: 784633260
+      Spritesheet_Mineral_Chunks_30: -622379997
+      Spritesheet_Mineral_Chunks_79: 326470040
+      Spritesheet_Mineral_Chunks_71: -1404142678
+      Spritesheet_Mineral_Chunks_27: 2145356878
+      Spritesheet_Mineral_Chunks_83: 484494941
+      Spritesheet_Mineral_Chunks_140: 1267355487
+      Spritesheet_Mineral_Chunks_94: 163110339
+      Spritesheet_Mineral_Chunks_155: 1428807595
+      Spritesheet_Mineral_Chunks_10: 907085819
+      Spritesheet_Mineral_Chunks_35: -1783945574
+      Spritesheet_Mineral_Chunks_43: -1490409613
+      Spritesheet_Mineral_Chunks_99: -1198985612
+      Spritesheet_Mineral_Chunks_109: 1568938467
+      Spritesheet_Mineral_Chunks_151: 1400586628
+      Spritesheet_Mineral_Chunks_158: 1448884293
+      Spritesheet_Mineral_Chunks_153: -639888384
+      Spritesheet_Mineral_Chunks_54: 1321142655
+      Spritesheet_Mineral_Chunks_102: -314997806
+      Spritesheet_Mineral_Chunks_86: 1455115229
+      Spritesheet_Mineral_Chunks_59: 1810405762
+      Spritesheet_Mineral_Chunks_145: 1131628658
+      Spritesheet_Mineral_Chunks_58: -156414840
+      Spritesheet_Mineral_Chunks_80: 944735995
+      Spritesheet_Mineral_Chunks_92: 1836373011
+      Spritesheet_Mineral_Chunks_154: 1697705048
+      Spritesheet_Mineral_Chunks_97: -853920875
+      Spritesheet_Mineral_Chunks_147: 1824505098
+      Spritesheet_Mineral_Chunks_116: -1266644029
+      Spritesheet_Mineral_Chunks_48: -1388352939
+      Spritesheet_Mineral_Chunks_134: -1108111324
+      Spritesheet_Mineral_Chunks_132: -42497116
+      Spritesheet_Mineral_Chunks_13: 856621487
+      Spritesheet_Mineral_Chunks_101: 278397746
+      Spritesheet_Mineral_Chunks_52: 1285301464
+      Spritesheet_Mineral_Chunks_98: 885529697
+      Spritesheet_Mineral_Chunks_113: 1541116533
+      Spritesheet_Mineral_Chunks_1: -1020200116
+      Spritesheet_Mineral_Chunks_51: -1189650642
+      Spritesheet_Mineral_Chunks_62: 1484755389
+      Spritesheet_Mineral_Chunks_87: 1790057654
+      Spritesheet_Mineral_Chunks_157: -179081108
+      Spritesheet_Mineral_Chunks_106: -1825155910
+      Spritesheet_Mineral_Chunks_125: -330179750
+      Spritesheet_Mineral_Chunks_105: -2083144557
+      Spritesheet_Mineral_Chunks_4: -1791015401
+      Spritesheet_Mineral_Chunks_119: 2120738252
+      Spritesheet_Mineral_Chunks_31: -1284313619
+      Spritesheet_Mineral_Chunks_37: 2093193848
+      Spritesheet_Mineral_Chunks_50: 1378197791
+      Spritesheet_Mineral_Chunks_63: -103823932
+      Spritesheet_Mineral_Chunks_32: 1954626183
+      Spritesheet_Mineral_Chunks_148: 1936680199
+      Spritesheet_Mineral_Chunks_121: -2055526717
+      Spritesheet_Mineral_Chunks_2: -1314780552
+      Spritesheet_Mineral_Chunks_131: 743580421
+      Spritesheet_Mineral_Chunks_38: -909234466
+      Spritesheet_Mineral_Chunks_103: -1599729525
+      Spritesheet_Mineral_Chunks_73: -1360647757
+      Spritesheet_Mineral_Chunks_46: -1152412896
+      Spritesheet_Mineral_Chunks_56: -1766949949
+      Spritesheet_Mineral_Chunks_128: -84671906
+      Spritesheet_Mineral_Chunks_141: -752056966
+      Spritesheet_Mineral_Chunks_150: 1449227455
+      Spritesheet_Mineral_Chunks_143: 1473049004
+      Spritesheet_Mineral_Chunks_69: -905485353
+      Spritesheet_Mineral_Chunks_114: 511530786
+      Spritesheet_Mineral_Chunks_16: -1023628267
+      Spritesheet_Mineral_Chunks_21: -1603641133
+      Spritesheet_Mineral_Chunks_20: -772990552
+      Spritesheet_Mineral_Chunks_76: -844116620
+      Spritesheet_Mineral_Chunks_142: 1587762112
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Sprites/Minerals/Spritesheet_Mineral_Chunks.png
+  uploadId: 566792

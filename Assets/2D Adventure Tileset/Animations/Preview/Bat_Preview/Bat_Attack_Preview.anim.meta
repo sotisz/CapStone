@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 99cc27f404c203d419f0a7f516f61b90
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Bat_Preview/Bat_Attack_Preview.anim
+  uploadId: 566792

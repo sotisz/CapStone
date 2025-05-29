@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: abbcde146f8b55f4cae9780e59d55f30
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Player Character/Player_Crouching_Moving.anim
+  uploadId: 566792

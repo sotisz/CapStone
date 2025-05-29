@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9400c6cc54ce0a48847294e1ab27b83
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Rat_Preview/Rat_Death_Preview.anim
+  uploadId: 566792

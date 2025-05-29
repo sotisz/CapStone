@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d50c1a2895316f34c923052b69b297bb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Player Character/Player_Fall_State.anim
+  uploadId: 566792

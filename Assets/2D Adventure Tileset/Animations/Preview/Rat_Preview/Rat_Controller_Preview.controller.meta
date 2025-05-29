@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b113ec6f7be1db843b437e19826f533a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Preview/Rat_Preview/Rat_Controller_Preview.controller
+  uploadId: 566792
