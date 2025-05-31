@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b01d7fdc1dedba646a0d32417ef9e7c2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Shroom/Shroom_Walk.anim
+  uploadId: 566792

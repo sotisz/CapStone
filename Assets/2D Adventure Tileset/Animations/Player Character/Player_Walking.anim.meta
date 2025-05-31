@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4db093d75b222744d812294a67195a27
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245171
+  packageName: 2D Adventurer Character & Tileset
+  packageVersion: 1.3.0
+  assetPath: Assets/2D Adventure Tileset/Animations/Player Character/Player_Walking.anim
+  uploadId: 566792

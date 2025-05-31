@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2233032ac25c603449005917a45839c9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240848
+  packageName: Hand Painted Platformer - Dungeon
+  packageVersion: 1.0
+  assetPath: Assets/Yoge/Platformer/Dungeon/_VFX/Glow.mat
+  uploadId: 554951

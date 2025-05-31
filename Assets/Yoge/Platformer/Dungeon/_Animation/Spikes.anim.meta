@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ac67e486e737de419073cb70e755b70
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240848
+  packageName: Hand Painted Platformer - Dungeon
+  packageVersion: 1.0
+  assetPath: Assets/Yoge/Platformer/Dungeon/_Animation/Spikes.anim
+  uploadId: 554951

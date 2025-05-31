@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3013abeac564b6e42a63cd0b7aee094e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240848
+  packageName: Hand Painted Platformer - Dungeon
+  packageVersion: 1.0
+  assetPath: Assets/Yoge/Platformer/Dungeon/_Animation/AxeChainLong.controller
+  uploadId: 554951
