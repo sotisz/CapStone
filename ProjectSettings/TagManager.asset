@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Block
+  - FalllingBlock
+  - BoxObject
+  - Fade
   layers:
   - Default
   - TransparentFX
@@ -47,6 +50,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1446733019
+    locked: 0
+  - name: Portal
+    uniqueID: 1506365191
     locked: 0
   m_RenderingLayers:
   - Default
