@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a0e519872b9bda64cab9dbe28cf3f36d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240848
+  packageName: Hand Painted Platformer - Dungeon
+  packageVersion: 1.0
+  assetPath: Assets/Yoge/Platformer/Dungeon/Prefabs/Torch.prefab
+  uploadId: 554951

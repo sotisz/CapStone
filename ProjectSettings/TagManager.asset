@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Block
   - FalllingBlock
-  - Water
+  - BoxObject
+  - Fade
   layers:
   - Default
   - TransparentFX
@@ -41,9 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Backgrounds
-    uniqueID: 3928913883
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -52,6 +50,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1446733019
+    locked: 0
+  - name: Portal
+    uniqueID: 1506365191
     locked: 0
   m_RenderingLayers:
   - Default
