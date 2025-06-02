@@ -10,10 +10,17 @@ public class SceneMove : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void RestartCurrentScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
     public void MoveToIntroScene()
     {
         SceneManager.LoadScene("Intro");
     }
+
     public void OnExitButton()
     {
 #if UNITY_EDITOR

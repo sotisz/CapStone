@@ -34,11 +34,14 @@ public class BearController : MonoBehaviour
 
     Animator animator;
     public GameManager Instance => GameManager.Instance;
-
-    protected void Start()
+    private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    protected void Start()
+    {
         Instance.gameState = "playing";
     }
 

@@ -264,7 +264,15 @@ PrefabInstance:
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5546971363539373895}
+      objectReference: {fileID: 1043027585035560325}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PausePanelScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -330,10 +338,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2072919803839873546, guid: 48090d2113bb17148bcf58291196115f, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1691905617695338214}
-    - target: {fileID: 2072919803839873546, guid: 48090d2113bb17148bcf58291196115f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -357,10 +361,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2655005853072004510, guid: 48090d2113bb17148bcf58291196115f, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1691905617695338214}
     - target: {fileID: 2655005853072004510, guid: 48090d2113bb17148bcf58291196115f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -514,10 +514,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9038288652026139004, guid: 48090d2113bb17148bcf58291196115f, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1691905617695338214}
-    - target: {fileID: 9038288652026139004, guid: 48090d2113bb17148bcf58291196115f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeVolume
       objectReference: {fileID: 0}
@@ -532,33 +528,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 534757691531406313, guid: 48090d2113bb17148bcf58291196115f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1691905617695338214}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48090d2113bb17148bcf58291196115f, type: 3}
 --- !u!224 &2241241704846947022 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8709523375972528003, guid: 48090d2113bb17148bcf58291196115f, type: 3}
   m_PrefabInstance: {fileID: 7477114652430490957}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6967028356988532388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 534757691531406313, guid: 48090d2113bb17148bcf58291196115f, type: 3}
-  m_PrefabInstance: {fileID: 7477114652430490957}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1691905617695338214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6967028356988532388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d02ed6ebac93843bf86e8082c0858c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7943922379540017321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 719018456141196772, guid: 48090d2113bb17148bcf58291196115f, type: 3}

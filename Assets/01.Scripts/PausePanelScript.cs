@@ -25,9 +25,29 @@ public class PausePanelScript : MonoBehaviour
     }
 
 
+    private void OnEnable() // 일시정지 메뉴가 활성화 되면
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.gameState = "paused";
+            Time.timeScale = 0f; //게임 일시정지
+        }
+    }
+    private void OnDisable() // 일시정지 메뉴가 꺼질 때
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.gameState = "playing";
+            Time.timeScale = 1f; // 게임 재개
+        }
+    }
+
     public void OnRestartButton() // 레벨 재시작
     {
-        SceneManager.LoadScene("SampleScene");
+        GameManager.Instance.gameState = "playing";
+        Time.timeScale = 1f; // 게임 재개
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 
     public void OnExitButton() // 나가기 버튼
