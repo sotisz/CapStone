@@ -114,13 +114,13 @@ public class BearController : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && onGroundTimer > 0 && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0)
         {
             rb2d.linearVelocityY = jumpForce;
             jumpCount -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        if (Input.GetKeyDown(KeyCode.R) && onGround)
         {
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position - new Vector3(0, 0.31f, 0);
