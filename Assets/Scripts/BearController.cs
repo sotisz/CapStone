@@ -101,7 +101,13 @@ public class BearController : MonoBehaviour
     private void Update()
     {
         if (GameManager.gameState != "playing")
+        {
+            rb2d.bodyType = RigidbodyType2D.Static;
+            animator.speed = 0;
             return;
+        }
+
+        animator.speed = 1;
 
         axisH = Input.GetAxis("Horizontal");
 
@@ -132,6 +138,8 @@ public class BearController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.gameState != "playing")
+            return;
         onGround = false;
         if (Physics2D.OverlapBox(transform.position - new Vector3(0, 1, 0), groundSize, 0f, groundLayer))
         {
@@ -153,9 +161,6 @@ public class BearController : MonoBehaviour
         {
             rb2d.linearVelocity = new Vector2(axisH * speed, rb2d.linearVelocity.y);
         }
-
-        if (GameManager.gameState != "playing")
-            return;
 
         if (onGroundTimer > 0)
         {

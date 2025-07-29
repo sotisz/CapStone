@@ -20,7 +20,6 @@ public class TigerController : MonoBehaviour
     public float climbSpeed = 4.0f;
     public float jumpForce = 8.0f;
     public GameObject tagPlayer;
-    public GameObject Renderer;
 
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
@@ -45,7 +44,6 @@ public class TigerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         c2d = GetComponent<Collider2D>();
-        GameManager.gameState = "playing";
     }
 
     public void ChangeState(TigerState newState)
@@ -114,8 +112,15 @@ public class TigerController : MonoBehaviour
     private void Update()
     {
         if (GameManager.gameState != "playing")
+        {
+            rb2d.bodyType = RigidbodyType2D.Static;
+            animator.speed = 0;
             return;
+        }
 
+        animator.speed = 1;
+
+        rb2d.bodyType = RigidbodyType2D.Dynamic;
         axisH = Input.GetAxis("Horizontal");
         axisV = Input.GetAxis("Vertical");
 
@@ -146,6 +151,9 @@ public class TigerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.gameState != "playing")
+            return;
+
         onGround = false;
         Vector2 offset = groundOffset;
         if (transform.localScale.x < 0)
@@ -192,9 +200,6 @@ public class TigerController : MonoBehaviour
                 animator.SetBool("isClimbingUp", false);
             }
         }
-
-        if (GameManager.gameState != "playing")
-            return;
 
         if (isWall)
             return;
