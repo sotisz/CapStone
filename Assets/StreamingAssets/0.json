@@ -1,0 +1,16 @@
+[
+  {
+    "left_name": "웅",
+    "left_avatar_url": "image/plant",
+    "right_name": "환웅",
+    "right_avatar_url": "image/plant",
+    "text": "안녕하세요"
+  },
+  {
+      "left_name": "범",
+      "left_avatar_url": "image/plant",
+      "right_name": "",
+      "right_avatar_url": "",
+      "text": "하나"
+  }
+]
