@@ -102,13 +102,10 @@ public class BearController : MonoBehaviour
     {
         if (GameManager.gameState != "playing")
         {
-            rb2d.bodyType = RigidbodyType2D.Static;
-            animator.speed = 0;
             return;
         }
 
-        animator.speed = 1;
-
+        rb2d.bodyType = RigidbodyType2D.Dynamic;
         axisH = Input.GetAxis("Horizontal");
 
         if (axisH > 0.0f)

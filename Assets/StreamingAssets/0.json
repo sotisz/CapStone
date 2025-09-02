@@ -1,5 +1,6 @@
 [
   {
+    "speaking": "left",
     "left_name": "웅",
     "left_avatar_url": "image/plant",
     "right_name": "환웅",
@@ -7,6 +8,7 @@
     "text": "안녕하세요"
   },
   {
+      "speaking": "left",
       "left_name": "범",
       "left_avatar_url": "image/plant",
       "right_name": "",

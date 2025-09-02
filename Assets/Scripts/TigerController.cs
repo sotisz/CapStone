@@ -63,7 +63,7 @@ public class TigerController : MonoBehaviour
             case TigerState.Special:
                 rb2d.gravityScale = 1;
                 animator.SetBool("Special", false);
-                animator.SetBool("isClimbingUp", false);
+                animator.speed = 1;
                 break;
         }
 
@@ -113,12 +113,8 @@ public class TigerController : MonoBehaviour
     {
         if (GameManager.gameState != "playing")
         {
-            rb2d.bodyType = RigidbodyType2D.Static;
-            animator.speed = 0;
             return;
         }
-
-        animator.speed = 1;
 
         rb2d.bodyType = RigidbodyType2D.Dynamic;
         axisH = Input.GetAxis("Horizontal");
@@ -133,10 +129,19 @@ public class TigerController : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer >= 0 && jumpCount > 0)
         {
-            rb2d.linearVelocityY = jumpForce;
-            jumpCount -= 1;
+            if (!isWall)
+            {
+                rb2d.linearVelocityY = jumpForce;
+                jumpCount -= 1;
+            }
+            else
+            {
+                rb2d.linearVelocityY = jumpForce;
+                rb2d.linearVelocityX = jumpForce;
+                jumpCount -= 1;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround)
@@ -186,7 +191,6 @@ public class TigerController : MonoBehaviour
             rb2d.linearVelocity = new Vector2(axisH * speed, axisV * climbSpeed);
             if (Mathf.Approximately(rb2d.linearVelocityY, 0))
             {
-                animator.SetBool("isClimbingUp", true);
                 animator.speed = 0;
             }
             else if (rb2d.linearVelocityY > 0)

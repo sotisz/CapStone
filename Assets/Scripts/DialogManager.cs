@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public GameObject canvas;
-    public static DialogManager instance; 
+    public static DialogManager instance;
+
     [System.Serializable]
     public class DialogEntry
     {
+        public string speaking;
         public string left_name;
         public string left_avatar_url;
         public string right_name;
@@ -95,6 +97,29 @@ public class DialogManager : MonoBehaviour
         {
             rightNameBox.enabled = false;
             rightAvatar.enabled = false;
+        }
+
+        if (leftSprite != null && rightSprite != null)
+        {
+            if (dialogList[index].speaking.Equals("left"))
+            {
+                Color color = rightAvatar.color;
+                color.a = 0.5f;
+                rightAvatar.color = color;
+            }
+            else if (dialogList[index].speaking.Equals("right"))
+            {
+                Color color = leftAvatar.color;
+                color.a = 0.5f;
+                leftAvatar.color = color;
+            }
+            else if (dialogList[index].speaking.Equals("both"))
+            {
+                Color color = leftAvatar.color;
+                color.a = 1f;
+                leftAvatar.color = color;
+                rightAvatar.color = color;
+            }
         }
 
         index++;
