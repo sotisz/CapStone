@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tagebar : MonoBehaviour
+public class Tagbar : MonoBehaviour
 {
     public Image gaugeBarFill;
     public float gaugeBarFillCooldown = 0f;
@@ -10,6 +10,7 @@ public class Tagebar : MonoBehaviour
     public Image gaugeBarFillBackground;
     public GameObject target1, target2;
     public Vector3 Offset = new Vector3(-0.5f, 1.7f, 0);
+    public bool tagAble = true;
 
     void Start()
     {
@@ -21,13 +22,6 @@ public class Tagebar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !gaugeBarFilling)
-        {
-            gaugeBarFill.enabled = true;
-            gaugeBarFillBackground.enabled = true;
-            StartCooldown();
-        }
-
         if (gaugeBarFilling)
         {
             gaugeBarFillCooldown += Time.deltaTime;
@@ -43,6 +37,7 @@ public class Tagebar : MonoBehaviour
 
                 gaugeBarFill.enabled = false;
                 gaugeBarFillBackground.enabled = false;
+                tagAble = true;
             }
         }
     }
@@ -57,6 +52,14 @@ public class Tagebar : MonoBehaviour
         {
             transform.position = target2.transform.position + Offset;
         }
+    }
+
+    public void TagPlayer()
+    {
+        gaugeBarFill.enabled = true;
+        gaugeBarFillBackground.enabled = true;
+        StartCooldown();
+        tagAble = false;
     }
 
     void StartCooldown()

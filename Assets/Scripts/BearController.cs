@@ -20,6 +20,7 @@ public class BearController : MonoBehaviour
     public float jumpForce = 6.0f;
     public UnityEvent special;
     public GameObject tagPlayer;
+    public Tagbar tagbar;
 
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
@@ -123,8 +124,9 @@ public class BearController : MonoBehaviour
             jumpCount -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && onGround)
+        if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
         {
+            tagbar.TagPlayer();
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position - new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;

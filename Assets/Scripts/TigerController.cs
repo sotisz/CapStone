@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,6 +20,7 @@ public class TigerController : MonoBehaviour
     public float climbSpeed = 4.0f;
     public float jumpForce = 8.0f;
     public GameObject tagPlayer;
+    public Tagbar tagbar;
 
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
@@ -38,6 +40,7 @@ public class TigerController : MonoBehaviour
     private bool jumpCount = false;
     private bool walljump = false;
     private bool groundjump = false;
+    private bool checkWall = true;
 
     Animator animator;
 
@@ -135,9 +138,14 @@ public class TigerController : MonoBehaviour
         {
             jumpCount = true;
         }
-        
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(axisH, 0), 1f,
-            1 << LayerMask.NameToLayer("Wall"));
+
+        RaycastHit2D hit = default;
+        if (checkWall)
+        {
+            hit = Physics2D.Raycast(transform.position, new Vector2(axisH, 0), 1f,
+                1 << LayerMask.NameToLayer("Wall"));
+        }
+
         if (hit && currentState != TigerState.Special && (currentState == TigerState.Floating))
         {
             wallDir = (int)axisH;
@@ -167,13 +175,17 @@ public class TigerController : MonoBehaviour
                 rb2d.linearVelocityY = jumpForce;
                 rb2d.linearVelocityX = jumpForce * -wallDir;
                 jumpCount = false;
+                checkWall = false;
+                StartCoroutine(Cooldown());
+                checkWall = true;
             }
 
             ChangeState(TigerState.Floating);
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && onGround)
+        if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
         {
+            tagbar.TagPlayer();
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position + new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
@@ -277,6 +289,11 @@ public class TigerController : MonoBehaviour
                 animator.SetInteger("ySpeed", -1);
             }
         }
+    }
+
+    private IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(0.1f);
     }
 
     protected void Dead()

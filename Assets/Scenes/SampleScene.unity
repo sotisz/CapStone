@@ -1206,6 +1206,7 @@ MonoBehaviour:
   target1: {fileID: 921016837}
   target2: {fileID: 1093758088}
   Offset: {x: -0.5, y: 1.7, z: 0}
+  tagAble: 1
 --- !u!1 &1093758088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3175932534431430076, guid: 93569a77b04144c499eada9859c84f47, type: 3}
@@ -2630,6 +2631,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5641670176201897815, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: tagbar
+      value: 
+      objectReference: {fileID: 970338983}
+    - target: {fileID: 5641670176201897815, guid: 93569a77b04144c499eada9859c84f47, type: 3}
       propertyPath: tagPlayer
       value: 
       objectReference: {fileID: 921016837}
@@ -2686,6 +2691,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 179743567912322006, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+      propertyPath: tagbar
+      value: 
+      objectReference: {fileID: 970338983}
     - target: {fileID: 179743567912322006, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
       propertyPath: tagPlayer
       value: 
