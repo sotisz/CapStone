@@ -8,13 +8,14 @@ public class Tagebar : MonoBehaviour
     public float gaugeBarFillSpeed = 2f;
     private bool gaugeBarFilling = false;
     public Image gaugeBarFillBackground;
-    
+    public GameObject target1, target2;
+    public Vector3 Offset = new Vector3(-0.5f, 1.7f, 0);
+
     void Start()
     {
         gaugeBarFill.fillAmount = 0f;
         gaugeBarFill.enabled = false;
         gaugeBarFillBackground.enabled = false;
-        
     }
 
     // Update is called once per frame
@@ -26,31 +27,44 @@ public class Tagebar : MonoBehaviour
             gaugeBarFillBackground.enabled = true;
             StartCooldown();
         }
+
         if (gaugeBarFilling)
         {
             gaugeBarFillCooldown += Time.deltaTime;
 
             float Ratio = Mathf.Clamp01(gaugeBarFillCooldown / gaugeBarFillSpeed);
-           
+
             gaugeBarFill.fillAmount = Ratio;
-            
+
             if (gaugeBarFillCooldown >= gaugeBarFillSpeed)
             {
                 gaugeBarFilling = false;
                 gaugeBarFillCooldown = 0f;
-                
+
                 gaugeBarFill.enabled = false;
-               gaugeBarFillBackground.enabled = false;
+                gaugeBarFillBackground.enabled = false;
             }
         }
-        
     }
+
+    void LateUpdate()
+    {
+        if (target1.activeInHierarchy)
+        {
+            transform.position = target1.transform.position + Offset;
+        }
+        else if (target2.activeInHierarchy)
+        {
+            transform.position = target2.transform.position + Offset;
+        }
+    }
+
     void StartCooldown()
     {
         gaugeBarFillCooldown = 0f;
-            
+
         gaugeBarFilling = true;
-            
+
         gaugeBarFill.fillAmount = 0f;
     }
 }

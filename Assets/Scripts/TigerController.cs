@@ -6,8 +6,7 @@ public enum TigerState
 {
     Idle,
     Walk,
-    Up,
-    Down,
+    Floating,
     Special,
     Dead
 }
@@ -31,11 +30,14 @@ public class TigerController : MonoBehaviour
     float axisV = 0.0f;
     public TigerState currentState = TigerState.Idle;
     private float onGroundTimer = 0.1f;
-    int jumpCount = 0;
+    
 
     private bool onGround;
     private bool wasGround;
-    private bool isWall = false;
+    private int wallDir;
+    private bool jumpCount = false;
+    private bool walljump = false;
+    private bool groundjump = false;
 
     Animator animator;
 
@@ -51,40 +53,40 @@ public class TigerController : MonoBehaviour
         switch (currentState)
         {
             case TigerState.Idle:
+                groundjump = false;
                 break;
             case TigerState.Walk:
+                groundjump = false;
                 break;
-            case TigerState.Up:
-                animator.SetInteger("ySpeed", 0);
-                break;
-            case TigerState.Down:
+            case TigerState.Floating:
                 animator.SetInteger("ySpeed", 0);
                 break;
             case TigerState.Special:
                 rb2d.gravityScale = 1;
                 animator.SetBool("Special", false);
                 animator.speed = 1;
+                walljump = false;
                 break;
         }
 
         switch (newState)
         {
             case TigerState.Idle:
+                groundjump = true;
                 animator.SetBool("isMoving", false);
                 break;
             case TigerState.Walk:
+                groundjump = true;
                 animator.SetBool("isMoving", true);
                 break;
-            case TigerState.Up:
-                animator.SetInteger("ySpeed", 1);
-                break;
-            case TigerState.Down:
-                animator.SetInteger("ySpeed", -1);
+            case TigerState.Floating:
+                jumpCount = false;
                 break;
             case TigerState.Special:
                 animator.SetBool("Special", true);
                 rb2d.gravityScale = 0;
                 rb2d.linearVelocityX = 0;
+                walljump = true;
                 break;
             case TigerState.Dead:
                 animator.SetBool("Dead", true);
@@ -117,8 +119,8 @@ public class TigerController : MonoBehaviour
         }
 
         rb2d.bodyType = RigidbodyType2D.Dynamic;
-        axisH = Input.GetAxis("Horizontal");
-        axisV = Input.GetAxis("Vertical");
+        axisH = Input.GetAxisRaw("Horizontal");
+        axisV = Input.GetAxisRaw("Vertical");
 
         if (axisH > 0.0f)
         {
@@ -129,19 +131,45 @@ public class TigerController : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer >= 0 && jumpCount > 0)
+        if (walljump || groundjump)
         {
-            if (!isWall)
+            jumpCount = true;
+        }
+        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(axisH, 0), 1f,
+            1 << LayerMask.NameToLayer("Wall"));
+        if (hit && currentState != TigerState.Special && (currentState == TigerState.Floating))
+        {
+            wallDir = (int)axisH;
+            ChangeState(TigerState.Special);
+        }
+        else if (!hit && currentState == TigerState.Special)
+        {
+            if (onGroundTimer <= 0)
+            {
+                ChangeState(TigerState.Floating);
+            }
+            else
+            {
+                ChangeState(TigerState.Idle);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount)
+        {
+            if (currentState != TigerState.Special)
             {
                 rb2d.linearVelocityY = jumpForce;
-                jumpCount -= 1;
+                jumpCount = false;
             }
             else
             {
                 rb2d.linearVelocityY = jumpForce;
-                rb2d.linearVelocityX = jumpForce;
-                jumpCount -= 1;
+                rb2d.linearVelocityX = jumpForce * -wallDir;
+                jumpCount = false;
             }
+
+            ChangeState(TigerState.Floating);
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround)
@@ -176,15 +204,18 @@ public class TigerController : MonoBehaviour
             onGroundTimer -= Time.deltaTime;
         }
 
-        if (!wasGround && onGround)
-        {
-            jumpCount = 1;
-        }
-
         wasGround = onGround;
         if (currentState != TigerState.Special)
         {
-            rb2d.linearVelocity = new Vector2(axisH * speed, rb2d.linearVelocity.y);
+            var veloTarget = axisH * speed;
+            if (currentState == TigerState.Floating)
+            {
+                rb2d.linearVelocityX = Mathf.Lerp(rb2d.linearVelocityX, veloTarget, Time.deltaTime * 2);
+            }
+            else
+            {
+                rb2d.linearVelocityX = veloTarget;
+            }
         }
         else
         {
@@ -205,11 +236,11 @@ public class TigerController : MonoBehaviour
             }
         }
 
-        if (isWall)
+        if (currentState == TigerState.Special)
             return;
         if (onGroundTimer > 0)
         {
-            if (currentState.Equals(TigerState.Down) || currentState.Equals(TigerState.Up))
+            if (currentState.Equals(TigerState.Floating))
             {
                 ChangeState(TigerState.Idle);
             }
@@ -232,31 +263,19 @@ public class TigerController : MonoBehaviour
 
         else
         {
-            if (rb2d.linearVelocity.y > 0.0f)
-            {
-                ChangeState(TigerState.Up);
-            }
-            else if (rb2d.linearVelocity.y <= 0.0f)
-            {
-                ChangeState(TigerState.Down);
-            }
+            ChangeState(TigerState.Floating);
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Wall") && onGroundTimer <= 0)
+        if (currentState == TigerState.Floating)
         {
-            isWall = true;
-            ChangeState(TigerState.Special);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Wall") && onGroundTimer <= 0)
-        {
-            isWall = false;
+            if (rb2d.linearVelocityY > 0)
+            {
+                animator.SetInteger("ySpeed", 1);
+            }
+            if (rb2d.linearVelocityY < 0)
+            {
+                animator.SetInteger("ySpeed", -1);
+            }
         }
     }
 

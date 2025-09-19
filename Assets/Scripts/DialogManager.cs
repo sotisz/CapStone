@@ -16,10 +16,12 @@ public class DialogManager : MonoBehaviour
     {
         public string speaking;
         public string left_name;
-        public string left_avatar_url;
+        public string left_avatar_emotional;
         public string right_name;
-        public string right_avatar_url;
+        public string right_avatar_emotional;
         public string text;
+        public string left_avatar_url;
+        public string right_avatar_url;
     }
 
     public TMP_Text dialogText;
@@ -32,6 +34,29 @@ public class DialogManager : MonoBehaviour
 
     public List<DialogEntry> dialogList;
     private int index = 0;
+
+    private static readonly Dictionary<string, Dictionary<string, string>> AvatarPathMap =
+        new Dictionary<string, Dictionary<string, string>> {
+            { "웅", new Dictionary<string,string> {
+                {"default","image/bear_default"},
+                {"happy","image/bear_happy"},
+                {"sad","image/bear_sad"},
+                {"angry","image/bear_angry"},
+                {"hungry","image/bear_hungry"},
+                {"disappoint","image/bear_disappoint"}
+            }},
+            { "범", new Dictionary<string,string> {
+                {"default","image/tiger_default"},
+                {"happy","image/tiger_happy"},
+                {"sad","image/tiger_sad"},
+                {"angry","image/tiger_angry"},
+                {"hungry","image/tiger_hungry"},
+                {"confident","image/tiger_confident"}
+            }},
+            { "환웅", new Dictionary<string,string> {
+                {"default","image/plant"}
+            }}
+        };
 
     private void Awake()
     {
@@ -65,6 +90,18 @@ public class DialogManager : MonoBehaviour
         return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
     }
 
+    private string GetAvatarPath(string characterName, string emotion)
+    {
+        if (string.IsNullOrEmpty(characterName)) return null;
+        if (!AvatarPathMap.TryGetValue(characterName, out var emotions)) return null;
+
+        // 감정값이 없으면 default 사용
+        if (string.IsNullOrEmpty(emotion) || !emotions.TryGetValue(emotion, out var path))
+            emotions.TryGetValue("default", out path);
+
+        return path;
+    }
+
     public void ShowDialog()
     {
         var dialog = dialogList[index];
@@ -72,9 +109,12 @@ public class DialogManager : MonoBehaviour
         leftNameText.text = dialog.left_name;
         rightNameText.text = dialog.right_name;
 
+        dialog.left_avatar_url  = GetAvatarPath(dialog.left_name,  dialog.left_avatar_emotional);
+        dialog.right_avatar_url = GetAvatarPath(dialog.right_name, dialog.right_avatar_emotional);
 
         Sprite leftSprite = LoadSpriteFromResources(dialog.left_avatar_url);
         Sprite rightSprite = LoadSpriteFromResources(dialog.right_avatar_url);
+
         if (leftSprite != null)
         {
             leftNameBox.enabled = true;
@@ -92,6 +132,9 @@ public class DialogManager : MonoBehaviour
             rightNameBox.enabled = true;
             rightAvatar.enabled = true;
             rightAvatar.sprite = rightSprite;
+            Vector3 scale = rightAvatar.rectTransform.localScale;
+            scale.x = Mathf.Abs(scale.x) * -1f;
+            rightAvatar.rectTransform.localScale = scale;
         }
         else
         {
@@ -101,19 +144,25 @@ public class DialogManager : MonoBehaviour
 
         if (leftSprite != null && rightSprite != null)
         {
-            if (dialogList[index].speaking.Equals("left"))
+            if (dialog.speaking.Equals("left"))
             {
-                Color color = rightAvatar.color;
-                color.a = 0.5f;
-                rightAvatar.color = color;
+                Color color1 = leftAvatar.color;
+                Color color2 = rightAvatar.color;
+                color1.a = 1f;
+                color2.a = 0.5f;
+                leftAvatar.color = color1;
+                rightAvatar.color = color2;
             }
-            else if (dialogList[index].speaking.Equals("right"))
+            else if (dialog.speaking.Equals("right"))
             {
-                Color color = leftAvatar.color;
-                color.a = 0.5f;
-                leftAvatar.color = color;
+                Color color1 = leftAvatar.color;
+                Color color2 = rightAvatar.color;
+                color1.a = 0.5f;
+                color2.a = 1f;
+                leftAvatar.color = color1;
+                rightAvatar.color = color2;
             }
-            else if (dialogList[index].speaking.Equals("both"))
+            else if (dialog.speaking.Equals("both"))
             {
                 Color color = leftAvatar.color;
                 color.a = 1f;
