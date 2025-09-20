@@ -292,7 +292,6 @@ public class TigerController : MonoBehaviour
 
     private IEnumerator Cooldown()
     {
-        Debug.Log("확인");
         checkWall = false;
         yield return new WaitForSeconds(0.3f);
         checkWall = true;

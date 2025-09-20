@@ -36,26 +36,36 @@ public class DialogManager : MonoBehaviour
     private int index = 0;
 
     private static readonly Dictionary<string, Dictionary<string, string>> AvatarPathMap =
-        new Dictionary<string, Dictionary<string, string>> {
-            { "웅", new Dictionary<string,string> {
-                {"default","image/bear_default"},
-                {"happy","image/bear_happy"},
-                {"sad","image/bear_sad"},
-                {"angry","image/bear_angry"},
-                {"hungry","image/bear_hungry"},
-                {"disappoint","image/bear_disappoint"}
-            }},
-            { "범", new Dictionary<string,string> {
-                {"default","image/tiger_default"},
-                {"happy","image/tiger_happy"},
-                {"sad","image/tiger_sad"},
-                {"angry","image/tiger_angry"},
-                {"hungry","image/tiger_hungry"},
-                {"confident","image/tiger_confident"}
-            }},
-            { "환웅", new Dictionary<string,string> {
-                {"default","image/plant"}
-            }}
+        new Dictionary<string, Dictionary<string, string>>
+        {
+            {
+                "웅", new Dictionary<string, string>
+                {
+                    { "default", "image/bear_default" },
+                    { "happy", "image/bear_happy" },
+                    { "sad", "image/bear_sad" },
+                    { "angry", "image/bear_angry" },
+                    { "hungry", "image/bear_hungry" },
+                    { "disappoint", "image/bear_disappointed" }
+                }
+            },
+            {
+                "범", new Dictionary<string, string>
+                {
+                    { "default", "image/tiger_default" },
+                    { "happy", "image/tiger_happy" },
+                    { "sad", "image/tiger_sad" },
+                    { "angry", "image/tiger_angry" },
+                    { "hungry", "image/tiger_hungry" },
+                    { "confident", "image/tiger_confident" }
+                }
+            },
+            {
+                "환웅", new Dictionary<string, string>
+                {
+                    { "default", "image/plant" }
+                }
+            }
         };
 
     private void Awake()
@@ -109,7 +119,7 @@ public class DialogManager : MonoBehaviour
         leftNameText.text = dialog.left_name;
         rightNameText.text = dialog.right_name;
 
-        dialog.left_avatar_url  = GetAvatarPath(dialog.left_name,  dialog.left_avatar_emotional);
+        dialog.left_avatar_url = GetAvatarPath(dialog.left_name, dialog.left_avatar_emotional);
         dialog.right_avatar_url = GetAvatarPath(dialog.right_name, dialog.right_avatar_emotional);
 
         Sprite leftSprite = LoadSpriteFromResources(dialog.left_avatar_url);
@@ -152,6 +162,8 @@ public class DialogManager : MonoBehaviour
                 color2.a = 0.5f;
                 leftAvatar.color = color1;
                 rightAvatar.color = color2;
+                leftNameBox.gameObject.SetActive(true);
+                rightNameBox.gameObject.SetActive(false);
             }
             else if (dialog.speaking.Equals("right"))
             {
@@ -161,6 +173,8 @@ public class DialogManager : MonoBehaviour
                 color2.a = 1f;
                 leftAvatar.color = color1;
                 rightAvatar.color = color2;
+                leftNameBox.gameObject.SetActive(false);
+                rightNameBox.gameObject.SetActive(true);
             }
             else if (dialog.speaking.Equals("both"))
             {
@@ -168,6 +182,8 @@ public class DialogManager : MonoBehaviour
                 color.a = 1f;
                 leftAvatar.color = color;
                 rightAvatar.color = color;
+                leftNameBox.gameObject.SetActive(true);
+                rightNameBox.gameObject.SetActive(true);
             }
         }
 
