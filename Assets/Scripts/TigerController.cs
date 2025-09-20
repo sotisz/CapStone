@@ -69,6 +69,7 @@ public class TigerController : MonoBehaviour
                 animator.SetBool("Special", false);
                 animator.speed = 1;
                 walljump = false;
+                StartCoroutine(Cooldown());
                 break;
         }
 
@@ -175,9 +176,7 @@ public class TigerController : MonoBehaviour
                 rb2d.linearVelocityY = jumpForce;
                 rb2d.linearVelocityX = jumpForce * -wallDir;
                 jumpCount = false;
-                checkWall = false;
-                StartCoroutine(Cooldown());
-                checkWall = true;
+                
             }
 
             ChangeState(TigerState.Floating);
@@ -293,7 +292,10 @@ public class TigerController : MonoBehaviour
 
     private IEnumerator Cooldown()
     {
-        yield return new WaitForSeconds(0.1f);
+        Debug.Log("확인");
+        checkWall = false;
+        yield return new WaitForSeconds(0.3f);
+        checkWall = true;
     }
 
     protected void Dead()
