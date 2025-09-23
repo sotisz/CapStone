@@ -35,6 +35,8 @@ public class BearController : MonoBehaviour
     private bool onGround;
     private bool wasGround;
 
+    private float lookdir = 1f;
+
     Animator animator;
 
     protected void Start()
@@ -96,6 +98,8 @@ public class BearController : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position - new Vector3(0, 1, 0), groundSize);
+        Gizmos.DrawWireCube(transform.position + new Vector3(1f * lookdir, 0, 0), new Vector3(1f, 1.8f, 0));
+
     }
 
     // Update is called once per frame
@@ -112,10 +116,12 @@ public class BearController : MonoBehaviour
         if (axisH > 0.0f)
         {
             transform.localScale = new Vector2(1, 1);
+            lookdir = 1f;
         }
         else if (axisH < 0.0f)
         {
             transform.localScale = new Vector2(-1, 1);
+            lookdir = -1f;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0)
@@ -186,10 +192,15 @@ public class BearController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 ChangeState(BearState.Special);
+                if (Physics2D.OverlapBox(transform.position + new Vector3(1f * lookdir, 0, 0), new Vector3(1f, 1.8f, 0), 0f,
+                        groundLayer))
+                {
+                    Debug.Log("펀치");
+                }
             }
         }
-
         else
+
         {
             if (rb2d.linearVelocity.y > 0.0f)
             {

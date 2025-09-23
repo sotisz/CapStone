@@ -3,24 +3,24 @@
     "speaking": "right",
     "left_name": "웅",
     "left_avatar_emotional": "disappointed",
-    "right_name": "환웅",
-    "right_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
     "text": "123가나다!@#"
   },
   {
     "speaking": "left",
     "left_name": "웅",
     "left_avatar_emotional": "default",
-    "right_name": "환웅",
-    "right_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
     "text": "123가나다!@#"
   },
   {
     "speaking": "both",
     "left_name": "웅",
-    "left_avatar_emotional": "happy",
-    "right_name": "환웅",
-    "right_avatar_emotional": "default",
+    "left_avatar_emotional": "hungry",
+    "right_name": "범",
+    "right_avatar_emotional": "hungry",
     "text": "123가나다!@#"
   }
 ]

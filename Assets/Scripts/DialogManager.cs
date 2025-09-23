@@ -105,7 +105,6 @@ public class DialogManager : MonoBehaviour
         if (string.IsNullOrEmpty(characterName)) return null;
         if (!AvatarPathMap.TryGetValue(characterName, out var emotions)) return null;
 
-        // 감정값이 없으면 default 사용
         if (string.IsNullOrEmpty(emotion) || !emotions.TryGetValue(emotion, out var path))
             emotions.TryGetValue("default", out path);
 
