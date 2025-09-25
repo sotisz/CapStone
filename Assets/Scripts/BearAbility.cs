@@ -11,6 +11,17 @@ public class BearAbility : MonoBehaviour
 
     public void Punch()
     {
-        anim.SetBool("Special", true);
+        Debug.Log("펀치 애니메이션");
+        anim.SetBool("Punch", true);
+    }
+
+    public void Smell()
+    {
+        
+    }
+
+    public void Push()
+    {
+        
     }
 }

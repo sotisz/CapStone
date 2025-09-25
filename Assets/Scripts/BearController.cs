@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -34,7 +35,8 @@ public class BearController : MonoBehaviour
 
     private bool onGround;
     private bool wasGround;
-
+    private bool canPunch = true;
+    
     private float lookdir = 1f;
 
     Animator animator;
@@ -62,7 +64,9 @@ public class BearController : MonoBehaviour
                 animator.SetInteger("ySpeed", 0);
                 break;
             case BearState.Special:
-                animator.SetBool("Special", false);
+                animator.SetBool("Punch", false);
+                animator.SetBool("Smell", false);
+                animator.SetBool("Push", false);
                 break;
         }
 
@@ -81,6 +85,7 @@ public class BearController : MonoBehaviour
                 animator.SetInteger("ySpeed", -1);
                 break;
             case BearState.Special:
+                Debug.Log("스페셜");
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
                 break;
@@ -124,7 +129,7 @@ public class BearController : MonoBehaviour
             lookdir = -1f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && onGroundTimer > 0 && jumpCount > 0 && canPunch)
         {
             rb2d.linearVelocityY = jumpForce;
             jumpCount -= 1;
@@ -138,6 +143,13 @@ public class BearController : MonoBehaviour
             tagPlayer.transform.localScale = transform.localScale;
             tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity; //속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.F) && canPunch && onGround)
+        {
+            Debug.Log("펀치");
+            ChangeState(BearState.Special);
+            StartCoroutine(Cooldown());
         }
     }
 
@@ -188,16 +200,6 @@ public class BearController : MonoBehaviour
                     ChangeState(BearState.Idle);
                 }
             }
-
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                ChangeState(BearState.Special);
-                if (Physics2D.OverlapBox(transform.position + new Vector3(1f * lookdir, 0, 0), new Vector3(1f, 1.8f, 0), 0f,
-                        groundLayer))
-                {
-                    Debug.Log("펀치");
-                }
-            }
         }
         else
 
@@ -213,6 +215,22 @@ public class BearController : MonoBehaviour
         }
     }
 
+    private IEnumerator Cooldown()
+    {
+        canPunch = false;
+        Collider2D hit = Physics2D.OverlapBox(transform.position + new Vector3(1f * lookdir, 0, 0),
+            new Vector3(1f, 1.8f, 0), 0f,
+            groundLayer);
+        if (hit != null)
+        {
+            if (hit.CompareTag("Breakable"))
+            {
+                hit.GetComponent<BreakSystem>().Break();
+            }
+    }
+        yield return new WaitForSeconds(0.5f);
+        canPunch = true;
+    }
     protected void Dead()
     {
         ChangeState(BearState.Dead);
