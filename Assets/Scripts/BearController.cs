@@ -36,7 +36,7 @@ public class BearController : MonoBehaviour
     private bool onGround;
     private bool wasGround;
     private bool canPunch = true;
-    
+
     private float lookdir = 1f;
 
     Animator animator;
@@ -85,7 +85,6 @@ public class BearController : MonoBehaviour
                 animator.SetInteger("ySpeed", -1);
                 break;
             case BearState.Special:
-                Debug.Log("스페셜");
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
                 break;
@@ -104,7 +103,6 @@ public class BearController : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position - new Vector3(0, 1, 0), groundSize);
         Gizmos.DrawWireCube(transform.position + new Vector3(1f * lookdir, 0, 0), new Vector3(1f, 1.8f, 0));
-
     }
 
     // Update is called once per frame
@@ -144,12 +142,31 @@ public class BearController : MonoBehaviour
             tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity; //속도 공유(캐릭터가 움직이고 있을때 태그시)
             gameObject.SetActive(false);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.F) && canPunch && onGround)
         {
-            Debug.Log("펀치");
             ChangeState(BearState.Special);
             StartCoroutine(Cooldown());
+        }
+
+        var raySize = c2d.bounds.size;
+        raySize.y -= 0.1f;
+        if (!Mathf.Approximately(axisH, 0.0f))
+        {
+            if (Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0f,
+                    1 << LayerMask.NameToLayer("Block")))
+            {
+                animator.SetBool("Push", true);
+            }
+
+            else
+            {
+                animator.SetBool("Push", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("Push", false);
         }
     }
 
@@ -227,10 +244,12 @@ public class BearController : MonoBehaviour
             {
                 hit.GetComponent<BreakSystem>().Break();
             }
-    }
+        }
+
         yield return new WaitForSeconds(0.5f);
         canPunch = true;
     }
+
     protected void Dead()
     {
         ChangeState(BearState.Dead);
