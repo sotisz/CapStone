@@ -44,6 +44,7 @@ public class BreakSystem : MonoBehaviour
             );
 
             GameObject piece = new GameObject("Piece_" + i);
+            piece.layer = LayerMask.NameToLayer("Broken");
             piece.transform.position = transform.position;
             var sr = piece.AddComponent<SpriteRenderer>();
             sr.sprite = pieceSprite;
