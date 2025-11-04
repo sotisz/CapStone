@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
@@ -73,7 +74,7 @@ public class DialogManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -193,6 +194,12 @@ public class DialogManager : MonoBehaviour
     {
         canvas.SetActive(false);
         dialogList.Clear();
+        StartCoroutine(FinishDialog());
+    }
+
+    IEnumerator FinishDialog()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
         GameManager.gameState = "playing";
     }
 

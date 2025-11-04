@@ -169,7 +169,7 @@ public class BearController : MonoBehaviour
         Gizmos.DrawWireCube(transform.position + new Vector3(1f * lookdir, 0, 0), new Vector3(1f, 1.8f, 0));
     }
 
-    private void Update()
+    public void Update()
     {
         if (GameManager.gameState != "playing")
         {

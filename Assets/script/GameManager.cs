@@ -5,7 +5,6 @@ public class GameManager : MonoBehaviour
 {
     public static string gameState = "playing";
     public static int currentLevel = 0;
-
     private void Update()
     {
         if (gameState == "playing")

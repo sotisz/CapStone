@@ -5,84 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25870266-966c-43dd-bc7c-23c9bbb9a51d" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearAnimatorController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearDown.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearDown.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearPunch.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearPunch.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearPush.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearPush.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearStop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearStop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearUp.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearUp.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearWalk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/BearWalk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Jump.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Jump.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Punch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Punch.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Walk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/Bear_Walk.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Bear_Move/웅_밀기8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/PlayerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Player/PlayerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/Player(Tiger).controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Charater/Tiger/Player(Tiger).controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/TigerClimbDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Charater/Tiger/TigerClimbDown.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/TigerClimbUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Charater/Tiger/TigerClimbUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/climb/climb6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/jump/jump3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/jump/jump6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Charater/Tiger/jump/jump8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Animations.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Animations.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Cave Biome - 2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Cave Biome - 2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Cave Biome.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Cave Biome.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Mushroom Biome.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreviewScene - Mushroom Biome.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapStone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Charater/Bear/BearDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Charater/Bear/BearDown.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Charater/Bear/BearPunch.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Charater/Bear/BearPunch.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BearAbility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BearController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BearController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TigerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TagBar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TagBar/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TagBar/TagBarEmpty.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TagBar/TagBarEmpty.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/BearController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/BearController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/DialogManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/TigerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/TigerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LJH" />
+        <entry key="$PROJECT_DIR$" value="진상현" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,15 +51,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BearAbility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BearController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ljh/OneDrive/문서/GitHub/CapStone/Assets/Scripts/BearController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingBlock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tagbar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TigerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ljh/OneDrive/문서/GitHub/CapStone/Assets/Settings/Renderer2D.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/prefabs/GuidingLight.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script/BearController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script/TigerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@91e7def251e0/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -137,22 +68,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.51f1\Editor\Unity.exe" />
@@ -258,6 +189,7 @@
       <workItem from="1761290882519" duration="4902000" />
       <workItem from="1761627235068" duration="5025000" />
       <workItem from="1761894624860" duration="5113000" />
+      <workItem from="1762230638564" duration="2684000" />
     </task>
     <task id="LOCAL-00001" summary="20250502&#10;태그 설정 및 버그 수정">
       <option name="closed" value="true" />
