@@ -7,13 +7,20 @@ public class SceneMove : MonoBehaviour
 {
     public void MoveToGameScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void RestartCurrentScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 
     public void MoveToIntroScene()
     {
         SceneManager.LoadScene("Intro");
     }
+
     public void OnExitButton()
     {
 #if UNITY_EDITOR

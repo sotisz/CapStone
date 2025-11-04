@@ -1,34 +1,51 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+
 public class MoveCamera : MonoBehaviour
 {
-    public GameObject Bear;
-    public GameObject Tiger;
-    public Transform target;
-    public Transform target2;
+    public Transform Bear;
+    public Transform Tiger;
     public float speed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Vector2 center;
+    public Vector2 size;
+    float height;
+    float width;
+    
+
     void Start()
     {
-        
+        height = Camera.main.orthographicSize;
+        width = height * Screen.width / Screen.height;
     }
-    
-    // Update is called once per frame
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(center, size);
+    }
+
     void LateUpdate()
     {
-        if(Bear != null && Bear.activeInHierarchy)
+        Transform target = null;
+
+        if (Bear != null && Bear.gameObject.activeInHierarchy)
+        {
+            target = Bear;
+        }else if (Tiger != null && Tiger.gameObject.activeInHierarchy)
+        {
+            target = Tiger;
+        }
+        if (target != null)
         {
             transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
-            transform.position = new Vector3(target.position.x, transform.position.y, -10f);
+
+            float lx = size.x * 0.5f - width;
+            float clampX = Mathf.Clamp(transform.position.x, -lx + center.x, center.x + lx);
+
+            float ly = size.y * 0.5f - height;
+            float clampY = Mathf.Clamp(transform.position.y, -ly + center.y, center.y + ly);
+
+            transform.position = new Vector3(clampX, clampY, -10f);
         }
-        else if(Tiger != null && Tiger.activeInHierarchy)
-        {
-            transform.position = Vector3.Lerp(transform.position, target2.position, Time.deltaTime * speed);
-            transform.position = new Vector3(target2.position.x, transform.position.y, -10f);
-        }
-
-
-
     }
 }

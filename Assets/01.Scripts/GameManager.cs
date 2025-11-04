@@ -7,21 +7,20 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public string gameState = "playing";
 
-    public CanvasGroup canvasGroup; // ÆĞ³Î¿¡ ºÙÀÎ CanvasGroup ¿¬°á
-    public float fadeDuration = 1f; // ÆäÀÌµå¿¡ °É¸®´Â ½Ã°£(ÃÊ)
-
+    public CanvasGroup canvasGroup;// íŒ¨ë„ì— ë¶™ì¸ CanvasGroup ì—°ê²°
+    public float fadeDuration = 1f;  // í˜ì´ë“œì— ê±¸ë¦¬ëŠ” ì‹œê°„(ì´ˆ)
 
     private void Awake()
     {
-        // ÀÎ½ºÅÏ½º°¡ ºñ¾îÀÖ´Ù¸é ÇÒ´çÇØÁÖ°í, 
-        //ÇØ´ç ¿ÀºêÁ§Æ®¸¦ ¾À ÀÌµ¿°£ ÆÄ±«ÇÏÁö ¾Ê°ÔÇÕ´Ï´Ù.
+        // ì¸ìŠ¤í„´ìŠ¤ê°€ ë¹„ì–´ìˆë‹¤ë©´ í• ë‹¹í•´ì£¼ê³ , 
+        //í•´ë‹¹ ì˜¤ë¸Œì íŠ¸ë¥¼ ì”¬ ì´ë™ê°„ íŒŒê´´í•˜ì§€ ì•Šê²Œí•©ë‹ˆë‹¤.
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        // ÀÎ½ºÅÏ½º°¡ ÀÌ¹Ì ÇÒ´çµÅÀÖ´Ù¸é(2°³ ÀÌ»óÀÌ¶ó¸é) ÆÄ±«ÇÕ´Ï´Ù.
+        // ì¸ìŠ¤í„´ìŠ¤ê°€ ì´ë¯¸ í• ë‹¹ë¼ìˆë‹¤ë©´(2ê°œ ì´ìƒì´ë¼ë©´) íŒŒê´´í•©ë‹ˆë‹¤.
         else
         {
             Destroy(gameObject);
@@ -37,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Time.timeScale = 1f;
         canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
         FadeOut();
     }
