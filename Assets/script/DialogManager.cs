@@ -199,7 +199,7 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator FinishDialog()
     {
-        yield return new WaitForSecondsRealtime(0.1f);
+        yield return new WaitForSecondsRealtime(0.3f);
         GameManager.gameState = "playing";
     }
 
