@@ -74,18 +74,18 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1446733019
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4072598593252468119, guid: 1879f8dc70f18e94591bb08b8b082683, type: 3}
+  m_Sprite: {fileID: 3533201652538884530, guid: fb16eae1b231b1e459c15ebcab7c0c21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.32, y: 1.5}
+  m_Size: {x: 3.22, y: 1.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1822456451693627729
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 2197919314344186426}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 36cb3bfc4426200458fbe6a3b3b378ff, type: 2}
+  m_Controller: {fileID: 9100000, guid: 96f449b9eb6259f47bcb583554ba7871, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7854830404963856706
 Transform:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3175932534431430076}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -292,7 +292,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: f345a37752e792b44a63f75a16eeca5c, type: 2}
+  m_Material: {fileID: 6200000, guid: 72c22461331372d4bad29dc8cb9badbc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -319,9 +319,10 @@ MonoBehaviour:
   climbSpeed: 4
   jumpForce: 8
   tagPlayer: {fileID: 0}
+  tagbar: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   groundSize: {x: 1.65, y: 0.2}
   groundOffset: {x: 0.01, y: -0.73}
   currentState: 0

@@ -14,7 +14,6 @@ public enum TigerState
 
 public class TigerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public float speed = 6.0f;
     public float climbSpeed = 4.0f;
@@ -35,7 +34,6 @@ public class TigerController : MonoBehaviour
     
 
     private bool onGround;
-    private bool wasGround;
     private int wallDir;
     private bool jumpCount = false;
     private bool walljump = false;
@@ -188,7 +186,7 @@ public class TigerController : MonoBehaviour
             tagPlayer.SetActive(true);
             tagPlayer.transform.position = transform.position + new Vector3(0, 0.31f, 0);
             tagPlayer.transform.localScale = transform.localScale;
-            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity; //속도 공유(캐릭터가 움직이고 있을때 태그시)
+            tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;
             gameObject.SetActive(false);
         }
     }
@@ -215,7 +213,6 @@ public class TigerController : MonoBehaviour
             onGroundTimer -= Time.deltaTime;
         }
 
-        wasGround = onGround;
         if (currentState != TigerState.Special)
         {
             var veloTarget = axisH * speed;

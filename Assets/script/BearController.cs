@@ -45,13 +45,11 @@ public class BearController : MonoBehaviour
 
     Animator animator;
 
-    // A* 경로 탐색 관련 변수
     private Pathfinder pathfinder;
     private bool isShowingPath = false;
     private List<WaypointNode> activePath = new List<WaypointNode>();
     private WaypointNode[] allNodesInScene;
     
-    // [수정] Awake: '자기 자신'의 컴포넌트를 가져옵니다.
     protected void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -59,19 +57,15 @@ public class BearController : MonoBehaviour
         c2d = GetComponent<Collider2D>();
     }
 
-    // [수정] Start: '다른' 오브젝트(Pathfinder, Nodes)를 찾습니다.
     protected void Start()
     {
         GameManager.gameState = "playing";
         
-        // Start에서 찾는 것이 OnEnable에서 찾는 것보다 안전합니다.
         FindPathfinderAndNodes();
     }
     
-    // [신규] Pathfinder와 노드를 찾는 함수
     private void FindPathfinderAndNodes()
     {
-        // 씬에서 Pathfinder를 찾습니다.
         if (pathfinder == null) 
         {
             pathfinder = FindObjectOfType<Pathfinder>();
@@ -81,26 +75,20 @@ public class BearController : MonoBehaviour
             Debug.LogError("Pathfinder를 씬에서 찾을 수 없습니다!");
         }
         
-        // 씬의 모든 노드를 찾습니다.
         if (allNodesInScene == null || allNodesInScene.Length == 0)
         {
             allNodesInScene = FindObjectsOfType<WaypointNode>();
         }
     }
 
-    // [수정] OnEnable: 태그 시 플래그 리셋만 담당합니다.
     private void OnEnable()
     {
-        // 활성화될 때는 플래그만 리셋합니다.
         isShowingPath = false; 
     }
 
-    // [수정] OnDisable: 태그 시 이펙트/플래그 정리
     private void OnDisable()
     {
-        Debug.Log("BearController가 비활성화(OnDisable)됩니다. 경로 이펙트를 강제 종료합니다.");
 
-        // 코루틴이 중지되므로, 켜져 있던 이펙트를 수동으로 끕니다.
         if (activePath != null)
         {
             foreach (WaypointNode node in activePath)
@@ -109,7 +97,6 @@ public class BearController : MonoBehaviour
             }
             activePath.Clear(); 
         }
-        // 플래그를 리셋합니다.
         isShowingPath = false;
     }
 
@@ -212,7 +199,6 @@ public class BearController : MonoBehaviour
             StartCoroutine(Cooldown());
         }
 
-        // S키 로직 (중복 실행 방지)
         if (Input.GetKeyDown(KeyCode.S) && onGround)
         {
             if (!isShowingPath)
@@ -322,47 +308,40 @@ public class BearController : MonoBehaviour
         canPunch = true;
     }
 
-    // [수정] ShowNode() 코루틴에 안전장치 추가
     private IEnumerator ShowNode()
     {
-        // 0. [안전장치] Start에서 pathfinder를 못 찾았을 경우, 여기서 한 번 더 시도합니다.
         if (pathfinder == null)
         {
             Debug.LogWarning("Pathfinder가 null입니다. S키를 눌렀을 때 다시 검색합니다...");
-            FindPathfinderAndNodes(); // 다시 찾아본다.
+            FindPathfinderAndNodes();
             
-            // 그래도 null이면 코루틴을 종료합니다.
             if (pathfinder == null) 
             {
                 Debug.LogError("Pathfinder를 여전히 찾을 수 없습니다! ShowNode를 중단합니다.");
-                yield break; // 코루틴 즉시 종료
+                yield break;
             }
         }
 
-        // 0. Target 유효성 검사
         if (pathfindingTarget == null)
         {
             Debug.LogWarning("pathfindingTarget이 설정되지 않았습니다! Bear의 인스펙터에서 Target을 지정해주세요.");
-            yield break; // 코루틴 즉시 종료
+            yield break;
         }
 
-        isShowingPath = true; // 유효성 검사 통과 후 플래그 설정
+        isShowingPath = true;
         Debug.Log("S키 눌렀음: A* 경로 탐색 및 표시 시작");
 
-        // 1. A* 경로 계산
         WaypointNode startNode = pathfinder.FindClosestWaypoint(transform.position);
         WaypointNode targetNode = pathfinder.FindClosestWaypoint(pathfindingTarget.position);
         
-        activePath.Clear(); // 이전 경로가 남아있을 수 있으니 비웁니다.
+        activePath.Clear();
         activePath = pathfinder.FindPath(startNode, targetNode);
 
-        // 2. 경로가 있다면 이펙트 켜기
         if (activePath != null && activePath.Count > 0)
         {
             for (int i = 0; i < activePath.Count; i++)
             {
                 WaypointNode node = activePath[i];
-                // '다음' 노드를 찾습니다. (경로의 마지막 노드는 nextNode가 null이 됨)
                 WaypointNode nextNode = (i < activePath.Count - 1) ? activePath[i + 1] : null;
                 if(node != null) node.ShowEffect(nextNode);
             }
@@ -372,12 +351,10 @@ public class BearController : MonoBehaviour
             Debug.Log("경로를 찾을 수 없습니다.");
         }
 
-        // 3. 15초간 대기
         yield return new WaitForSeconds(7f);
 
         Debug.Log("7초 경과: A* 경로 표시 종료");
 
-        // 4. 켰던 이펙트 끄기
         if (activePath != null)
         {
             foreach (WaypointNode node in activePath)
@@ -387,7 +364,7 @@ public class BearController : MonoBehaviour
             activePath.Clear();
         }
 
-        isShowingPath = false; // 플래그 해제
+        isShowingPath = false;
     }
 
     protected void Dead()
