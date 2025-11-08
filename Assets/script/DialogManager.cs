@@ -88,7 +88,7 @@ public class DialogManager : MonoBehaviour
     public void DialogStart(string dialogPath)
     {
         index = 0;
-        GameManager.gameState = "paused";
+        GameManager.Instance.gameState = "paused";
         canvas.SetActive(true);
         LoadDialog(dialogPath);
         ShowDialog();
@@ -200,7 +200,7 @@ public class DialogManager : MonoBehaviour
     IEnumerator FinishDialog()
     {
         yield return new WaitForSecondsRealtime(0.3f);
-        GameManager.gameState = "playing";
+        GameManager.Instance.gameState = "playing";
     }
 
     void LoadDialog(string dialogPath)

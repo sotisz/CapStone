@@ -7,11 +7,6 @@ public class SceneMove : MonoBehaviour
 {
     public void MoveToGameScene()
     {
-<<<<<<<< HEAD:Assets/script/SceneMove.cs
-        SceneManager.LoadScene("SampleScene");
-    }
-
-========
         SceneManager.LoadScene("Level1");
     }
 
@@ -26,7 +21,6 @@ public class SceneMove : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
->>>>>>>> 진상현:Assets/01.Scripts/SceneMove.cs
     public void OnExitButton()
     {
 #if UNITY_EDITOR
@@ -35,5 +29,4 @@ public class SceneMove : MonoBehaviour
         Application.Quit();
 #endif
     }
-
 }

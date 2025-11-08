@@ -115,7 +115,7 @@ public class TigerController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (GameManager.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing")
         {
             return;
         }
@@ -193,7 +193,7 @@ public class TigerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing")
             return;
 
         onGround = false;

@@ -59,7 +59,7 @@ public class BearController : MonoBehaviour
 
     protected void Start()
     {
-        GameManager.gameState = "playing";
+        GameManager.Instance.gameState = "playing";
         
         FindPathfinderAndNodes();
     }
@@ -158,7 +158,7 @@ public class BearController : MonoBehaviour
 
     public void Update()
     {
-        if (GameManager.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing")
         {
             return;
         }
@@ -230,7 +230,7 @@ public class BearController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing")
             return;
         onGround = false;
         if (Physics2D.OverlapBox(transform.position - new Vector3(0, 1, 0), groundSize, 0f, groundLayer))

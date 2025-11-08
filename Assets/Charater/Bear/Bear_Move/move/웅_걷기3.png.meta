@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기3.png.meta
-guid: 3b9499e0fd5efe745af661ae5af02557
+guid: 67c6728b99571aa4aa2ef59fe9358063
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4125620375325955239
-    second: "\uC6C5_\uAC77\uAE303_0"
-========
-guid: 015ea01654616fd489a95b728074c3e5
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -8397708857385434039
-    second: Tag_0
->>>>>>>> 진상현:Assets/image/Tag.png.meta
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -75,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -120,44 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기3.png.meta
-      name: "\uC6C5_\uAC77\uAE303_0"
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 47
-        width: 156
-        height: 208
-========
-      name: Tag_0
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 108
-        width: 1447
-        height: 830
->>>>>>>> 진상현:Assets/image/Tag.png.meta
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기3.png.meta
-      spriteID: 95b259a802adeb6c0800000000000000
-      internalID: -4125620375325955239
-========
-      spriteID: 944c3648948557b80800000000000000
-      internalID: -8397708857385434039
->>>>>>>> 진상현:Assets/image/Tag.png.meta
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
@@ -171,12 +122,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기3.png.meta
-      "\uC6C5_\uAC77\uAE303_0": -4125620375325955239
-========
-      Tag_0: -8397708857385434039
->>>>>>>> 진상현:Assets/image/Tag.png.meta
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
