@@ -1,10 +1,19 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기1.png.meta
 guid: 0f4b2c3cf6e7da543a253eaa8845c5e5
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8121648295762990164
     second: "\uC6C5_\uAC77\uAE301_0"
+========
+guid: ab9c7511d27a0f04994496245577d2aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7918418355632838023
+    second: BearPush_0
+>>>>>>>> 진상현:Assets/image/BearPush.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,6 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기1.png.meta
       name: "\uC6C5_\uAC77\uAE301_0"
       rect:
         serializedVersion: 2
@@ -120,6 +130,15 @@ TextureImporter:
         y: 47
         width: 156
         height: 208
+========
+      name: BearPush_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 92
+        width: 1357
+        height: 836
+>>>>>>>> 진상현:Assets/image/BearPush.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +147,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기1.png.meta
       spriteID: 4541c9b3814e5b070800000000000000
       internalID: 8121648295762990164
+========
+      spriteID: 7859d667a8fd3ed60800000000000000
+      internalID: 7918418355632838023
+>>>>>>>> 진상현:Assets/image/BearPush.png.meta
       vertices: []
       indices: 
       edges: []
@@ -148,7 +172,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Charater/Bear/Bear_Move/move/웅_걷기1.png.meta
       "\uC6C5_\uAC77\uAE301_0": 8121648295762990164
+========
+      BearPush_0: 7918418355632838023
+>>>>>>>> 진상현:Assets/image/BearPush.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
