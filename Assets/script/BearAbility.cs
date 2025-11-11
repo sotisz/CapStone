@@ -13,9 +13,4 @@ public class BearAbility : MonoBehaviour
     {
         anim.SetBool("Punch", true);
     }
-
-    public void Smell()
-    {
-        
-    }
 }

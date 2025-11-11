@@ -5,27 +5,22 @@ public class MoveCamera : MonoBehaviour
 {
     public GameObject Bear;
     public GameObject Tiger;
-    public Transform target;
-    public Transform target2;
-    public float speed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float speed = 3;
     
     // Update is called once per frame
     void LateUpdate()
     {
-        if(Bear != null && Bear.activeInHierarchy)
+        if(Bear && Bear.activeInHierarchy)
         {
-            transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
-            transform.position = new Vector3(target.position.x, transform.position.y, -10f);
+            Transform Bt = Bear.transform;
+            transform.position = Vector3.Lerp(transform.position, Bt.position, Time.deltaTime * speed);
+            transform.position = new Vector3(Bt.position.x, transform.position.y, -10f);
         }
-        else if(Tiger != null && Tiger.activeInHierarchy)
+        else if(Tiger && Tiger.activeInHierarchy)
         {
-            transform.position = Vector3.Lerp(transform.position, target2.position, Time.deltaTime * speed);
-            transform.position = new Vector3(target2.position.x, transform.position.y, -10f);
+            Transform Tt = Tiger.transform;
+            transform.position = Vector3.Lerp(transform.position, Tt.position, Time.deltaTime * speed);
+            transform.position = new Vector3(Tt.position.x, transform.position.y, -10f);
         }
 
 

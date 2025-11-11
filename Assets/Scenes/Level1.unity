@@ -831,11 +831,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 480824400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3044c2d35264bab49bd347456656d128, type: 3}
+  m_Script: {fileID: 11500000, guid: af39cc7495434955b443f3524970cba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: playing
-  canvasGroup: {fileID: 0}
+  canvasGroup: {fileID: 5459087596789510893}
   fadeDuration: 1
 --- !u!4 &480824402
 Transform:
@@ -22469,6 +22469,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
+--- !u!225 &5459087596789510893 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5548169327795562705, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
+  m_PrefabInstance: {fileID: 5459087596789510892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

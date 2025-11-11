@@ -11,6 +11,7 @@ public enum BearState
     Up,
     Down,
     Special,
+    Push,
     Dead
 }
 
@@ -23,12 +24,10 @@ public class BearController : MonoBehaviour
     public Tagbar tagbar;
 
 
-    [Header("Ground Settings")]
-    public LayerMask groundLayer;
+    [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
 
-    [Header("Pathfinding")]
-    [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
+    [Header("Pathfinding")] [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
     public Transform pathfindingTarget;
 
     Rigidbody2D rb2d;
@@ -42,6 +41,7 @@ public class BearController : MonoBehaviour
     private bool wasGround;
     private bool canPunch = true;
     private float lookdir = 1f;
+    private bool isPushing = false;
 
     Animator animator;
 
@@ -49,7 +49,7 @@ public class BearController : MonoBehaviour
     private bool isShowingPath = false;
     private List<WaypointNode> activePath = new List<WaypointNode>();
     private WaypointNode[] allNodesInScene;
-    
+
     protected void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -60,21 +60,22 @@ public class BearController : MonoBehaviour
     protected void Start()
     {
         GameManager.Instance.gameState = "playing";
-        
+
         FindPathfinderAndNodes();
     }
-    
+
     private void FindPathfinderAndNodes()
     {
-        if (pathfinder == null) 
+        if (pathfinder == null)
         {
             pathfinder = FindObjectOfType<Pathfinder>();
         }
+
         if (pathfinder == null)
         {
             Debug.LogError("Pathfinder를 씬에서 찾을 수 없습니다!");
         }
-        
+
         if (allNodesInScene == null || allNodesInScene.Length == 0)
         {
             allNodesInScene = FindObjectsOfType<WaypointNode>();
@@ -83,20 +84,21 @@ public class BearController : MonoBehaviour
 
     private void OnEnable()
     {
-        isShowingPath = false; 
+        isShowingPath = false;
     }
 
     private void OnDisable()
     {
-
         if (activePath != null)
         {
             foreach (WaypointNode node in activePath)
             {
                 if (node != null) node.HideEffect();
             }
-            activePath.Clear(); 
+
+            activePath.Clear();
         }
+
         isShowingPath = false;
     }
 
@@ -116,7 +118,9 @@ public class BearController : MonoBehaviour
                 break;
             case BearState.Special:
                 animator.SetBool("Punch", false);
-                animator.SetBool("Smell", false);
+                animator.SetBool("Push", false);
+                break;
+            case BearState.Push:
                 animator.SetBool("Push", false);
                 break;
         }
@@ -138,6 +142,9 @@ public class BearController : MonoBehaviour
             case BearState.Special:
                 special.Invoke();
                 rb2d.linearVelocityX = 0;
+                break;
+            case BearState.Push:
+                animator.SetBool("Push", true);
                 break;
             case BearState.Dead:
                 animator.SetBool("Dead", true);
@@ -207,24 +214,17 @@ public class BearController : MonoBehaviour
             }
         }
 
+        isPushing = false;
+
         var raySize = c2d.bounds.size;
         raySize.y -= 0.1f;
         if (!Mathf.Approximately(axisH, 0.0f))
         {
-            if (Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0f,
+            if (Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0.05f,
                     1 << LayerMask.NameToLayer("Block")))
             {
-                animator.SetBool("Push", true);
+                isPushing = true;
             }
-
-            else
-            {
-                animator.SetBool("Push", false);
-            }
-        }
-        else
-        {
-            animator.SetBool("Push", false);
         }
     }
 
@@ -232,6 +232,7 @@ public class BearController : MonoBehaviour
     {
         if (GameManager.Instance.gameState != "playing")
             return;
+
         onGround = false;
         if (Physics2D.OverlapBox(transform.position - new Vector3(0, 1, 0), groundSize, 0f, groundLayer))
         {
@@ -249,6 +250,7 @@ public class BearController : MonoBehaviour
         }
 
         wasGround = onGround;
+
         if (currentState != BearState.Special)
         {
             rb2d.linearVelocity = new Vector2(axisH * speed, rb2d.linearVelocity.y);
@@ -261,23 +263,26 @@ public class BearController : MonoBehaviour
                 ChangeState(BearState.Idle);
             }
 
-            if (axisH != 0.0f)
+            BearState desiredState;
+            if (isPushing)
             {
-                if (currentState.Equals(BearState.Idle))
-                {
-                    ChangeState(BearState.Walk);
-                }
+                desiredState = BearState.Push;
+            }
+            else if (axisH != 0.0f)
+            {
+                desiredState = BearState.Walk;
             }
             else
             {
-                if (!currentState.Equals(BearState.Idle))
-                {
-                    ChangeState(BearState.Idle);
-                }
+                desiredState = BearState.Idle;
+            }
+
+            if (currentState != desiredState)
+            {
+                ChangeState(desiredState);
             }
         }
         else
-
         {
             if (rb2d.linearVelocity.y > 0.0f)
             {
@@ -314,8 +319,8 @@ public class BearController : MonoBehaviour
         {
             Debug.LogWarning("Pathfinder가 null입니다. S키를 눌렀을 때 다시 검색합니다...");
             FindPathfinderAndNodes();
-            
-            if (pathfinder == null) 
+
+            if (pathfinder == null)
             {
                 Debug.LogError("Pathfinder를 여전히 찾을 수 없습니다! ShowNode를 중단합니다.");
                 yield break;
@@ -333,7 +338,7 @@ public class BearController : MonoBehaviour
 
         WaypointNode startNode = pathfinder.FindClosestWaypoint(transform.position);
         WaypointNode targetNode = pathfinder.FindClosestWaypoint(pathfindingTarget.position);
-        
+
         activePath.Clear();
         activePath = pathfinder.FindPath(startNode, targetNode);
 
@@ -343,7 +348,7 @@ public class BearController : MonoBehaviour
             {
                 WaypointNode node = activePath[i];
                 WaypointNode nextNode = (i < activePath.Count - 1) ? activePath[i + 1] : null;
-                if(node != null) node.ShowEffect(nextNode);
+                if (node != null) node.ShowEffect(nextNode);
             }
         }
         else
@@ -359,8 +364,9 @@ public class BearController : MonoBehaviour
         {
             foreach (WaypointNode node in activePath)
             {
-                if(node != null) node.HideEffect();
+                if (node != null) node.HideEffect();
             }
+
             activePath.Clear();
         }
 

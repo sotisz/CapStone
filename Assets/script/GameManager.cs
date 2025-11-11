@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public string gameState = "playing";
 
-    public CanvasGroup canvasGroup;// 패널에 붙인 CanvasGroup 연결
+    private CanvasGroup canvasGroup;// 패널에 붙인 CanvasGroup 연결
     public float fadeDuration = 1f;  // 페이드에 걸리는 시간(초)
 
     private void Awake()
