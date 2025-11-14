@@ -33,7 +33,7 @@ public class TigerController : MonoBehaviour
     private float onGroundTimer = 0.1f;
     
 
-    private bool onGround;
+    public bool onGround;
     private int wallDir;
     private bool jumpCount = false;
     private bool walljump = false;
@@ -179,7 +179,6 @@ public class TigerController : MonoBehaviour
 
             ChangeState(TigerState.Floating);
         }
-
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
         {
             tagbar.TagPlayer();

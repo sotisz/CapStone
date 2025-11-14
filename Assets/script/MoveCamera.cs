@@ -1,29 +1,52 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 public class MoveCamera : MonoBehaviour
 {
-    public GameObject Bear;
-    public GameObject Tiger;
-    public float speed = 3;
-    
-    // Update is called once per frame
+    public Transform Bear;
+    public Transform Tiger;
+    public float speed;
+
+    public Vector2 center;
+    public Vector2 size;
+    float height;
+    float width;
+
+
+    void Start()
+    {
+        height = Camera.main.orthographicSize;
+        width = height * Screen.width / Screen.height;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(center, size);
+    }
+
     void LateUpdate()
     {
-        if(Bear && Bear.activeInHierarchy)
+        Transform target = null;
+
+        if (Bear != null && Bear.gameObject.activeInHierarchy)
         {
-            Transform Bt = Bear.transform;
-            transform.position = Vector3.Lerp(transform.position, Bt.position, Time.deltaTime * speed);
-            transform.position = new Vector3(Bt.position.x, transform.position.y, -10f);
+            target = Bear;
         }
-        else if(Tiger && Tiger.activeInHierarchy)
+        else if (Tiger != null && Tiger.gameObject.activeInHierarchy)
         {
-            Transform Tt = Tiger.transform;
-            transform.position = Vector3.Lerp(transform.position, Tt.position, Time.deltaTime * speed);
-            transform.position = new Vector3(Tt.position.x, transform.position.y, -10f);
+            target = Tiger;
         }
 
+        if (target != null)
+        {
+            transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
 
+            float lx = size.x * 0.5f - width;
+            float clampX = Mathf.Clamp(transform.position.x, -lx + center.x, center.x + lx);
 
+            float ly = size.y * 0.5f - height;
+            float clampY = Mathf.Clamp(transform.position.y, -ly + center.y, center.y + ly);
+
+            transform.position = new Vector3(clampX, clampY, -10f);
+        }
     }
 }

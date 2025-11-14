@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7721781716897157536}
   - component: {fileID: 4963943087678916032}
   - component: {fileID: 824064428578845991}
-  - component: {fileID: 1043027585035560325}
   - component: {fileID: 1058969142501177647}
-  - component: {fileID: 5546971363539373895}
+  - component: {fileID: 8245339030862097926}
+  - component: {fileID: 2876405118445413692}
   m_Layer: 5
   m_Name: Pause Panel Canvas
   m_TagString: Untagged
@@ -106,20 +106,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1043027585035560325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104344541910318877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b829468cd10a2c643b13522367fddcab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausePanel: {fileID: 4053756390376855779}
-  SettingPanel: {fileID: 7943922379540017321}
 --- !u!114 &1058969142501177647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SettingPanel: {fileID: 7943922379540017321}
---- !u!114 &5546971363539373895
+--- !u!114 &8245339030862097926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +128,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104344541910318877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c711414e33011846a1c668975c6fefc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7d72e1e07ba8b4fb65854b291a7844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2876405118445413692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104344541910318877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593c27f35740cbd49842abb9a2fca542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PausePanel: {fileID: 4053756390376855779}
+  SettingPanel: {fileID: 7943922379540017321}
 --- !u!1001 &1257823233304526119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,10 +153,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6312910121847630976}
     m_Modifications:
-    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5546971363539373895}
     - target: {fileID: 2969414101739546052, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_Name
       value: Pause Panel
@@ -241,10 +237,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5546971363539373895}
     - target: {fileID: 6217768781685271803, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -262,10 +254,6 @@ PrefabInstance:
       value: SettingPanelScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1043027585035560325}
-    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRestartButton
       objectReference: {fileID: 0}
@@ -276,10 +264,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2969414101739546052, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 962563567881317581}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
 --- !u!224 &3360397428337015089 stripped
 RectTransform:
@@ -291,20 +276,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2969414101739546052, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
   m_PrefabInstance: {fileID: 1257823233304526119}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &962563567881317581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4053756390376855779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b829468cd10a2c643b13522367fddcab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausePanel: {fileID: 4053756390376855779}
-  SettingPanel: {fileID: 7943922379540017321}
 --- !u!1001 &7477114652430490957
 PrefabInstance:
   m_ObjectHideFlags: 0

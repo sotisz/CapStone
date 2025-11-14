@@ -33,7 +33,6 @@ public class PausePanelScript : MonoBehaviour
             Time.timeScale = 0f; //게임 일시정지
         }
     }
-
     private void OnDisable() // 일시정지 메뉴가 꺼질 때
     {
         if (GameManager.Instance != null)

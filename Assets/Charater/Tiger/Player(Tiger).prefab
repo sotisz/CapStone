@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7854830404963856706
 Transform:
   m_ObjectHideFlags: 0
@@ -222,8 +222,8 @@ Transform:
   m_GameObject: {fileID: 3175932534431430076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20.855114, y: -8.185001, z: -0.10000038}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4557933348320810955}
@@ -318,8 +318,8 @@ MonoBehaviour:
   speed: 6
   climbSpeed: 4
   jumpForce: 8
-  tagPlayer: {fileID: 0}
-  tagbar: {fileID: 0}
+  tagPlayer: {fileID: 3545909282894604306, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+  tagbar: {fileID: 6252974340479191673, guid: 419ada886e0ae9b48b9a76d5ad67f810, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 320

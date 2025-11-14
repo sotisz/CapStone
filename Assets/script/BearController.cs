@@ -71,11 +71,6 @@ public class BearController : MonoBehaviour
             pathfinder = FindObjectOfType<Pathfinder>();
         }
 
-        if (pathfinder == null)
-        {
-            Debug.LogError("Pathfinder를 씬에서 찾을 수 없습니다!");
-        }
-
         if (allNodesInScene == null || allNodesInScene.Length == 0)
         {
             allNodesInScene = FindObjectsOfType<WaypointNode>();
