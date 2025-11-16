@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107622596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c711414e33011846a1c668975c6fefc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7d72e1e07ba8b4fb65854b291a7844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1107622602
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107622596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b829468cd10a2c643b13522367fddcab, type: 3}
+  m_Script: {fileID: 11500000, guid: 593c27f35740cbd49842abb9a2fca542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 1337209063}
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5300757227190793532, guid: bdd17d501eee903498f461698459c0d9, type: 3}
+  m_Sprite: {fileID: -2736822108507773146, guid: 1bab69bba7ccd7e489222ec75fa1aec4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
