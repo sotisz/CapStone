@@ -14,37 +14,5 @@
     "right_name": "범",
     "right_avatar_emotional": "default",
     "text": "저 버섯이 우리를 더 높이 뛸 수 있게 도와줄 수 있을 것 같아."
-  },
-  {
-    "speaking": "right",
-    "left_name": "웅",
-    "left_avatar_emotional": "default",
-    "right_name": "범",
-    "right_avatar_emotional": "default",
-    "text": "너 왜 그렇게 인간이 되고 싶은 거야?"
-  },
-  {
-    "speaking": "left",
-    "left_name": "웅",
-    "left_avatar_emotional": "sad",
-    "right_name": "범",
-    "right_avatar_emotional": "default",
-    "text": "난 친구를 사귀고 싶어. 하지만 숲 속에서는 나를 보면 다들 도망가. 함께 웃을 수 있는 세상에 살고 싶을 뿐이야."
-  },
-  {
-    "speaking": "right",
-    "left_name": "웅",
-    "left_avatar_emotional": "sad",
-    "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "뭐? 시시하게! 난 인간이 되면 분명 왕이 될 수 있을거야! 왕이 되어 내 마음대로 살겠어."
-  },
-  {
-    "speaking": "left",
-    "left_name": "웅",
-    "left_avatar_emotional": "default",
-    "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "지금도 꽤나 자유롭게 살고 있는 것 같은데?"
   }
 ]
