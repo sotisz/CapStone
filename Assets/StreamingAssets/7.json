@@ -1,0 +1,50 @@
+[
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "어느새 동굴은 완전한 어둠에 잠겼다."
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "두 짐승은 서로의 숨소리만을 의지한 채 걸었다."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "아무것도 안 보여... 너 거기 있지?"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "응, 네 뒤야. 겁먹지 마."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "난 겁 안 먹었어. 그냥... 어둠 속에 혼자 있는 게 싫을 뿐이야."
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "혼자가 아니야, 범. 함께하면 우린 할 수 있어."
+  }
+]

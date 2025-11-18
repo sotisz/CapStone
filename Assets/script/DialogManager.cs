@@ -64,7 +64,7 @@ public class DialogManager : MonoBehaviour
             {
                 "환웅", new Dictionary<string, string>
                 {
-                    { "default", "image/plant" }
+                    { "default", "image/god_default" }
                 }
             }
         };
