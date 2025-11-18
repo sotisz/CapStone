@@ -248,6 +248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Panel Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1104344541910318877, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1160830766168794394, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

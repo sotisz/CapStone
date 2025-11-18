@@ -42,6 +42,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3724118735463748474}
     m_Modifications:
+    - target: {fileID: 2491858876807085912, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491858876807085912, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1446733019
+      objectReference: {fileID: 0}
     - target: {fileID: 3175932534431430076, guid: 93569a77b04144c499eada9859c84f47, type: 3}
       propertyPath: m_Name
       value: Player(Tiger)
