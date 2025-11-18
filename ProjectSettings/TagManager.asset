@@ -8,6 +8,8 @@ TagManager:
   - FalllingBlock
   - Breakable
   - Ground
+  - Fade
+  - BoxObject
   layers:
   - Default
   - TransparentFX
@@ -47,6 +49,9 @@ TagManager:
     locked: 0
   - name: Block
     uniqueID: 147250121
+    locked: 0
+  - name: lava
+    uniqueID: 605617459
     locked: 0
   - name: Player
     uniqueID: 1446733019
