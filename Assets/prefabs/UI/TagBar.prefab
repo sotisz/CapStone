@@ -201,7 +201,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 8571131547385412140, guid: 28c39bd31ceb21e48ba5b0430a8bd8ae, type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -270,7 +270,7 @@ MonoBehaviour:
   gaugeBarFillCooldown: 0
   gaugeBarFillSpeed: 2
   gaugeBarFillBackground: {fileID: 2616546331060778523}
-  target1: {fileID: 0}
-  target2: {fileID: 0}
+  target1: {fileID: 3545909282894604306, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+  target2: {fileID: 3175932534431430076, guid: 93569a77b04144c499eada9859c84f47, type: 3}
   Offset: {x: -0.5, y: 1.7, z: 0}
   tagAble: 1

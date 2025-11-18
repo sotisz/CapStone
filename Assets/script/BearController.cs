@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum BearState
 {
@@ -15,7 +15,7 @@ public enum BearState
     Dead
 }
 
-public class BearController : MonoBehaviour
+public class BearController : MonoBehaviour, IKillable
 {
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
@@ -143,7 +143,7 @@ public class BearController : MonoBehaviour
                 break;
             case BearState.Dead:
                 animator.SetBool("Dead", true);
-                rb2d.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
+                rb2d.linearVelocity = new Vector2(0, 7.0f);
                 c2d.enabled = false;
                 break;
         }
@@ -160,7 +160,7 @@ public class BearController : MonoBehaviour
 
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
         {
             return;
         }
@@ -225,7 +225,7 @@ public class BearController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
             return;
 
         onGround = false;
@@ -368,8 +368,19 @@ public class BearController : MonoBehaviour
         isShowingPath = false;
     }
 
-    protected void Dead()
+    public void Dead()
     {
+        if (currentState == BearState.Dead)
+        {
+            return;
+        }
         ChangeState(BearState.Dead);
+        StartCoroutine(RestartScene());
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

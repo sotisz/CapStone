@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum TigerState
 {
@@ -12,7 +11,7 @@ public enum TigerState
     Dead
 }
 
-public class TigerController : MonoBehaviour
+public class TigerController : MonoBehaviour, IKillable
 {
 
     public float speed = 6.0f;
@@ -92,7 +91,7 @@ public class TigerController : MonoBehaviour
                 break;
             case TigerState.Dead:
                 animator.SetBool("Dead", true);
-                rb2d.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
+                rb2d.linearVelocity = new Vector2(0, 7.0f);
                 c2d.enabled = false;
                 break;
         }
@@ -115,7 +114,7 @@ public class TigerController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(TigerState.Dead))
         {
             return;
         }
@@ -192,7 +191,7 @@ public class TigerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing")
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(TigerState.Dead))
             return;
 
         onGround = false;
@@ -293,8 +292,19 @@ public class TigerController : MonoBehaviour
         checkWall = true;
     }
 
-    protected void Dead()
+    public void Dead()
     {
+        if (currentState == TigerState.Dead)
+        {
+            return;
+        }
         ChangeState(TigerState.Dead);
+        StartCoroutine(RestartScene());
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
