@@ -46,6 +46,16 @@ public class GameManager : MonoBehaviour
     public void LoadNextScene()
     {
         int nowIndex = SceneManager.GetActiveScene().buildIndex;
+        string scenePath = SceneUtility.GetScenePathByBuildIndex(nowIndex + 1);
+
+        if (!string.IsNullOrEmpty(scenePath))
+        {
+            // Extract the scene name from the path
+            string sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePath);
+            SaveManager.SaveScene(sceneName);
+            Debug.Log(sceneName);
+        }
+
         SceneManager.LoadScene(nowIndex + 1);
     }
     public void FadeIn()

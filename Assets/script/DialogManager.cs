@@ -35,6 +35,7 @@ public class DialogManager : MonoBehaviour
 
     public List<DialogEntry> dialogList;
     private int index = 0;
+    private bool isTalking;
 
     private static readonly Dictionary<string, Dictionary<string, string>> AvatarPathMap =
         new Dictionary<string, Dictionary<string, string>>
@@ -71,12 +72,18 @@ public class DialogManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isTalking && Input.GetKeyDown(KeyCode.Space))
         {
             if (index < dialogList.Count)
                 ShowDialog();
@@ -92,6 +99,7 @@ public class DialogManager : MonoBehaviour
         canvas.SetActive(true);
         LoadDialog(dialogPath);
         ShowDialog();
+        isTalking = true;
     }
 
     private Sprite LoadSpriteFromResources(string resourcePath)
@@ -193,8 +201,10 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         canvas.SetActive(false);
+        print("끝");
         dialogList.Clear();
         StartCoroutine(FinishDialog());
+        isTalking = false;
     }
 
     IEnumerator FinishDialog()
