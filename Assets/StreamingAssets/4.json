@@ -1,0 +1,42 @@
+[
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "disappoint",
+    "right_name": "범",
+    "right_avatar_emotional": "default",
+    "text": "혼자선 이 문을 열 수 없겠어."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "disappoint",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
+    "text": "그럼 이 몸이 특별히 너를 도와주지! 난 벽타기 고수라고!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
+    "text": "그래, 이번엔 네 도움이 필요하겠군."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "happy",
+    "text": "드디어 내 실력을 드디어 인정하는 거야? 내가 얼마나 최강인지 보여주지!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "(둘은 처음으로 서로를 인정하기 시작했다.)"
+  }
+]

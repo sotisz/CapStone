@@ -1,0 +1,34 @@
+[
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "default",
+    "text": "조심해, 저 용암은 닿는 순간 끝이야."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "와... 이건 진짜 위험하네. 환웅님, 너무한 거 아니야?"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "sad",
+    "text": "그래도 여기까지 왔잖아. 우리라면 해낼 수 있어."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "happy",
+    "text": "“우리”라니... 듣기 나쁘지 않네."
+  }
+]
