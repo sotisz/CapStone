@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public string gameState = "playing";
 
-    private CanvasGroup canvasGroup;// 패널에 붙인 CanvasGroup 연결
-    public float fadeDuration = 1f;  // 페이드에 걸리는 시간(초)
+    private CanvasGroup canvasGroup; // 패널에 붙인 CanvasGroup 연결
+    public float fadeDuration = 1f; // 페이드에 걸리는 시간(초)
 
     private void Awake()
     {
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         if (canvasGroup == null)
             canvasGroup = GetComponent<CanvasGroup>();
     }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -38,8 +39,11 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 1f;
-        canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
-        FadeOut();
+        if (GameObject.FindWithTag("Fade"))
+        {
+            canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
+            FadeOut();
+        }
     }
 
 
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(nowIndex + 1);
     }
+
     public void FadeIn()
     {
         canvasGroup.gameObject.SetActive(true);
@@ -81,6 +86,7 @@ public class GameManager : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+
         if (isLoad)
         {
             LoadNextScene();
@@ -92,6 +98,7 @@ public class GameManager : MonoBehaviour
             canvasGroup.gameObject.SetActive(false);
         }
     }
+
     private void Update()
     {
         if (gameState == "playing")

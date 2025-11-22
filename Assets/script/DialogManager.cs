@@ -65,7 +65,11 @@ public class DialogManager : MonoBehaviour
             {
                 "환웅", new Dictionary<string, string>
                 {
-                    { "default", "image/god_default" }
+                    { "default", "image/god_default" },
+                    { "angry", "image/god_angry" },
+                    { "sad", "image/god_sad" },
+                    { "happy", "image/god_happy" },
+                    { "difficulty", "image/god_difficulty" }
                 }
             }
         };
@@ -201,7 +205,6 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         canvas.SetActive(false);
-        print("끝");
         dialogList.Clear();
         StartCoroutine(FinishDialog());
         isTalking = false;
