@@ -24,9 +24,13 @@ public class Falling_Spike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Player(Bear)") || collision.gameObject.name.Equals("Player(Tiger)"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // PlayerC.GetComponent<>().Dead(); // 플레이어 죽음
+            IKillable player = collision.gameObject.GetComponent<IKillable>();
+            if(player != null)
+            {
+                player.Dead();
+            }
         }
 
         if (collision.gameObject.name.Equals("Tilemap") || collision.gameObject.tag == "Player")

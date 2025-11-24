@@ -89,11 +89,15 @@ public class FireBall : MonoBehaviour
         timer = 0f;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("플레이어 사망!");
+            IKillable player = collision.gameObject.GetComponent<IKillable>();
+            if(player != null)
+            {
+                player.Dead();
+            }
         }
     }
 }

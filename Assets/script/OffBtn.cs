@@ -21,6 +21,8 @@ public class OffBtn : MonoBehaviour
         {
             OffObject = true;
         }
+        
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -28,6 +30,18 @@ public class OffBtn : MonoBehaviour
         if (other.CompareTag("BoxObject") || Object)
         {
             OffObject = false;
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            IKillable player = collision.gameObject.GetComponent<IKillable>();
+            if(player != null)
+            {
+                player.Dead();
+            }
         }
     }
 }
