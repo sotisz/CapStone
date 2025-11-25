@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class MoveObstacle : MonoBehaviour
 {
-    public float speed = 3f;        // 이동 속도
-    public Transform stopPoint;     // 도착 지점
-    private bool isMove = false;  // 플레이어 접촉 후 true
+    public float speed = 2f;         // 이동 속도
+    public Transform stopPoint;      // 도착 지점
+    private bool isMove = false;     // 움직임 여부
 
     void Update()
     {
         if (!isMove) return;
 
-        // 오른쪽으로 이동
+        // ★ 항상 오른쪽으로만 이동
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        // 도착지점 도달 → 멈춤
+        // 도착 지점과의 거리 확인 후 멈춤
         if (Vector2.Distance(transform.position, stopPoint.position) < 0.1f)
         {
             isMove = false;
@@ -22,7 +22,6 @@ public class MoveObstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 플레이어 접촉 시 움직임 시작
         if (collision.CompareTag("Player"))
         {
             isMove = true;

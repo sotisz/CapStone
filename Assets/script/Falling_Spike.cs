@@ -33,7 +33,8 @@ public class Falling_Spike : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name.Equals("Tilemap") || collision.gameObject.tag == "Player")
+        if (collision.gameObject.name.Equals("Tilemap") || collision.gameObject.tag == "Player" ||
+            collision.gameObject.tag == "Breakable") 
         {
             FSpike.gameObject.SetActive(false);
         }
