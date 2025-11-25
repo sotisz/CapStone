@@ -16,6 +16,8 @@ public class PBtn : MonoBehaviour
     private Vector3 doorClosedPos;
     private Vector3 doorOpenPos;
     private bool isOpen = false;
+    public bool IsOpen => isOpen;
+    
 
     void Start()
     {

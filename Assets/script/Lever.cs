@@ -30,21 +30,30 @@ public class Lever : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= interactionDistance && Input.GetKeyDown(interactionKey))
+        if (distance <= interactionDistance && 
+            Input.GetKeyDown(interactionKey) && 
+            player.gameObject.activeInHierarchy) // 현재 Player(Bear) 활성화 조건 추가
         {
-            lever_manager.isActivated = !lever_manager.isActivated;
+                lever_manager.isActivated = !lever_manager.isActivated;
         }
 
         
         if (lever_manager.isActivated)
         {
-            door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, leverActivatedRot, 10f * Time.deltaTime); 
+            PullLever(doorOpenPos,leverActivatedRot);
+            //door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, leverActivatedRot, 10f * Time.deltaTime); 
         }
         else
         {
-            door.position = Vector3.MoveTowards(door.position, doorClosedPos, moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, leverDefaultRot, 10f * Time.deltaTime); 
+            PullLever(doorClosedPos, leverDefaultRot);
+;            //door.position = Vector3.MoveTowards(door.position, doorClosedPos, moveSpeed * Time.deltaTime);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, leverDefaultRot, 10f * Time.deltaTime); 
         }
+    }
+    void PullLever(Vector3 doorPos, Quaternion leverRot)
+    {
+        door.position = Vector3.MoveTowards(door.position, doorPos, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, leverRot, 10f * Time.deltaTime);
     }
 }

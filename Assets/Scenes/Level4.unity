@@ -125,7 +125,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1232115623}
     m_Modifications:
     - target: {fileID: 2966527963351237070, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
       propertyPath: m_IsActive
@@ -228,13 +228,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
+--- !u!224 &81148018 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7321784878696991875, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
+  m_PrefabInstance: {fileID: 81148017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &233484759
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1232115623}
     m_Modifications:
     - target: {fileID: 210998574448027826, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -536,6 +541,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
   waterEnterSound: {fileID: 8300000, guid: c8d5be93f648f6449b17d00ad6906df3, type: 3}
+--- !u!224 &233484764 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6312910121847630976, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+  m_PrefabInstance: {fileID: 233484759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &254414120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1965,10 @@ PrefabInstance:
       propertyPath: Tiger
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7882763843320909947, guid: 28c39bd31ceb21e48ba5b0430a8bd8ae, type: 3}
+      propertyPath: offset.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2099,6 +2113,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1232115622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232115623}
+  m_Layer: 0
+  m_Name: Canvases
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232115623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232115622}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 233484764}
+  - {fileID: 81148018}
+  - {fileID: 1672973086}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533291768
@@ -2381,7 +2429,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1043023436}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1232115623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7590,12 +7638,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1074560277}
-  - {fileID: 1672973086}
   - {fileID: 1165460406}
   - {fileID: 2065296837}
   - {fileID: 960591848}
   - {fileID: 1102758065}
-  - {fileID: 233484759}
-  - {fileID: 81148017}
   - {fileID: 260301890}
   - {fileID: 267672812}
+  - {fileID: 1232115623}
