@@ -153,9 +153,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6312910121847630976}
     m_Modifications:
+    - target: {fileID: 295608788411445958, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c71dea8146d294e299de9835192f5dd2, type: 3}
+    - target: {fileID: 295608788411445958, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652259235031912755, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c71dea8146d294e299de9835192f5dd2, type: 3}
+    - target: {fileID: 1652259235031912755, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794251171629938171, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c71dea8146d294e299de9835192f5dd2, type: 3}
+    - target: {fileID: 1794251171629938171, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8245339030862097926}
+    - target: {fileID: 2542253029913555261, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveToIntroScene
+      objectReference: {fileID: 0}
     - target: {fileID: 2969414101739546052, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_Name
       value: Pause Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969414101739546052, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966330142835535945, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c71dea8146d294e299de9835192f5dd2, type: 3}
+    - target: {fileID: 3966330142835535945, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4599908295479690262, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_Pivot.x
@@ -237,6 +293,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2876405118445413692}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105130547233264138, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PausePanelScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 6193255232555440160, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 6217768781685271803, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217768781685271803, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 6217768781685271803, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
     - target: {fileID: 6217768781685271803, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -253,13 +369,37 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SettingPanelScript, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7091766364481041171, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c71dea8146d294e299de9835192f5dd2, type: 3}
+    - target: {fileID: 7091766364481041171, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fabc77ce90fc43ffb6370706ce4896a, type: 3}
+    - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8245339030862097926}
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnRestartButton
+      value: RestartCurrentScene
       objectReference: {fileID: 0}
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PausePanelScript, Assembly-CSharp
+      value: SceneMove, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
