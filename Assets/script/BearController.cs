@@ -334,9 +334,8 @@ public class BearController : MonoBehaviour, IKillable
         WaypointNode startNode = pathfinder.FindClosestWaypoint(transform.position);
         WaypointNode targetNode = pathfinder.FindClosestWaypoint(pathfindingTarget.position);
 
-        activePath.Clear();
+        activePath?.Clear();
         activePath = pathfinder.FindPath(startNode, targetNode);
-
         if (activePath != null && activePath.Count > 0)
         {
             for (int i = 0; i < activePath.Count; i++)
