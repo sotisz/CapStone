@@ -2,18 +2,17 @@ using UnityEngine;
 
 public class MoveObstacle : MonoBehaviour
 {
-    public float speed = 2f;         // 이동 속도
-    public Transform stopPoint;      // 도착 지점
-    private bool isMove = false;     // 움직임 여부
+    public float speed = 2f;              // 이동 속도
+    public Vector2 moveDirection = Vector2.right;  // 이동 방향
+    public Transform stopPoint;           // 도착 지점
+    private bool isMove = false;          // 움직임 여부
 
     void Update()
     {
         if (!isMove) return;
-
-        // ★ 항상 오른쪽으로만 이동
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-
-        // 도착 지점과의 거리 확인 후 멈춤
+        
+        transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
+        
         if (Vector2.Distance(transform.position, stopPoint.position) < 0.1f)
         {
             isMove = false;
