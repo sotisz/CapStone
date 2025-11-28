@@ -169,7 +169,7 @@ MonoBehaviour:
   interactionKey: 101
   door: {fileID: 1250917591}
   doorPos: {x: 0, y: -12, z: 0}
-  moveSpeed: 2
+  moveSpeed: 1.5
   lever_manager: {fileID: 866711020}
 --- !u!212 &48185078
 SpriteRenderer:
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   interactionKey: 101
   door: {fileID: 1250917591}
   doorPos: {x: 0, y: -12, z: 0}
-  moveSpeed: 2
+  moveSpeed: 1.5
   lever_manager: {fileID: 866711020}
 --- !u!212 &371327869
 SpriteRenderer:
@@ -35113,7 +35113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882763843320909947, guid: 28c39bd31ceb21e48ba5b0430a8bd8ae, type: 3}
       propertyPath: offset.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
