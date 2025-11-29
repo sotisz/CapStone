@@ -3,7 +3,7 @@ using UnityEngine;
 public class FallingDebris : MonoBehaviour
 {
     // 돌이 땅에 닿았을 때 바로 사라질지, 약간 이펙트를 줄지 결정
-    public float destroyDelay = 0.5f;
+    public float destroyDelay = 2.0f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

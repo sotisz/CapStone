@@ -3,20 +3,33 @@ using UnityEngine;
 
 public class DebrisSpawner : MonoBehaviour
 {
-    [Header("¼³Á¤")]
-    public GameObject debrisPrefab;   // ¶³¾îÁú µ¹ ÇÁ¸®ÆÕ
-    public Transform playerTransform; // ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡¸¦ ¾Ë±â À§ÇØ ÇÊ¿ä
+    [Header("ê¸°ë³¸ ì„¤ì •")]
+    public GameObject debrisPrefab;   // ë–¨ì–´ì§ˆ ëŒ í”„ë¦¬íŒ¹
 
-    [Header("»ı¼º ¹üÀ§ ¹× ½Ã°£")]
-    public float spawnInterval = 0.5f; // µ¹ÀÌ ¶³¾îÁö´Â °£°İ (ÃÊ)
-    public float spawnHeight = 10f;    // ÇÃ·¹ÀÌ¾î ¸Ó¸® À§ ¾ó¸¶³ª ³ôÀº °÷¿¡¼­ ¶³¾îÁúÁö
-    public float xRange = 5f;          // ÇÃ·¹ÀÌ¾î ±âÁØ ÁÂ¿ì ·£´ı ¹üÀ§
+    [Header("í”Œë ˆì´ì–´ ì—°ê²° (ìì‹ ì˜¤ë¸Œì íŠ¸ ì—°ê²°)")]
+    public Transform bearTransform;   // 'Player(Bear)'ë¥¼ ì—¬ê¸°ì— ì—°ê²°
+    public Transform tigerTransform;  // 'Player(Tiger)'ë¥¼ ì—¬ê¸°ì— ì—°ê²°
+    
+    [Header("ìƒì„± ë²”ìœ„ ë° ì‹œê°„")]
+    public float spawnInterval = 0.5f; 
+    public float spawnHeight = 10f;    
+    public float xRange = 5f;          
 
-    private bool isSpawning = true;
+    [Header("ë‚™ì„ ì¤‘ë‹¨ ì„¤ì •")]
+    public bool useStopPosition = true; 
+    public float stopXPosition = 0f;    
+
+    private bool isSpawning = true; 
 
     private void Start()
     {
-        // ÀÚµ¿À¸·Î ÄÚ·çÆ¾ ½ÃÀÛ
+        // ì•ˆì „ ì¥ì¹˜: ë‘˜ ì¤‘ í•˜ë‚˜ë¼ë„ ì—°ê²° ì•ˆ ë˜ë©´ ê²½ê³ 
+        if (bearTransform == null || tigerTransform == null)
+        {
+            Debug.LogError("DebrisSpawner: ê³°(Bear)ê³¼ í˜¸ë‘ì´(Tiger) Transformì„ ëª¨ë‘ ì—°ê²°í•´ì£¼ì„¸ìš”!");
+            return;
+        }
+
         StartCoroutine(SpawnDebrisRoutine());
     }
 
@@ -24,28 +37,50 @@ public class DebrisSpawner : MonoBehaviour
     {
         while (isSpawning)
         {
-            // ÇÃ·¹ÀÌ¾î°¡ Á¸ÀçÇÒ ¶§¸¸ »ı¼º
-            if (playerTransform != null)
+            // 1. í˜„ì¬ í™œì„±í™”ëœ í”Œë ˆì´ì–´ ì°¾ê¸° (íƒœê·¸ ì‹œìŠ¤í…œ ëŒ€ì‘)
+            Transform activePlayer = GetActivePlayer();
+
+            // í™œì„±í™”ëœ í”Œë ˆì´ì–´ê°€ ì—†ìœ¼ë©´ ëŒ€ê¸° (ë‘˜ ë‹¤ êº¼ì§„ ê²½ìš° ë“±)
+            if (activePlayer == null)
             {
-                SpawnDebris();
+                yield return null;
+                continue;
             }
 
-            // ÁöÁ¤µÈ ½Ã°£¸¸Å­ ´ë±â
+            // 2. ëª©í‘œ ì§€ì  í†µê³¼ í™•ì¸ (í˜„ì¬ í™œì„±í™”ëœ ìºë¦­í„°ì˜ X ì¢Œí‘œ ê¸°ì¤€)
+            if (useStopPosition && activePlayer.position.x >= stopXPosition)
+            {
+                Debug.Log($"í”Œë ˆì´ì–´({activePlayer.name})ê°€ ëª©í‘œ ì§€ì ì„ í†µê³¼í•˜ì—¬ ë‚™ì„ì„ ì¤‘ë‹¨í•©ë‹ˆë‹¤.");
+                StopSpawning();
+                yield break; 
+            }
+
+            // 3. ëŒ ìƒì„± (í™œì„±í™”ëœ ìºë¦­í„° ìœ„ì¹˜ ê¸°ì¤€)
+            SpawnDebris(activePlayer);
+            
             yield return new WaitForSeconds(spawnInterval);
         }
     }
 
-    private void SpawnDebris()
+    // í˜„ì¬ ê³°ê³¼ í˜¸ë‘ì´ ì¤‘ ëˆ„ê°€ ì¼œì ¸ìˆëŠ”ì§€(Active) í™•ì¸í•´ì„œ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜
+    private Transform GetActivePlayer()
     {
-        // 1. ÇÃ·¹ÀÌ¾îÀÇ X À§Ä¡¸¦ ±âÁØÀ¸·Î ·£´ıÇÑ X À§Ä¡ °è»ê
-        float randomX = Random.Range(-xRange, xRange);
-        Vector3 spawnPos = new Vector3(playerTransform.position.x + randomX, playerTransform.position.y + spawnHeight, 0);
-
-        // 2. µ¹ »ı¼º
-        Instantiate(debrisPrefab, spawnPos, Quaternion.identity);
+        if (bearTransform.gameObject.activeInHierarchy) return bearTransform;
+        if (tigerTransform.gameObject.activeInHierarchy) return tigerTransform;
+        return null;
     }
 
-    // °ÔÀÓ ¿À¹ö½Ã³ª ÄÆ½Å ÁøÀÔ ½Ã »ı¼ºÀ» ¸ØÃß±â À§ÇÑ ÇÔ¼ö
+    private void SpawnDebris(Transform targetPlayer)
+    {
+        if (debrisPrefab == null) return;
+
+        // í™œì„±í™”ëœ ìºë¦­í„°ì˜ ìœ„ì¹˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ìƒì„±
+        float randomX = Random.Range(-xRange, xRange);
+        Vector3 spawnPos = new Vector3(targetPlayer.position.x + randomX, targetPlayer.position.y + spawnHeight, 0);
+
+        Instantiate(debrisPrefab, spawnPos, Quaternion.identity);
+    }
+    
     public void StopSpawning()
     {
         isSpawning = false;
