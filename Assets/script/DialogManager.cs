@@ -35,6 +35,7 @@ public class DialogManager : MonoBehaviour
 
     public List<DialogEntry> dialogList;
     private int index = 0;
+    private bool isTalking;
 
     private static readonly Dictionary<string, Dictionary<string, string>> AvatarPathMap =
         new Dictionary<string, Dictionary<string, string>>
@@ -64,19 +65,29 @@ public class DialogManager : MonoBehaviour
             {
                 "환웅", new Dictionary<string, string>
                 {
-                    { "default", "image/god_default" }
+                    { "default", "image/god_default" },
+                    { "angry", "image/god_angry" },
+                    { "sad", "image/god_sad" },
+                    { "happy", "image/god_happy" },
+                    { "difficulty", "image/god_difficulty" }
                 }
             }
         };
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isTalking && Input.GetKeyDown(KeyCode.Space))
         {
             if (index < dialogList.Count)
                 ShowDialog();
@@ -92,6 +103,7 @@ public class DialogManager : MonoBehaviour
         canvas.SetActive(true);
         LoadDialog(dialogPath);
         ShowDialog();
+        isTalking = true;
     }
 
     private Sprite LoadSpriteFromResources(string resourcePath)
@@ -195,6 +207,7 @@ public class DialogManager : MonoBehaviour
         canvas.SetActive(false);
         dialogList.Clear();
         StartCoroutine(FinishDialog());
+        isTalking = false;
     }
 
     IEnumerator FinishDialog()

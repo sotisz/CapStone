@@ -10,7 +10,8 @@ public class Pathfinder : MonoBehaviour
         openList.Add(startNode);
 
         // A* 계산을 시작하기 전 모든 노드의 비용 초기화
-        WaypointNode[] allNodes = FindObjectsOfType<WaypointNode>();
+        WaypointNode[] allNodes = FindObjectsByType<WaypointNode>(FindObjectsSortMode.None);
+        Debug.Log(allNodes.Length);
         foreach (WaypointNode node in allNodes)
         {
             node.gCost = float.MaxValue;
@@ -23,9 +24,10 @@ public class Pathfinder : MonoBehaviour
         while (openList.Count > 0)
         {
             WaypointNode currentNode = openList[0];
+            print(currentNode);
             for (int i = 1; i < openList.Count; i++)
             {
-                if (openList[i].fCost < currentNode.fCost || (openList[i].fCost == currentNode.fCost && openList[i].hCost < currentNode.hCost))
+                if (openList[i].fCost < currentNode.fCost || (Mathf.Approximately(openList[i].fCost, currentNode.fCost) && openList[i].hCost < currentNode.hCost))
                 {
                     currentNode = openList[i];
                 }

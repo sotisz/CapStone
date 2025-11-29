@@ -1,0 +1,42 @@
+[
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "(“철컥” 소리)"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "angry",
+    "right_name": "범",
+    "right_avatar_emotional": "hungry",
+    "text": "범! 안 돼—!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "(고기를 건드린 순간, 동굴이 요란하게 흔들리기 시작했다."
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "천장이 무너지고, 불길이 솟았다."
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "이제 그들은 살아남기 위해 달려야 했다!)"
+  }
+]
