@@ -328,6 +328,7 @@ public class BearController : MonoBehaviour, IKillable
             yield break;
         }
 
+        Debug.Log(activePath.Count);
         isShowingPath = true;
         Debug.Log("S키 눌렀음: A* 경로 탐색 및 표시 시작");
 

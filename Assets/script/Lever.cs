@@ -1,22 +1,22 @@
-using System;
 using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
+    public Transform player; // 플레이어 참조
     public float interactionDistance = 2f; // 상호작용 거리
     public KeyCode interactionKey = KeyCode.E; // 상호작용 키
+
     public Transform door;
     public Vector3 doorPos = new Vector3(0, 0, 0); // 문이 이동할 오프셋
     public float moveSpeed = 2f;
 
     private Vector3 doorClosedPos;
     private Vector3 doorOpenPos;
-    private bool isActivated = false;
 
-    private Quaternion leverDefaultRot; // 초기 회전값
-    private Quaternion leverActivatedRot; // -30도 회전값
+    public LeverManager lever_manager;
 
-    private BearController bear;
+    private Quaternion leverDefaultRot;      // 초기 회전값
+    private Quaternion leverActivatedRot;    // -30도 회전값
 
     void Start()
     {
@@ -24,37 +24,36 @@ public class Lever : MonoBehaviour
         doorOpenPos = door.position + doorPos;
 
         leverDefaultRot = transform.rotation;
-        leverActivatedRot = Quaternion.Euler(0, 0, -30);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!bear)
-            bear = other.gameObject.GetComponent<BearController>();
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (bear.gameObject == other.gameObject)
-            bear = null;
+        leverActivatedRot = Quaternion.Euler(0, 0, -30); 
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(interactionKey) && bear)
+        float distance = Vector2.Distance(transform.position, player.position);
+        if (distance <= interactionDistance && 
+            Input.GetKeyDown(interactionKey) && 
+            player.gameObject.activeInHierarchy) // 현재 Player(Bear) 활성화 조건 추가
         {
-            Debug.Log("가져옴");
-            isActivated = !isActivated;
+                lever_manager.isActivated = !lever_manager.isActivated;
         }
-        if (isActivated)
+
+        
+        if (lever_manager.isActivated)
         {
-            door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, leverActivatedRot, 10f * Time.deltaTime);
+            PullLever(doorOpenPos,leverActivatedRot);
+            //door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, leverActivatedRot, 10f * Time.deltaTime); 
         }
         else
         {
-            door.position = Vector3.MoveTowards(door.position, doorClosedPos, moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, leverDefaultRot, 10f * Time.deltaTime);
+            PullLever(doorClosedPos, leverDefaultRot);
+;            //door.position = Vector3.MoveTowards(door.position, doorClosedPos, moveSpeed * Time.deltaTime);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, leverDefaultRot, 10f * Time.deltaTime); 
         }
+    }
+    void PullLever(Vector3 doorPos, Quaternion leverRot)
+    {
+        door.position = Vector3.MoveTowards(door.position, doorPos, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, leverRot, 10f * Time.deltaTime);
     }
 }

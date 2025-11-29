@@ -10,6 +10,7 @@ public class MoveCamera : MonoBehaviour
     float height;
     float width;
 
+    public Vector2 offset;
 
     void Start()
     {
@@ -38,7 +39,10 @@ public class MoveCamera : MonoBehaviour
 
         if (target != null)
         {
-            transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
+            Vector2 targetPos = (Vector2)target.position + offset;
+            Vector3 targetPos3D = new Vector3(targetPos.x, targetPos.y, transform.position.z);
+
+            transform.position = Vector3.Lerp(transform.position, targetPos3D, Time.deltaTime * speed);
 
             float lx = size.x * 0.5f - width;
             float clampX = Mathf.Clamp(transform.position.x, -lx + center.x, center.x + lx);

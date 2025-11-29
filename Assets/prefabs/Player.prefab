@@ -66,6 +66,10 @@ PrefabInstance:
       propertyPath: tagPlayer
       value: 
       objectReference: {fileID: 6973144295159323100}
+    - target: {fileID: 5641670176201897815, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: groundSize.x
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7854830404963856706, guid: 93569a77b04144c499eada9859c84f47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
