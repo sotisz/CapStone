@@ -18,7 +18,7 @@ public class JumpPad : MonoBehaviour
     void Update()
     {
         float targetY = isTouching ? targetScaleY : originalScale.y;
-        
+
         Vector3 newScale = new Vector3(originalScale.x,
             Mathf.Lerp(transform.localScale.y, targetY, Time.deltaTime * speed),
             originalScale.z);
@@ -29,7 +29,7 @@ public class JumpPad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            other.gameObject.GetComponent<Rigidbody2D>().linearVelocityY = bounce;
             isTouching = true;
         }
     }
