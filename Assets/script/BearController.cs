@@ -27,8 +27,7 @@ public class BearController : MonoBehaviour, IKillable
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
 
-    [Header("Pathfinding")]
-    [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
+    [Header("Pathfinding")] [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
     public Transform pathfindingTarget;
 
     Rigidbody2D rb2d;
@@ -161,7 +160,7 @@ public class BearController : MonoBehaviour, IKillable
 
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
         {
             return;
         }
@@ -226,7 +225,7 @@ public class BearController : MonoBehaviour, IKillable
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
             return;
 
         onGround = false;
@@ -329,6 +328,7 @@ public class BearController : MonoBehaviour, IKillable
             yield break;
         }
 
+        Debug.Log(activePath.Count);
         isShowingPath = true;
         Debug.Log("S키 눌렀음: A* 경로 탐색 및 표시 시작");
 
