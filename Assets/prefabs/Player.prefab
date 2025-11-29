@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1276646746339821416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6519668792096381892}
+  - component: {fileID: 7780822003357255539}
+  m_Layer: 0
+  m_Name: PlayerSync
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6519668792096381892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276646746339821416}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3724118735463748474}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7780822003357255539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276646746339821416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a299030deb10ad4387433b87cd5faa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bear: {fileID: 6973144295159323100}
+  tiger: {fileID: 161451963360994815}
+  playerT: {fileID: 3724118735463748474}
 --- !u!1 &6552660789445318904
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +79,7 @@ Transform:
   - {fileID: 4332548354520112302}
   - {fileID: 6145523803850653413}
   - {fileID: 4841172538937647361}
+  - {fileID: 6519668792096381892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3327802116504801347
@@ -50,6 +98,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1446733019
       objectReference: {fileID: 0}
+    - target: {fileID: 2491858876807085912, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d9b8167d89c6414e84babdc45b8b8c9, type: 2}
     - target: {fileID: 3175932534431430076, guid: 93569a77b04144c499eada9859c84f47, type: 3}
       propertyPath: m_Name
       value: Player(Tiger)
@@ -189,6 +241,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7993415207633831152, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d9b8167d89c6414e84babdc45b8b8c9, type: 2}
     m_RemovedComponents:
     - {fileID: 2985672401533312447, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
     - {fileID: 5369544058687965636, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
