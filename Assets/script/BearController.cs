@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class BearController : MonoBehaviour, IKillable
 {
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
+    public float pushForce = 5f;
     public UnityEvent special;
     public GameObject tagPlayer;
     public Tagbar tagbar;
@@ -215,11 +217,14 @@ public class BearController : MonoBehaviour, IKillable
         raySize.y -= 0.1f;
         if (!Mathf.Approximately(axisH, 0.0f))
         {
-            if (Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0.05f,
-                    1 << LayerMask.NameToLayer("Block")))
+            var hit = Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0.05f,
+                1 << LayerMask.NameToLayer("Block"));
+            if (hit)
             {
+                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));                
                 isPushing = true;
             }
+            
         }
     }
 

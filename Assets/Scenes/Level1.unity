@@ -291,7 +291,7 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2858,9 +2858,9 @@ GameObject:
   - component: {fileID: 1081203817}
   - component: {fileID: 1081203819}
   - component: {fileID: 1081203818}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Tilemap
-  m_TagString: Block
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19960,9 +19960,9 @@ GameObject:
   - component: {fileID: 1815493030}
   - component: {fileID: 1815493029}
   - component: {fileID: 1815493028}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Tilemap2
-  m_TagString: Block
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22439,25 +22439,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 161451963360994815, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 917157721272397595, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 917157721272397595, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1446733019
-      objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: -40.39
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -5.56
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22494,10 +22482,6 @@ PrefabInstance:
     - target: {fileID: 6552660789445318904, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973144295159323100, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22874,8 +22858,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 100
+  m_LinearDamping: 5
   m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}

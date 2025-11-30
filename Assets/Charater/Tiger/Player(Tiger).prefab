@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1446733019
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3533201652538884530, guid: fb16eae1b231b1e459c15ebcab7c0c21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7854830404963856706
 Transform:
   m_ObjectHideFlags: 0
@@ -318,11 +318,12 @@ MonoBehaviour:
   speed: 6
   climbSpeed: 4
   jumpForce: 8
-  tagPlayer: {fileID: 3545909282894604306, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
-  tagbar: {fileID: 6252974340479191673, guid: 419ada886e0ae9b48b9a76d5ad67f810, type: 3}
+  tagPlayer: {fileID: 0}
+  tagbar: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 320
-  groundSize: {x: 1.65, y: 0.2}
+  groundSize: {x: 1.6, y: 0.2}
   groundOffset: {x: 0.01, y: -0.9}
   currentState: 0
+  onGround: 0

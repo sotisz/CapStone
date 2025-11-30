@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7032501}
   - component: {fileID: 7032500}
   m_Layer: 0
-  m_Name: WaypointNode (10)
+  m_Name: WaypointNode17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 263231060}
+  - neighbor: {fileID: 732650109}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 263231059}
   - component: {fileID: 263231060}
   m_Layer: 0
-  m_Name: WaypointNode (11)
+  m_Name: WaypointNode16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1139362665}
+  - neighbor: {fileID: 7032500}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 580548190}
   - component: {fileID: 580548189}
   m_Layer: 0
-  m_Name: WaypointNode (1)
+  m_Name: WaypointNode2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1393792712}
+  - neighbor: {fileID: 2019474027}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -1768,7 +1768,7 @@ GameObject:
   - component: {fileID: 732650108}
   - component: {fileID: 732650109}
   m_Layer: 0
-  m_Name: WaypointNode (12)
+  m_Name: WaypointNode18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1801,9 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa0b5a8caa598b43a3cbaabf667ad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbors:
-  - neighbor: {fileID: 7032500}
-    connectionType: 0
+  neighbors: []
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
@@ -1820,7 +1818,7 @@ GameObject:
   - component: {fileID: 748720558}
   - component: {fileID: 748720557}
   m_Layer: 0
-  m_Name: WaypointNode (4)
+  m_Name: WaypointNode5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2075,15 +2073,15 @@ Transform:
   - {fileID: 1358517983}
   - {fileID: 1731315082}
   - {fileID: 1512580322}
-  - {fileID: 1139362666}
-  - {fileID: 1785744207}
-  - {fileID: 2055472062}
-  - {fileID: 1635340889}
-  - {fileID: 2022194057}
   - {fileID: 1971180401}
+  - {fileID: 2022194057}
+  - {fileID: 1785744207}
+  - {fileID: 1635340889}
+  - {fileID: 2055472062}
+  - {fileID: 1139362666}
+  - {fileID: 263231059}
   - {fileID: 7032501}
   - {fileID: 732650108}
-  - {fileID: 263231059}
   - {fileID: 2067004160}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2558,7 +2556,7 @@ GameObject:
   - component: {fileID: 1139362666}
   - component: {fileID: 1139362665}
   m_Layer: 0
-  m_Name: WaypointNode (9)
+  m_Name: WaypointNode15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2577,12 +2575,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 2055472061}
+  - neighbor: {fileID: 263231060}
     connectionType: 0
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
-  nodeEffectPrefab: {fileID: 1971180399}
+  nodeEffectPrefab: {fileID: 0}
   pathEffectPrefab: {fileID: 5442726917476671008, guid: 86212193634e3db42a03ab2cdd4b8e9c, type: 3}
 --- !u!4 &1139362666
 Transform:
@@ -3181,7 +3179,7 @@ GameObject:
   - component: {fileID: 1358517983}
   - component: {fileID: 1358517982}
   m_Layer: 0
-  m_Name: WaypointNode (6)
+  m_Name: WaypointNode7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3200,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1568226035}
+  - neighbor: {fileID: 1731315081}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -3345,7 +3343,7 @@ GameObject:
   - component: {fileID: 1393792713}
   - component: {fileID: 1393792712}
   m_Layer: 0
-  m_Name: WaypointNode
+  m_Name: WaypointNode1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3363,7 +3361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa0b5a8caa598b43a3cbaabf667ad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbors: []
+  neighbors:
+  - neighbor: {fileID: 580548189}
+    connectionType: 0
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
@@ -3912,7 +3912,7 @@ GameObject:
   - component: {fileID: 1512580322}
   - component: {fileID: 1512580323}
   m_Layer: 0
-  m_Name: WaypointNode (8)
+  m_Name: WaypointNode9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3946,12 +3946,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1731315081}
+  - neighbor: {fileID: 1971180400}
     connectionType: 0
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
-  nodeEffectPrefab: {fileID: 1971180399}
+  nodeEffectPrefab: {fileID: 0}
   pathEffectPrefab: {fileID: 5442726917476671008, guid: 86212193634e3db42a03ab2cdd4b8e9c, type: 3}
 --- !u!1 &1550080951
 GameObject:
@@ -4070,7 +4070,7 @@ GameObject:
   - component: {fileID: 1568226036}
   - component: {fileID: 1568226035}
   m_Layer: 0
-  m_Name: WaypointNode (5)
+  m_Name: WaypointNode6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4089,7 +4089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 748720557}
+  - neighbor: {fileID: 1358517982}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -4241,7 +4241,7 @@ GameObject:
   - component: {fileID: 1635340889}
   - component: {fileID: 1635340888}
   m_Layer: 0
-  m_Name: WaypointNode (17)
+  m_Name: WaypointNode13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4260,7 +4260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1785744206}
+  - neighbor: {fileID: 2055472061}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -4503,7 +4503,7 @@ GameObject:
   - component: {fileID: 1665828526}
   - component: {fileID: 1665828525}
   m_Layer: 0
-  m_Name: WaypointNode (3)
+  m_Name: WaypointNode4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4522,7 +4522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 2019474027}
+  - neighbor: {fileID: 748720557}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -4689,7 +4689,7 @@ GameObject:
   - component: {fileID: 1731315082}
   - component: {fileID: 1731315081}
   m_Layer: 0
-  m_Name: WaypointNode (7)
+  m_Name: WaypointNode8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4708,7 +4708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1358517982}
+  - neighbor: {fileID: 1512580323}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -4822,7 +4822,7 @@ GameObject:
   - component: {fileID: 1785744207}
   - component: {fileID: 1785744206}
   m_Layer: 0
-  m_Name: WaypointNode (13)
+  m_Name: WaypointNode12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 2022194056}
+  - neighbor: {fileID: 1635340888}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -5993,7 +5993,7 @@ GameObject:
   - component: {fileID: 1971180401}
   - component: {fileID: 1971180400}
   m_Layer: 0
-  m_Name: WaypointNode (15)
+  m_Name: WaypointNode10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6012,12 +6012,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1512580323}
+  - neighbor: {fileID: 2022194056}
     connectionType: 0
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
-  nodeEffectPrefab: {fileID: 1512580321}
+  nodeEffectPrefab: {fileID: 0}
   pathEffectPrefab: {fileID: 5442726917476671008, guid: 86212193634e3db42a03ab2cdd4b8e9c, type: 3}
 --- !u!4 &1971180401
 Transform:
@@ -6178,7 +6178,7 @@ GameObject:
   - component: {fileID: 2019474028}
   - component: {fileID: 2019474027}
   m_Layer: 0
-  m_Name: WaypointNode (2)
+  m_Name: WaypointNode3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6197,7 +6197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 580548189}
+  - neighbor: {fileID: 1665828525}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -6230,7 +6230,7 @@ GameObject:
   - component: {fileID: 2022194057}
   - component: {fileID: 2022194056}
   m_Layer: 0
-  m_Name: WaypointNode (14)
+  m_Name: WaypointNode11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6249,7 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1971180400}
+  - neighbor: {fileID: 1785744206}
     connectionType: 0
   gCost: 0
   hCost: 0
@@ -19760,7 +19760,7 @@ GameObject:
   - component: {fileID: 2055472062}
   - component: {fileID: 2055472061}
   m_Layer: 0
-  m_Name: WaypointNode (16)
+  m_Name: WaypointNode14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19779,7 +19779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - neighbor: {fileID: 1635340888}
+  - neighbor: {fileID: 1139362665}
     connectionType: 0
   gCost: 0
   hCost: 0
