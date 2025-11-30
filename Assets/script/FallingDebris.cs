@@ -15,6 +15,7 @@ public class FallingDebris : MonoBehaviour
             {
                 player.Dead();
             }
+            Destroy(gameObject);
         }
         
         // 2. 땅(Ground)이나 다른 블록에 닿았을 때
