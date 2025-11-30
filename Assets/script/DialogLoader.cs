@@ -8,6 +8,7 @@ public class DialogLoader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isUsed)
+        if (isUsed)
             return;
         if (other.CompareTag("Player"))
         {

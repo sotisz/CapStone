@@ -21,6 +21,7 @@
     "left_avatar_emotional": "default",
     "right_name": "범",
     "right_avatar_emotional": "hungry",
-    "text": "그래도... 한 입만..."
+    "text": "그래도... 한 입만...",
+    "trigger_event": "MoveTigerToMeat"
   }
 ]
