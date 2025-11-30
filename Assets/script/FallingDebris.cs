@@ -2,36 +2,36 @@ using UnityEngine;
 
 public class FallingDebris : MonoBehaviour
 {
-    // µ¹ÀÌ ¶¥¿¡ ´ê¾ÒÀ» ¶§ ¹Ù·Î »ç¶óÁúÁö, ¾à°£ ÀÌÆåÆ®¸¦ ÁÙÁö °áÁ¤
-    public float destroyDelay = 2.0f;
+    // ëŒì´ ë•…ì— ë‹¿ì•˜ì„ ë•Œ ë°”ë¡œ ì‚¬ë¼ì§ˆì§€, ì•½ê°„ ì´í™íŠ¸ë¥¼ ì¤„ì§€ ê²°ì •
+    public float destroyDelay = 0.5f; 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // 1. ÇÃ·¹ÀÌ¾î¿¡°Ô ¸Â¾ÒÀ» ¶§
+        // 1. í”Œë ˆì´ì–´ì—ê²Œ ë§ì•˜ì„ ë•Œ
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("ÇÃ·¹ÀÌ¾î »ç¸Á È¤Àº µ¥¹ÌÁö Ã³¸®");
             IKillable player = collision.gameObject.GetComponent<IKillable>();
-            if (player != null)
+            if(player != null)
             {
                 player.Dead();
             }
         }
-
-        // 2. ¶¥(Ground)ÀÌ³ª ´Ù¸¥ ºí·Ï¿¡ ´ê¾ÒÀ» ¶§
-        // (Layer³ª Tag·Î ±¸ºĞÇÏ´Â °ÍÀÌ ÁÁÀ½. ¿©±â¼± ¹Ù´Ú ÅÂ±×°¡ "Ground"¶ó°í °¡Á¤)
+        
+        // 2. ë•…(Ground)ì´ë‚˜ ë‹¤ë¥¸ ë¸”ë¡ì— ë‹¿ì•˜ì„ ë•Œ
         if (collision.gameObject.CompareTag("Block"))
         {
-            Destroy(gameObject, destroyDelay); // Àá½Ã ÈÄ Á¦°Å
+            // ì‚¬ìš´ë“œ í˜¹ì€ ì´í™íŠ¸ ì‚½ì… êµ¬ê°„ //
+            
+            Destroy(gameObject, destroyDelay); // ì ì‹œ í›„ ì œê±°
         }
     }
-
-    // 3. È­¸é ¹ÛÀ¸·Î ³Ê¹« ¸Ö¸® ¶³¾îÁö¸é ¼º´ÉÀ» À§ÇØ Á¦°Å (È¤½Ã ¶¥¿¡ ¾È ´ê¾ÒÀ» °æ¿ì ´ëºñ)
+    
+    // í™”ë©´ ë°–ìœ¼ë¡œ ë„ˆë¬´ ë©€ë¦¬ ë–¨ì–´ì§€ë©´ ì„±ëŠ¥ì„ ìœ„í•´ ì œê±° (í˜¹ì‹œ ë•…ì— ì•ˆ ë‹¿ì•˜ì„ ê²½ìš° ëŒ€ë¹„)
     private void Update()
     {
-        if (transform.position.y < -20f) // ¸Ê ¾Æ·¡·Î ÇÑÂü ¶³¾îÁö¸é
+        if (transform.position.y < -20f) // ë§µ ì•„ë˜ë¡œ í•œì°¸ ë–¨ì–´ì§€ë©´
         {
-            Destroy(gameObject, 2f); // 2ÃÊ ÈÄ ºí·Ï Á¦°Å
+            Destroy(gameObject);
         }
     }
 }
