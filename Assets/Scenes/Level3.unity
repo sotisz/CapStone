@@ -75439,9 +75439,9 @@ Animation:
   m_GameObject: {fileID: 1295399190}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: d13ad9da23dec48459a93ae06d3a4844, type: 2}
+  m_Animation: {fileID: 7400000, guid: 86c50dc055763be44a5029e59317a941, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: d13ad9da23dec48459a93ae06d3a4844, type: 2}
+  - {fileID: 7400000, guid: 86c50dc055763be44a5029e59317a941, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -75949,7 +75949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882763843320909947, guid: 28c39bd31ceb21e48ba5b0430a8bd8ae, type: 3}
       propertyPath: offset.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76068,7 +76068,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 537946901}
-  m_Father: {fileID: 2139465638}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -77148,7 +77148,6 @@ Transform:
   - {fileID: 1474002505}
   - {fileID: 1416813366}
   - {fileID: 231784389}
-  - {fileID: 1680967491}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &207166295894175143
@@ -77372,4 +77371,5 @@ SceneRoots:
   - {fileID: 1183373683}
   - {fileID: 9091611616295794391}
   - {fileID: 2139465638}
+  - {fileID: 1680967491}
   - {fileID: 117673105}

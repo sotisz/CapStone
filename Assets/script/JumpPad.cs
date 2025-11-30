@@ -4,7 +4,7 @@ using UnityEngine;
 public class JumpPad : MonoBehaviour
 {
     private float bounce = 10f;
-    public float targetScaleY = 1.5f; // 닿았을 때 Y축 목표 크기
+    public float targetScaleY = 3f; // 닿았을 때 Y축 목표 크기
     public float speed = 3f; // 스케일 변화 속도
 
     private bool isTouching = false; // 닿았는지 여부
@@ -18,7 +18,7 @@ public class JumpPad : MonoBehaviour
     void Update()
     {
         float targetY = isTouching ? targetScaleY : originalScale.y;
-        
+
         Vector3 newScale = new Vector3(originalScale.x,
             Mathf.Lerp(transform.localScale.y, targetY, Time.deltaTime * speed),
             originalScale.z);
@@ -29,7 +29,7 @@ public class JumpPad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            other.gameObject.GetComponent<Rigidbody2D>().linearVelocityY = bounce;
             isTouching = true;
         }
     }

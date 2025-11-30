@@ -13,7 +13,6 @@ public enum TigerState
 
 public class TigerController : MonoBehaviour, IKillable
 {
-
     public float speed = 6.0f;
     public float climbSpeed = 4.0f;
     public float jumpForce = 8.0f;
@@ -46,7 +45,6 @@ public class TigerController : MonoBehaviour, IKillable
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         c2d = GetComponent<Collider2D>();
-
     }
 
     public void ChangeState(TigerState newState)
@@ -68,6 +66,11 @@ public class TigerController : MonoBehaviour, IKillable
                 animator.speed = 1;
                 walljump = false;
                 StartCoroutine(Cooldown());
+                if (rb2d.linearVelocity.y > 0)
+                {
+                    rb2d.AddForce(Vector2.up * 3.0f, ForceMode2D.Impulse);
+                }
+
                 break;
         }
 
@@ -174,11 +177,11 @@ public class TigerController : MonoBehaviour, IKillable
                 rb2d.linearVelocityY = jumpForce;
                 rb2d.linearVelocityX = jumpForce * -wallDir;
                 jumpCount = false;
-
             }
 
             ChangeState(TigerState.Floating);
         }
+
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
         {
             tagbar.TagPlayer();
@@ -279,6 +282,7 @@ public class TigerController : MonoBehaviour, IKillable
             {
                 animator.SetInteger("ySpeed", 1);
             }
+
             if (rb2d.linearVelocityY < 0)
             {
                 animator.SetInteger("ySpeed", -1);
@@ -299,6 +303,7 @@ public class TigerController : MonoBehaviour, IKillable
         {
             return;
         }
+
         ChangeState(TigerState.Dead);
         StartCoroutine(RestartScene());
     }

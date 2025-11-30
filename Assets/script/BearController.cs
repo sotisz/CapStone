@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class BearController : MonoBehaviour, IKillable
 {
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
+    public float pushForce = 5f;
     public UnityEvent special;
     public GameObject tagPlayer;
     public Tagbar tagbar;
@@ -27,8 +29,7 @@ public class BearController : MonoBehaviour, IKillable
     [Header("Ground Settings")] public LayerMask groundLayer;
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
 
-    [Header("Pathfinding")]
-    [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
+    [Header("Pathfinding")] [Tooltip("A* 경로 탐색의 목적지 (인스펙터에서 설정)")]
     public Transform pathfindingTarget;
 
     Rigidbody2D rb2d;
@@ -161,7 +162,7 @@ public class BearController : MonoBehaviour, IKillable
 
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
         {
             return;
         }
@@ -216,17 +217,20 @@ public class BearController : MonoBehaviour, IKillable
         raySize.y -= 0.1f;
         if (!Mathf.Approximately(axisH, 0.0f))
         {
-            if (Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0.05f,
-                    1 << LayerMask.NameToLayer("Block")))
+            var hit = Physics2D.BoxCast(transform.position, raySize, 0f, axisH * Vector2.right, 0.05f,
+                1 << LayerMask.NameToLayer("Block"));
+            if (hit)
             {
+                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));                
                 isPushing = true;
             }
+            
         }
     }
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
             return;
 
         onGround = false;
@@ -329,15 +333,15 @@ public class BearController : MonoBehaviour, IKillable
             yield break;
         }
 
+        Debug.Log(activePath.Count);
         isShowingPath = true;
         Debug.Log("S키 눌렀음: A* 경로 탐색 및 표시 시작");
 
         WaypointNode startNode = pathfinder.FindClosestWaypoint(transform.position);
         WaypointNode targetNode = pathfinder.FindClosestWaypoint(pathfindingTarget.position);
 
-        activePath.Clear();
+        activePath?.Clear();
         activePath = pathfinder.FindPath(startNode, targetNode);
-
         if (activePath != null && activePath.Count > 0)
         {
             for (int i = 0; i < activePath.Count; i++)
