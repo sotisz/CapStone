@@ -241,6 +241,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 993168374624184429, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4372473
+      objectReference: {fileID: 0}
+    - target: {fileID: 993168374624184429, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14722326
+      objectReference: {fileID: 0}
     - target: {fileID: 3545909282894604306, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
       propertyPath: m_Name
       value: Player(Bear)

@@ -5,13 +5,15 @@ public class Lever : MonoBehaviour
 {
     public float interactionDistance = 2f; // 상호작용 거리
     public KeyCode interactionKey = KeyCode.E; // 상호작용 키
+
     public Transform door;
     public Vector3 doorPos = new Vector3(0, 0, 0); // 문이 이동할 오프셋
     public float moveSpeed = 2f;
 
     private Vector3 doorClosedPos;
     private Vector3 doorOpenPos;
-    private bool isActivated = false;
+
+    public LeverManager lever_manager;
 
     private Quaternion leverDefaultRot; // 초기 회전값
     private Quaternion leverActivatedRot; // -30도 회전값
@@ -35,7 +37,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (bear.gameObject == other.gameObject)
+        if (bear != null && bear.gameObject == other.gameObject)
             bear = null;
     }
 
@@ -44,9 +46,9 @@ public class Lever : MonoBehaviour
         if (Input.GetKeyDown(interactionKey) && bear)
         {
             Debug.Log("가져옴");
-            isActivated = !isActivated;
+            lever_manager.isActivated = !lever_manager.isActivated;
         }
-        if (isActivated)
+        if (lever_manager.isActivated)
         {
             door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, leverActivatedRot, 10f * Time.deltaTime);

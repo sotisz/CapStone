@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4044483455755597307}
   - component: {fileID: 2002765220165401995}
   - component: {fileID: 8307701601861726056}
+  - component: {fileID: 5899107952586877526}
   m_Layer: 0
   m_Name: LeverHead
   m_TagString: Untagged
@@ -100,13 +101,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03241d2adc977441892f536856a90b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionDistance: 1.5
   interactionKey: 101
   door: {fileID: 0}
   doorPos: {x: 0, y: -12, z: 0}
   moveSpeed: 1.5
   lever_manager: {fileID: 0}
+--- !u!61 &5899107952586877526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6282956907796129196}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.011249542, y: 0.36917973}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.50469404, y: 0.024254818}
+    oldSize: {x: 0.53, y: 1.14}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.4646225, y: 1.4532108}
+  m_EdgeRadius: 0
 --- !u!1 &7403436998624999029
 GameObject:
   m_ObjectHideFlags: 0
