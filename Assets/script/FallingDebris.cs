@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FallingDebris : MonoBehaviour
 {
-    public float destroyDelay = 0.5f; 
+    public float destroyDelay = 3.0f; 
 
     // [수정] OnCollisionEnter2D -> OnTriggerEnter2D 로 변경
     // [수정] 매개변수 Collision2D -> Collider2D 로 변경
