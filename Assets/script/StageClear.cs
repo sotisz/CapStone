@@ -3,12 +3,19 @@ using UnityEngine;
 public class StageClear : MonoBehaviour
 {
     public GameManager Instance => GameManager.Instance;
+    private bool isLoadScene = false; 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (isLoadScene == false)
         {
-            Instance.FadeIn();
+            if (collision.gameObject.tag == "Player")
+            {
+                isLoadScene = true;
+                Instance.FadeIn();
+            }
         }
     }
+
+
 }
