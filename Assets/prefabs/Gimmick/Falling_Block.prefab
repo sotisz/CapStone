@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2246121733086312407}
   - component: {fileID: 6995041990897275823}
   m_Layer: 6
-  m_Name: FallingBlock
+  m_Name: Falling_Block
   m_TagString: FalllingBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

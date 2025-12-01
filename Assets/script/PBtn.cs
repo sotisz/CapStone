@@ -40,7 +40,7 @@ public class PBtn : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
+        if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
         {
             if (buttonType == ButtonType.Hold)
             {
@@ -57,7 +57,7 @@ public class PBtn : MonoBehaviour
     {
         if (buttonType == ButtonType.Hold)
         {
-            if (other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
+            if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
             {
                 isOpen = false; 
             } 

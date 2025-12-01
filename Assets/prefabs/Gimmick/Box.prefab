@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6234749387163214028}
   - component: {fileID: 8406995670964375932}
   - component: {fileID: 2326852966494897268}
+  - component: {fileID: 4554530129341602082}
   m_Layer: 6
   m_Name: Box
-  m_TagString: BoxObject
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +164,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4554530129341602082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635897642735368862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45c9e5170edd8643b74524eeaca6668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceSprite: {fileID: 0}
+  pieces: 6
 --- !u!1 &5281611790348151380
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ TagManager:
   - FalllingBlock
   - Breakable
   - Ground
+  - Fade
+  - BoxObject
   layers:
   - Default
   - TransparentFX
