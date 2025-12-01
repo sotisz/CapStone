@@ -4379,7 +4379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03241d2adc977441892f536856a90b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 921016844}
   interactionDistance: 2
   interactionKey: 101
   door: {fileID: 1946498458}
@@ -20244,7 +20243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.z
