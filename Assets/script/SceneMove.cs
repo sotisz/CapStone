@@ -26,4 +26,11 @@ public class SceneMove : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+    public void GoToStage(int stageNum)
+    {
+        SceneManager.LoadScene("Level" + stageNum);
+
+        Debug.Log("Stage" + stageNum + " (으)로 이동합니다.");
+    }
+
 }
