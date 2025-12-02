@@ -5629,9 +5629,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 42963562}
     m_Modifications:
+    - target: {fileID: 1390756051177367041, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Spike_Falling
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688036918391476904, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7440464241661147929, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5672,6 +5680,18 @@ PrefabInstance:
     - target: {fileID: 7440464241661147929, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006771839177644716, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006771839177644716, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006771839177644716, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 147250121
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
