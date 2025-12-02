@@ -1,5 +1,5 @@
 using System.Collections;
-using Unity.Cinemachine;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     private CanvasGroup canvasGroup; // 패널에 붙인 CanvasGroup 연결
     public float fadeDuration = 1f; // 페이드에 걸리는 시간(초)
+    public List<string> readDialogs = new  List<string>();
 
     private void Awake()
     {
@@ -38,7 +39,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        gameState = "playing";
         Time.timeScale = 1f;
         if (GameObject.FindWithTag("Fade"))
         {
@@ -97,6 +97,19 @@ public class GameManager : MonoBehaviour
         {
             canvasGroup.alpha = end;
             canvasGroup.gameObject.SetActive(false);
+        }
+    }
+
+    public bool IsDialogRead(string path)
+    {
+        return readDialogs.Contains(path);
+    }
+
+    public void MarkDialogAsRead(string path)
+    {
+        if (!readDialogs.Contains(path))
+        {
+            readDialogs.Add(path);
         }
     }
 
