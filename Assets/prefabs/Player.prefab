@@ -122,6 +122,22 @@ PrefabInstance:
       propertyPath: groundSize.x
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5694307388272618479, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5753715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694307388272618479, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0499094
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694307388272618479, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006972909
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694307388272618479, guid: 93569a77b04144c499eada9859c84f47, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3295715
+      objectReference: {fileID: 0}
     - target: {fileID: 7854830404963856706, guid: 93569a77b04144c499eada9859c84f47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
