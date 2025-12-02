@@ -2796,6 +2796,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5153690637498316208, guid: e8177c6fa27423e499a6b316033644cf, type: 3}
   m_PrefabInstance: {fileID: 663983784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &665663807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 654.53156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 464.51398
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.3084836
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246934891562728988, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c8c90566ddd4b0489a09273ae8ce972, type: 3}
+    - target: {fileID: 4246934891562728988, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c8c90566ddd4b0489a09273ae8ce972, type: 3}
+    - target: {fileID: 6626235495860046259, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
 --- !u!1 &690278544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3396,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7574084052066453032, guid: a1813e925d9f5584c9764ca38ade202a, type: 3}
+      propertyPath: shakeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 16eed5e5fb99a424ca25d1aff74fc520, type: 3}
     - target: {fileID: 9054103754690581758, guid: a1813e925d9f5584c9764ca38ade202a, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
@@ -6257,6 +6326,10 @@ MonoBehaviour:
   door: {fileID: 1906800682}
   doorPos: {x: 0, y: 5, z: 0}
   moveSpeed: 2
+  buttonPressSound: {fileID: 0}
+  doorOpenSound: {fileID: 0}
+  doorCloseSound: {fileID: 0}
+  soundVolume: 1
 --- !u!1001 &1474002504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6917,6 +6990,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6140789513831196075, guid: 218e5b7046476ae46b4ed98f06c2df23, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 8215945376837781376, guid: 218e5b7046476ae46b4ed98f06c2df23, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -49028,3 +49105,4 @@ SceneRoots:
   - {fileID: 152193088}
   - {fileID: 1628287670}
   - {fileID: 1752291366}
+  - {fileID: 665663807}

@@ -2420,6 +2420,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8923206766099546684, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
   m_PrefabInstance: {fileID: 1763274719}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1035236828 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1763274719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050256585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,6 +3017,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1763274721}
     - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1035236828}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: footstepSound
       value: 
       objectReference: {fileID: 1034684329}
@@ -3055,6 +3064,10 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 1763274722}
+    - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1035236828}
     - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: climbingSound
       value: 
@@ -5458,6 +5471,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Volume
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 654.53156
@@ -5496,6 +5517,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364954069772067797, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Volume
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621309166523449150, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071222159857605343, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246934891562728988, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Volume
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382699123716944585, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6626235495860046259, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}

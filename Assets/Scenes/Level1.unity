@@ -19570,6 +19570,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: b10a17a94f43933418ce539dee62799d, type: 3}
+    - target: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b10a17a94f43933418ce539dee62799d, type: 3}
+    - target: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 654.53156
@@ -19614,15 +19626,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8865865314001664832, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+--- !u!82 &1773494119 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1773494118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1815493024
 GameObject:
   m_ObjectHideFlags: 0
@@ -22164,6 +22177,10 @@ PrefabInstance:
       propertyPath: pushSound
       value: 
       objectReference: {fileID: 798570289}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1773494119}
     - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: footstepSound
       value: 
