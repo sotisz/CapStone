@@ -2,20 +2,17 @@ using UnityEngine;
 
 public class MoveObstacle : MonoBehaviour
 {
-    public float speed = 2f;              // 이동 속도
-    public Vector2 moveDirection = Vector2.right;  // 이동 방향
-    public Transform stopPoint;           // 도착 지점
-    private bool isMove = false;          // 움직임 여부
+    public float speed = 2f; // 이동 속도
+    public Vector2 moveDirection = Vector2.right; // 이동 방향
+    public Transform stopPoint; // 도착 지점
+    private bool isMove = false; // 움직임 여부
 
     void Update()
     {
-        if (!isMove) return;
-        
-        transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
-        
-        if (Vector2.Distance(transform.position, stopPoint.position) < 0.1f)
+        if (isMove) transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
+        else if(!isMove)
         {
-            isMove = false;
+            transform.Translate(0 * speed * Time.deltaTime, 0, 0);
         }
     }
 
@@ -25,13 +22,12 @@ public class MoveObstacle : MonoBehaviour
         {
             isMove = true;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.CompareTag("EndPoint"))
         {
-            isMove = true;
+            isMove = false;
+         
         }
     }
+    
 }
