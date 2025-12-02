@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
     {
         gameState = "playing"; // 이 부분이 있어야 레벨 재시작 시 시간이 흐름 
         Time.timeScale = 1f;
-        
+        playTime = 0f;
+
         if (GameObject.FindWithTag("Fade"))
         {
             canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
@@ -87,7 +88,6 @@ public class GameManager : MonoBehaviour
             SaveManager.SaveScene(sceneName);
             Debug.Log(sceneName);
         }
-        playTime = 0f;
         deathCount = 0;
         SceneManager.LoadScene(nowIndex + 1);
     }
