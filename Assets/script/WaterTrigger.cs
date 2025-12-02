@@ -4,9 +4,9 @@ using UnityEngine;
 public class WaterTrigger : MonoBehaviour
 {
     public Transform waterTransform;
-    public float targetHeight = 28.3f;     // ¿Ã¶ó°¥ ¸ñÇ¥ ³ôÀÌ
-    public float originalHeight = 0.0f;   // ³»·Á°¥ ¿øÀ§Ä¡ ³ôÀÌ
-    public float fillSpeed = 2.5f;        // ÃÊ´ç ³ôÀÌ º¯È­·®
+    public float targetHeight = 28.3f;    // ë¬¼ì´ ì˜¬ë¼ê°ˆ ëª©í‘œ ë†’ì´
+    public float originalHeight = 0.0f;   // ë¬¼ì´ ë‚´ë ¤ê°ˆ ì´ˆê¸° ë†’ì´
+    public float fillSpeed = 2.5f;        // ë¬¼ì´ ì°¨ì˜¤ë¥´ëŠ”(ì´ë™í•˜ëŠ”) ì†ë„
 
     private Coroutine movingRoutine;
 
@@ -18,6 +18,7 @@ public class WaterTrigger : MonoBehaviour
 
     public void RaiseWater()
     {
+        // ì´ë¯¸ ì›€ì§ì´ê³  ìžˆë‹¤ë©´ ë©ˆì¶”ê³  ìƒˆë¡œ ì‹œìž‘
         if (movingRoutine != null)
             StopCoroutine(movingRoutine);
         movingRoutine = StartCoroutine(MoveWaterToHeight(targetHeight));
@@ -33,8 +34,9 @@ public class WaterTrigger : MonoBehaviour
     private IEnumerator MoveWaterToHeight(float targetY)
     {
         float currentY = waterTransform.position.y;
-        Debug.Log($"ÇöÀç ¹° ³ôÀÌ: {currentY}, ¸ñÇ¥ ³ôÀÌ: {targetY}");
+        Debug.Log($"í˜„ìž¬ ë¬¼ ë†’ì´: {currentY}, ëª©í‘œ ë†’ì´: {targetY}");
 
+        // ëª©í‘œ ë†’ì´ì™€ í˜„ìž¬ ë†’ì´ì˜ ì°¨ì´ê°€ 0.01ë³´ë‹¤ í´ ë•Œê¹Œì§€ ë°˜ë³µ (ê±°ì˜ ë„ì°©í•  ë•Œê¹Œì§€)
         while (Mathf.Abs(currentY - targetY) > 0.01f)
         {
             currentY = Mathf.MoveTowards(currentY, targetY, fillSpeed * Time.deltaTime);

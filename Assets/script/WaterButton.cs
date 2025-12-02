@@ -4,51 +4,52 @@ using System.Collections.Generic;
 
 public class WaterButton : MonoBehaviour
 {
-    public WaterTrigger waterTrigger; // Á¦¾îÇÒ ¹° ¿ÀºêÁ§Æ®
-    public bool isRaiseButton = true; // true¸é ¹° ¿Ã¸², false¸é ¹° ³»¸²
+    public WaterTrigger waterTrigger; // ë¬¼ì„ ì œì–´í•  ìŠ¤í¬ë¦½íŠ¸ ì—°ê²°
+    public bool isRaiseButton = true; // trueë©´ ë¬¼ ì˜¬ë¦¬ê¸°, falseë©´ ë¬¼ ë‚´ë¦¬ê¸° ë²„íŠ¼
     private GameObject player;
 
-    private bool isPlayerInside = false; // ÇÃ·¹ÀÌ¾î°¡ ¹üÀ§ ¾ÈÀ¸·Î µé¾î¿Ô´Ù¸é true
+    private bool isPlayerInside = false; // í”Œë ˆì´ì–´ê°€ ë²„íŠ¼ ë²”ìœ„ ì•ˆì— ìˆìœ¼ë©´ true
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnTriggerEnter2D(Collider2D collider) // ¹öÆ° »óÈ£ÀÛ¿ë È°¼ºÈ­
+    private void OnTriggerEnter2D(Collider2D collider) // ë²„íŠ¼ ë²”ìœ„ ì§„ì… ê°ì§€
     {
-        if (!collider.CompareTag("Player")) // ÇÃ·¹ÀÌ¾î°¡ ¾Æ´Ï¶ó¸é return
+        if (!collider.CompareTag("Player")) // í”Œë ˆì´ì–´ê°€ ì•„ë‹ˆë¼ë©´ ë¦¬í„´
             return;
 
         isPlayerInside = true;
-        Debug.Log("ÇÃ·¹ÀÌ¾î°¡ ¹öÆ° ¹üÀ§¾È¿¡ µé¾î¿È");
+        Debug.Log("í”Œë ˆì´ì–´ê°€ ë²„íŠ¼ ë²”ìœ„ ì•ˆì— ì§„ì…í•¨");
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    private void OnTriggerExit2D(Collider2D collider) // ë²„íŠ¼ ë²”ìœ„ íƒˆì¶œ ê°ì§€
     {
-        if (!collider.CompareTag("Player")) // ÇÃ·¹ÀÌ¾î°¡ ¾Æ´Ï¶ó¸é return
+        if (!collider.CompareTag("Player")) // í”Œë ˆì´ì–´ê°€ ì•„ë‹ˆë¼ë©´ ë¦¬í„´
             return;
 
         isPlayerInside = false;
-        Debug.Log("¹ş¾î³²");
+        Debug.Log("í”Œë ˆì´ì–´ê°€ ë²„íŠ¼ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¨");
     }
 
     void Update()
     {
+        // í”Œë ˆì´ì–´ê°€ ì—†ê±°ë‚˜ íŠ¸ë¦¬ê±°ê°€ ì—°ê²° ì•ˆ ëìœ¼ë©´ ë¦¬í„´
         if (!isPlayerInside || waterTrigger == null)
             return;
 
-        // ÇÃ·¹ÀÌ¾î°¡ ¹üÀ§ ¾È¿¡¼­ EÅ° ´©¸¦ ¶§
+        // í”Œë ˆì´ì–´ê°€ ë²”ìœ„ ì•ˆì—ì„œ Eí‚¤ë¥¼ ëˆŒë €ì„ ë•Œ
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (isRaiseButton)
             {
-                Debug.Log("¹° ¿Ã¸®±â ¹öÆ° ÀÛµ¿");
+                Debug.Log("ë¬¼ ì˜¬ë¦¬ê¸° ë²„íŠ¼ ì‘ë™!");
                 waterTrigger.RaiseWater();
             }
             else
             {
-                Debug.Log("¹° ³»¸®±â ¹öÆ° ÀÛµ¿");
+                Debug.Log("ë¬¼ ë‚´ë¦¬ê¸° ë²„íŠ¼ ì‘ë™!");
                 waterTrigger.LowerWater();
             }
         }
