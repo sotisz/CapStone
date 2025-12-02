@@ -305,6 +305,10 @@ public class TigerController : MonoBehaviour, IKillable
         }
 
         ChangeState(TigerState.Dead);
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.deathCount++;
+
         StartCoroutine(RestartScene());
     }
 
