@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        gameState = "playing";
         Time.timeScale = 1f;
         if (GameObject.FindWithTag("Fade"))
         {
