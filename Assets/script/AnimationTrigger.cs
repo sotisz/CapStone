@@ -4,9 +4,9 @@ using UnityEngine;
 public class AnimationTrigger : MonoBehaviour
 {
     private PBtn PbtnSc;
-    private bool wasOpen = false;  // ÀÌÀü ÇÁ·¹ÀÓ ¹® »óÅÂ ÀúÀå
+    private bool wasOpen = false;  // ì´ì „ í”„ë ˆì„ ë¬¸ ìƒíƒœ ì €ì¥
     public GameObject splictScreen;
-    private bool isRunning = false; // ÄÚ·çÆ¾ Áßº¹ ¹æÁö
+    private bool isRunning = false; // ì½”ë£¨í‹´ ì¤‘ë³µ ë°©ì§€
     public float activeTime;
 
     private void Start()
@@ -16,14 +16,14 @@ public class AnimationTrigger : MonoBehaviour
 
     private void Update()
     {
-        // ¹®ÀÌ ´İÇô ÀÖ´Ù°¡ ¡æ ¿­¸° ¼ø°£¸¸ ½ÇÇà
+        // ë¬¸ì´ ë‹«í˜€ ìˆë‹¤ê°€ â†’ ì—´ë¦° ìˆœê°„ë§Œ ì‹¤í–‰
         if (!wasOpen && PbtnSc.IsOpen)
         {
             if (!isRunning)
                 StartCoroutine(ActiveBoard());
         }
 
-        wasOpen = PbtnSc.IsOpen; // »óÅÂ ¾÷µ¥ÀÌÆ®
+        wasOpen = PbtnSc.IsOpen; // ìƒíƒœ ì—…ë°ì´íŠ¸
     }
 
     IEnumerator ActiveBoard()
