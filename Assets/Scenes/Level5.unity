@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 08f477681f383d740b5f6fbfd004a272, type: 3}
+    - target: {fileID: 3928732575723238049, guid: f555ca122d65838458e1fe04e97e50e3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7960781181812828961, guid: f555ca122d65838458e1fe04e97e50e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -34261,6 +34265,10 @@ MonoBehaviour:
   gameState: playing
   fadeDuration: 1
   readDialogs: []
+  deathCount: 0
+  deathText: {fileID: 0}
+  playTime: 0
+  timerText: {fileID: 0}
 --- !u!4 &965818827
 Transform:
   m_ObjectHideFlags: 0
