@@ -10,6 +10,9 @@ TagManager:
   - Ground
   - Fade
   - BoxObject
+  - EndPoint
+  - TimerText
+  - DeathText
   layers:
   - Default
   - TransparentFX

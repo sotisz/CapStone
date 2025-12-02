@@ -383,6 +383,10 @@ public class BearController : MonoBehaviour, IKillable
             return;
         }
         ChangeState(BearState.Dead);
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.deathCount++;
+
         StartCoroutine(RestartScene());
     }
 
