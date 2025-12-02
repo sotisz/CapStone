@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5330211943826657094}
   - component: {fileID: 712136912311306871}
   - component: {fileID: -4340534580426873736}
-  - component: {fileID: 8601270588892283713}
   - component: {fileID: 2783153588691453649}
   - component: {fileID: 4985941415177789109}
+  - component: {fileID: 302977683856304449}
   m_Layer: 0
   m_Name: Falling Debris
   m_TagString: Untagged
@@ -118,19 +118,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8601270588892283713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6079184679343032235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b131fcc04c41e449a25f3f91c1517c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!61 &2783153588691453649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -189,3 +176,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49774feceb8d077439ea9f174871ace4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &302977683856304449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079184679343032235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b131fcc04c41e449a25f3f91c1517c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 3

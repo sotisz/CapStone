@@ -39,7 +39,9 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        gameState = "playing"; // 이 부분이 있어야 레벨 재시작 시 시간이 흐름 
         Time.timeScale = 1f;
+        
         if (GameObject.FindWithTag("Fade"))
         {
             canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
