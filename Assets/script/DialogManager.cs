@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Action = System.Action;
+using Application = UnityEngine.Application;
 
 public class DialogManager : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class DialogManager : MonoBehaviour
         public string text;
         public string left_avatar_url;
         public string right_avatar_url;
+        public string background_path;
     }
 
     public TMP_Text dialogText;
@@ -31,10 +34,12 @@ public class DialogManager : MonoBehaviour
     public Image rightNameBox;
     public Image leftAvatar;
     public Image rightAvatar;
+    public Image backgroundPanel;
 
     public List<DialogEntry> dialogList;
     private int index = 0;
     private bool isTalking;
+    private Action onDialogEndCallback;
 
     private static readonly Dictionary<string, Dictionary<string, string>> AvatarPathMap =
         new Dictionary<string, Dictionary<string, string>>
@@ -95,10 +100,11 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void DialogStart(string dialogPath)
+    public void DialogStart(string dialogPath, System.Action onEnd = null)
     {
         index = 0;
         GameManager.Instance.gameState = "paused";
+        this.onDialogEndCallback = onEnd;
         canvas.SetActive(true);
         LoadDialog(dialogPath);
         ShowDialog();
@@ -129,6 +135,27 @@ public class DialogManager : MonoBehaviour
         dialogText.text = dialog.text;
         leftNameText.text = dialog.left_name;
         rightNameText.text = dialog.right_name;
+        
+        if (backgroundPanel == null && canvas != null)
+        {
+            Transform bgObj = canvas.transform.Find("Background");
+            if (bgObj != null) backgroundPanel = bgObj.GetComponent<Image>();
+        }
+        if (!string.IsNullOrEmpty(dialog.background_path))
+        {
+            Debug.Log($"배경 변경 시도: 경로 = {dialog.background_path}");
+            Sprite bgSprite = LoadSpriteFromResources(dialog.background_path);
+            if (bgSprite != null)
+            {
+                backgroundPanel.sprite = bgSprite;
+                backgroundPanel.gameObject.SetActive(true);
+                Debug.Log("성공: 배경 이미지 교체 완료");
+            }
+            else
+            {
+                Debug.LogError("에러: Inspector에서 Background Panel이 연결되지 않았습니다!");
+            }
+        }
 
         dialog.left_avatar_url = GetAvatarPath(dialog.left_name, dialog.left_avatar_emotional);
         dialog.right_avatar_url = GetAvatarPath(dialog.right_name, dialog.right_avatar_emotional);
@@ -212,6 +239,11 @@ public class DialogManager : MonoBehaviour
     IEnumerator FinishDialog()
     {
         yield return new WaitForSecondsRealtime(0.3f);
+        if (onDialogEndCallback != null)
+        {
+            onDialogEndCallback.Invoke();
+            onDialogEndCallback = null;
+        }
         GameManager.Instance.gameState = "playing";
     }
 
