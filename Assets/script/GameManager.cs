@@ -83,6 +83,9 @@ public class GameManager : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
+
+            if (canvasGroup == null) yield break;
+
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
             elapsed += Time.deltaTime;
             yield return null;
