@@ -5,7 +5,8 @@ public class Falling_Spike : MonoBehaviour
     Rigidbody2D _rb;
     EdgeCollider2D _cc;
     public Transform FSpike;
-    // GameObject PlayerC;
+    public AudioClip deactivateSound;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -36,6 +37,9 @@ public class Falling_Spike : MonoBehaviour
         if (collision.gameObject.name.Equals("Tilemap") || collision.gameObject.tag == "Player" ||
             collision.gameObject.tag == "Breakable" || collision.gameObject.tag == "Ground" || collision.gameObject.name.Equals("Ground") ) 
         {   
+            if (deactivateSound != null)
+                AudioSource.PlayClipAtPoint(deactivateSound, transform.position);
+            
             FSpike.gameObject.SetActive(false);
         }
     }

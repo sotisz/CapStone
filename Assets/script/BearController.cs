@@ -18,6 +18,15 @@ public enum BearState
 
 public class BearController : MonoBehaviour, IKillable
 {
+    public AudioSource jumpSound;
+    public AudioSource footstepSound;
+    public AudioSource pushSound;
+    public AudioSource deathSound;
+
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f; // 발자국 간격
+
+
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
     public float pushForce = 5f;
@@ -162,7 +171,7 @@ public class BearController : MonoBehaviour, IKillable
 
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
         {
             return;
         }
@@ -185,6 +194,9 @@ public class BearController : MonoBehaviour, IKillable
         {
             rb2d.linearVelocityY = jumpForce;
             jumpCount -= 1;
+
+            if (jumpSound != null)
+                jumpSound.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
@@ -221,16 +233,44 @@ public class BearController : MonoBehaviour, IKillable
                 1 << LayerMask.NameToLayer("Block"));
             if (hit)
             {
-                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));                
+                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));
                 isPushing = true;
             }
             
+            // 밀기 사운드 처리
+            if (isPushing && onGround && currentState == BearState.Push)
+            {
+                if (!pushSound.isPlaying)
+                    pushSound.Play();
+            }
+            else
+            {
+                if (pushSound.isPlaying)
+                    pushSound.Stop();
+            }
+
+        }
+
+        // 발자국 사운드
+        if (onGround && currentState == BearState.Walk)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                footstepSound.Play();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
         }
     }
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
             return;
 
         onGround = false;
@@ -379,7 +419,14 @@ public class BearController : MonoBehaviour, IKillable
         {
             return;
         }
+
         ChangeState(BearState.Dead);
+        //죽음 사운드 재생
+        if (deathSound != null)
+        {
+            deathSound.Play();  
+        }   
+        
         StartCoroutine(RestartScene());
     }
 

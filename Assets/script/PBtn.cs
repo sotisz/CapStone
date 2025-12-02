@@ -4,20 +4,25 @@ public class PBtn : MonoBehaviour
 {
     public enum ButtonType
     {
-        Hold, // 지속,RedBtn
-        OneTime // 한번(닫힘 불가능), BlueBtn
+        Hold, 
+        OneTime
     }
     public ButtonType buttonType = ButtonType.Hold;
 
-    public Transform Object; //버튼과 상호작용할 오브젝트
+    public Transform Object; 
     public Transform door;
-    public Vector3 doorPos = new Vector3(0,0,0); // 가로도 쓰고 세로도 쓸거라서 따로 지정은 안함
+    public Vector3 doorPos = new Vector3(0,0,0);
     public float moveSpeed = 2f;
     private Vector3 doorClosedPos;
     private Vector3 doorOpenPos;
     private bool isOpen = false;
     public bool IsOpen => isOpen;
-    
+
+    // 🔊 사운드 추가
+    public AudioClip buttonPressSound;
+    public AudioClip doorOpenSound;
+    public AudioClip doorCloseSound;
+    public float soundVolume = 1f;
 
     void Start()
     {
@@ -25,7 +30,6 @@ public class PBtn : MonoBehaviour
         doorOpenPos = door.position + doorPos;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isOpen)
@@ -40,15 +44,17 @@ public class PBtn : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
+        if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player"))
         {
-            if (buttonType == ButtonType.Hold)
+            if (!isOpen)   // 이미 열려있을 때 소리 중복 방지
             {
                 isOpen = true;
-            }
-            else if (buttonType == ButtonType.OneTime)
-            {
-                isOpen = true;
+                
+                if (buttonPressSound != null)
+                    AudioSource.PlayClipAtPoint(buttonPressSound, transform.position, soundVolume);
+                
+                if (doorOpenSound != null)
+                    AudioSource.PlayClipAtPoint(doorOpenSound, door.position, soundVolume);
             }
         }
     }
@@ -57,10 +63,16 @@ public class PBtn : MonoBehaviour
     {
         if (buttonType == ButtonType.Hold)
         {
-            if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player") || Object)
+            if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player"))
             {
-                isOpen = false; 
-            } 
-        } // OneTime 타입은 Exit하는 동작 없음 -> 계속 열려 있음(닫을 수 없음)
+                if (isOpen) // 닫힐 때 딱 한 번만 소리
+                {
+                    isOpen = false;
+                    
+                    if (doorCloseSound != null)
+                        AudioSource.PlayClipAtPoint(doorCloseSound, door.position, soundVolume);
+                }
+            }
+        }
     }
 }

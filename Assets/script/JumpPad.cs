@@ -6,7 +6,8 @@ public class JumpPad : MonoBehaviour
     private float bounce = 10f;
     public float targetScaleY = 3f; // 닿았을 때 Y축 목표 크기
     public float speed = 3f; // 스케일 변화 속도
-
+    public AudioSource jumpPadSound;
+    
     private bool isTouching = false; // 닿았는지 여부
     private Vector3 originalScale; // 원래 크기
 
@@ -32,6 +33,9 @@ public class JumpPad : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody2D>().linearVelocityY = bounce;
             isTouching = true;
         }
+            if (jumpPadSound != null)
+                jumpPadSound.Play();
+            
     }
 
     private void OnCollisionExit2D(Collision2D other)
