@@ -30,7 +30,7 @@ public class SceneMove : MonoBehaviour
     {
         SceneManager.LoadScene("Level" + stageNum);
 
-        Debug.Log("Stage" + stageNum + " (으)로 이동합니다.");
+        Debug.Log("Level" + stageNum + " (으)로 이동합니다.");
     }
 
 }
