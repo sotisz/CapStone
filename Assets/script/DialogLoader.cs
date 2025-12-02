@@ -8,12 +8,13 @@ public class DialogLoader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isUsed)
-        if (isUsed)
             return;
+        if (GameManager.Instance.IsDialogRead(dialogPath)) return;
         if (other.CompareTag("Player"))
         {
             DialogManager.instance.DialogStart(dialogPath);
             isUsed = true;
+            GameManager.Instance.MarkDialogAsRead(dialogPath);
         }
     }
 }
