@@ -71,7 +71,7 @@
     "right_name": null,
     "right_avatar_emotional": "default",
     "text": "그리고 정신을 잃은 사이, 그녀는 인간으로 깨어났다.",
-    "background_path": "image/Ending"
+    "background_path": "image/Meeting"
   },
   {
     "speaking": "left",
@@ -88,7 +88,7 @@
     "right_name": null,
     "right_avatar_emotional": "default",
     "text": "웅녀는 환웅과 함께 행복한 시간을 보내며 아들을 낳았고, 그 아이는 훗날 ‘단군’이라 불리며 나라를 세웠다.",
-    "background_path": "image/Meeting"
+    "background_path": "image/Ending"
   },
   {
     "speaking": "left",

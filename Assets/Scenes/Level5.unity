@@ -635,6 +635,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2773710057901515907, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
   m_PrefabInstance: {fileID: 95914036}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &95914041 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2605669370122635450, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 95914036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &141195799 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7321784878696991875, guid: 1d1857528e8d49344bef4eab9b9c8e02, type: 3}
@@ -36500,7 +36505,7 @@ PrefabInstance:
     - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: pushSound
       value: 
-      objectReference: {fileID: 95914037}
+      objectReference: {fileID: 95914041}
     - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: deathSound
       value: 
