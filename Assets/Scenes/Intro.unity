@@ -2426,7 +2426,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1107622601}
         m_TargetAssemblyTypeName: SceneMove, Assembly-CSharp
-        m_MethodName: MoveToGameScene
+        m_MethodName: OnExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
