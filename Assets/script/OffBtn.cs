@@ -9,7 +9,7 @@ public class OffBtn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!OffObject)
+        if (OffObject == true)
         {
             Target.gameObject.SetActive(false);
         }
@@ -24,14 +24,7 @@ public class OffBtn : MonoBehaviour
         
         
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("BoxObject") || Object)
-        {
-            OffObject = false;
-        }
-    }
+    
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
