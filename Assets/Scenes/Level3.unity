@@ -167,10 +167,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 1046269158}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: pushSound
+      value: 
+      objectReference: {fileID: 1046269156}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1046269154}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 1046269155}
     - target: {fileID: 6552660789445318904, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 1046269158}
+    - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1046269154}
+    - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: climbingSound
+      value: 
+      objectReference: {fileID: 1046269157}
+    - target: {fileID: 6946106738586298132, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 1046269155}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -245,6 +277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike7
@@ -480,6 +516,18 @@ PrefabInstance:
       propertyPath: buttonType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2049052049425424062, guid: e046b6b596c3d5f46ad2bd01acd9817c, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
+    - target: {fileID: 2049052049425424062, guid: e046b6b596c3d5f46ad2bd01acd9817c, type: 3}
+      propertyPath: doorCloseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
+    - target: {fileID: 2049052049425424062, guid: e046b6b596c3d5f46ad2bd01acd9817c, type: 3}
+      propertyPath: buttonPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
     - target: {fileID: 5940286898012043508, guid: e046b6b596c3d5f46ad2bd01acd9817c, type: 3}
       propertyPath: m_Name
       value: Btn_Blue
@@ -648,6 +696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box2
       objectReference: {fileID: 0}
+    - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 5052190523180054090, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.42
@@ -706,6 +758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike4
@@ -776,6 +832,18 @@ PrefabInstance:
       propertyPath: doorPos.y
       value: 4.7
       objectReference: {fileID: 0}
+    - target: {fileID: -7218700937982820055, guid: 5e3ecf061d7c0134f9dfa68800c124f0, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
+    - target: {fileID: -7218700937982820055, guid: 5e3ecf061d7c0134f9dfa68800c124f0, type: 3}
+      propertyPath: doorCloseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
+    - target: {fileID: -7218700937982820055, guid: 5e3ecf061d7c0134f9dfa68800c124f0, type: 3}
+      propertyPath: buttonPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
     - target: {fileID: 3573271963631047143, guid: 5e3ecf061d7c0134f9dfa68800c124f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7
@@ -860,6 +928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike8
@@ -69796,6 +69868,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike3
@@ -75154,6 +75230,101 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7960781181812828961, guid: f555ca122d65838458e1fe04e97e50e3, type: 3}
   m_PrefabInstance: {fileID: 945200593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1046269153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 654.53156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 464.51398
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.3084836
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597920543420519071, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071222159857605343, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626235495860046259, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865865314001664832, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+--- !u!82 &1046269154 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1558113546235767659, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1046269155 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8923206766099546684, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1046269156 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2605669370122635450, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1046269157 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3227732481601453195, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1046269158 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2773710057901515907, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1046269159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5951371902891856326, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+  m_PrefabInstance: {fileID: 1046269153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1131087086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75162,6 +75333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike9
@@ -75224,6 +75399,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike2
@@ -75645,6 +75824,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3617316531336186906, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 3617316531336186906, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937760773470594311, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 4937760773470594311, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029791205804797741, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 5029791205804797741, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133360659752571356, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 5133360659752571356, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6312910121847630976, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -75724,6 +75935,22 @@ PrefabInstance:
     - target: {fileID: 6312910121847630976, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811857793253151404, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 7811857793253151404, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8197818132170351518, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1046269159}
+    - target: {fileID: 8197818132170351518, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76131,6 +76358,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike5
@@ -76197,6 +76428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box1
       objectReference: {fileID: 0}
+    - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 5052190523180054090, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.5
@@ -76335,6 +76570,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike10
@@ -76397,6 +76636,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike6
@@ -76683,6 +76926,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641930941}
     m_Modifications:
+    - target: {fileID: 427907892752191666, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
+      propertyPath: deactivateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     - target: {fileID: 3118618500468950673, guid: d4c4ea14e7201cc43a33d67df2ade478, type: 3}
       propertyPath: m_Name
       value: Falling_Spike1
@@ -76861,3 +77108,4 @@ SceneRoots:
   - {fileID: 2139465638}
   - {fileID: 1680967491}
   - {fileID: 117673105}
+  - {fileID: 1046269153}

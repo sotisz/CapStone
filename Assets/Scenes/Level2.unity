@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 5052190523180054090, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.2
@@ -1076,6 +1080,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6995041990897275823, guid: 1a2ac7aeea9fe6540a3a268cf990bc5f, type: 3}
+      propertyPath: shakeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1102,6 +1110,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 5052190523180054090, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.3
@@ -1758,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6995041990897275823, guid: 1a2ac7aeea9fe6540a3a268cf990bc5f, type: 3}
+      propertyPath: shakeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5529,7 +5545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4071222159857605343, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4246934891562728988, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_Volume
@@ -5542,6 +5558,10 @@ PrefabInstance:
     - target: {fileID: 6626235495860046259, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865865314001664832, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5726,6 +5746,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e9ae92bb56ea4448a7d934e9c597d50, type: 3}
     - target: {fileID: 5052190523180054090, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 75
