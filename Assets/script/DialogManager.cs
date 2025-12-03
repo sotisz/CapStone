@@ -141,21 +141,30 @@ public class DialogManager : MonoBehaviour
             Transform bgObj = canvas.transform.Find("Background");
             if (bgObj != null) backgroundPanel = bgObj.GetComponent<Image>();
         }
+
         if (!string.IsNullOrEmpty(dialog.background_path))
         {
             Debug.Log($"배경 변경 시도: 경로 = {dialog.background_path}");
             Sprite bgSprite = LoadSpriteFromResources(dialog.background_path);
+
             if (bgSprite != null)
             {
                 backgroundPanel.sprite = bgSprite;
-                backgroundPanel.gameObject.SetActive(true);
+                backgroundPanel.gameObject.SetActive(true);   // 활성화
                 Debug.Log("성공: 배경 이미지 교체 완료");
             }
             else
             {
-                Debug.LogError("에러: Inspector에서 Background Panel이 연결되지 않았습니다!");
+                Debug.LogWarning("배경 경로는 존재하지만, 리소스를 찾지 못했습니다.");
+                backgroundPanel.gameObject.SetActive(false);  // 리소스 없음 → 비활성화
             }
         }
+        else
+        {
+            // 경로가 null 또는 "" → 비활성화
+            backgroundPanel.gameObject.SetActive(false);
+        }
+
 
         dialog.left_avatar_url = GetAvatarPath(dialog.left_name, dialog.left_avatar_emotional);
         dialog.right_avatar_url = GetAvatarPath(dialog.right_name, dialog.right_avatar_emotional);

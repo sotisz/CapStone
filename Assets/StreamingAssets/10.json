@@ -14,7 +14,9 @@
     "left_avatar_emotional": "sad",
     "right_name": "범",
     "right_avatar_emotional": "default",
-    "text": "더 이상 길이 없어... 우리 둘 다 떨어질 거야."
+    "text": "더 이상 길이 없어... 우리 둘 다 떨어질 거야.",
+    "background_path" : "image/Cliff"
+
   },
   {
     "speaking": "right",
@@ -22,7 +24,8 @@
     "left_avatar_emotional": "sad",
     "right_name": "범",
     "right_avatar_emotional": "sad",
-    "text": "에이, 너라도 살아. 인간이 되고 싶다며?"
+    "text": "에이, 너라도 살아. 인간이 되고 싶다며?",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "left",
@@ -30,7 +33,8 @@
     "left_avatar_emotional": "sad",
     "right_name": "범",
     "right_avatar_emotional": "sad",
-    "text": "그건… 너도 마찬가지잖아!"
+    "text": "그건… 너도 마찬가지잖아!",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "right",
@@ -38,7 +42,8 @@
     "left_avatar_emotional": "sad",
     "right_name": "범",
     "right_avatar_emotional": "sad",
-    "text": "난 됐어. 나보다는 더 인간적인 네가 인간이 되는 게 맞는 것 같아."
+    "text": "난 됐어. 나보다는 더 인간적인 네가 인간이 되는 게 맞는 것 같아.",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "left",
@@ -46,7 +51,8 @@
     "left_avatar_emotional": "sad",
     "right_name": "범",
     "right_avatar_emotional": "sad",
-    "text": "범...!"
+    "text": "범...!",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "left",
@@ -54,7 +60,8 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "(범이 손을 놓고 떨어진다.)"
+    "text": "(범이 손을 놓고 떨어진다.)",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "left",
@@ -62,7 +69,8 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "웅은 절벽 끝에 매달린 채 눈을 감았다."
+    "text": "웅은 절벽 끝에 매달린 채 눈을 감았다.",
+    "background_path" : "image/Cliff"
   },
   {
     "speaking": "left",
@@ -79,7 +87,8 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "사람들은 그녀를 “웅녀”라 불렀다."
+    "text": "사람들은 그녀를 “웅녀”라 불렀다.",
+    "background_path": "image/Meeting"
   },
   {
     "speaking": "left",
@@ -96,7 +105,8 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "높은 절벽 끝에서, 웅녀와 환웅은 함께 고조선의 빛나는 미래를 바라보았다."
+    "text": "높은 절벽 끝에서, 웅녀와 환웅은 함께 고조선의 빛나는 미래를 바라보았다.",
+    "background_path": "image/Ending"
   },
   {
     "speaking": "left",
@@ -104,7 +114,8 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "한편, 동굴에서는"
+    "text": "한편, 동굴에서는",
+    "background_path": "image/Ending"
   },
   {
     "speaking": "right",
@@ -121,6 +132,7 @@
     "left_avatar_emotional": "default",
     "right_name": null,
     "right_avatar_emotional": "default",
-    "text": "그렇게 범의 운명은 아직 끝나지 않았다."
+    "text": "그렇게 범의 운명은 아직 끝나지 않았다.",
+    "background_path": "image/Epilogue"
   }
 ]
