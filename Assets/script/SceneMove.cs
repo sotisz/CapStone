@@ -12,8 +12,6 @@ public class SceneMove : MonoBehaviour
 
     public void RestartCurrentScene()
     {
-        GameManager.Instance.playTime = 0f;
-        GameManager.Instance.deathCount = 0;
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
@@ -39,7 +37,7 @@ public class SceneMove : MonoBehaviour
         GameManager.Instance.deathCount = 0;
         SceneManager.LoadScene("Level" + stageNum);
 
-        Debug.Log("Level" + stageNum + " (À¸)·Î ÀÌµ¿ÇÕ´Ï´Ù.");
+        Debug.Log("Level" + stageNum + " (ï¿½ï¿½)ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Õ´Ï´ï¿½.");
     }
 
 }

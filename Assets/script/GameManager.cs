@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
 
             if(deathText != null)
             {
-                deathText.text = "<color=#FFE4B5>" + deathCount + "</color>" + "<color=#FF6347> 수련</color>";
+                deathText.text = "<color=#FFE4B5>" + deathCount + "</color>" + "<color=#FF6347> 죽음</color>";
             }
         }
         else
