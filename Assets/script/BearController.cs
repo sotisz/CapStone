@@ -18,6 +18,15 @@ public enum BearState
 
 public class BearController : MonoBehaviour, IKillable
 {
+    public AudioSource jumpSound;
+    public AudioSource footstepSound;
+    public AudioSource pushSound;
+    public AudioSource deathSound;
+
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f; // 발자국 간격
+
+
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
     public float pushForce = 5f;
@@ -33,8 +42,7 @@ public class BearController : MonoBehaviour, IKillable
     public Transform pathfindingTarget;
 
     Rigidbody2D rb2d;
-    BoxCollider2D bc2d;
-    CircleCollider2D cc2d;
+    Collider2D c2d;
     float axisH = 0.0f;
     public BearState currentState = BearState.Idle;
     private float onGroundTimer = 0.1f;
@@ -57,8 +65,7 @@ public class BearController : MonoBehaviour, IKillable
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        bc2d = GetComponent<BoxCollider2D>();
-        cc2d = GetComponent<CircleCollider2D>();
+        c2d = GetComponent<Collider2D>();
     }
 
     protected void Start()
@@ -148,8 +155,7 @@ public class BearController : MonoBehaviour, IKillable
             case BearState.Dead:
                 animator.SetBool("Dead", true);
                 rb2d.linearVelocity = new Vector2(0, 7.0f);
-                bc2d.enabled = false;
-                cc2d.enabled = false;
+                c2d.enabled = false;
                 break;
         }
 
@@ -165,7 +171,7 @@ public class BearController : MonoBehaviour, IKillable
 
     public void Update()
     {
-        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
         {
             return;
         }
@@ -188,6 +194,9 @@ public class BearController : MonoBehaviour, IKillable
         {
             rb2d.linearVelocityY = jumpForce;
             jumpCount -= 1;
+
+            if (jumpSound != null)
+                jumpSound.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
@@ -216,7 +225,7 @@ public class BearController : MonoBehaviour, IKillable
 
         isPushing = false;
 
-        var raySize = bc2d.bounds.size;
+        var raySize = c2d.bounds.size;
         raySize.y -= 0.1f;
         if (!Mathf.Approximately(axisH, 0.0f))
         {
@@ -224,16 +233,44 @@ public class BearController : MonoBehaviour, IKillable
                 1 << LayerMask.NameToLayer("Block"));
             if (hit)
             {
-                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));                
+                hit.collider.GetComponent<Rigidbody2D>()?.AddForce(Vector2.right * (axisH * pushForce));
                 isPushing = true;
             }
             
+            // 밀기 사운드 처리
+            if (isPushing && onGround && currentState == BearState.Push)
+            {
+                if (!pushSound.isPlaying)
+                    pushSound.Play();
+            }
+            else
+            {
+                if (pushSound.isPlaying)
+                    pushSound.Stop();
+            }
+
+        }
+
+        // 발자국 사운드
+        if (onGround && currentState == BearState.Walk)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                footstepSound.Play();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
         }
     }
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.gameState != "playing"||currentState.Equals(BearState.Dead))
+        if (GameManager.Instance.gameState != "playing" || currentState.Equals(BearState.Dead))
             return;
 
         onGround = false;
@@ -382,11 +419,14 @@ public class BearController : MonoBehaviour, IKillable
         {
             return;
         }
+
         ChangeState(BearState.Dead);
-
-        if (GameManager.Instance != null)
-            GameManager.Instance.deathCount++;
-
+        //죽음 사운드 재생
+        if (deathSound != null)
+        {
+            deathSound.Play();  
+        }   
+        
         StartCoroutine(RestartScene());
     }
 

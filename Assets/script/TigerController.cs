@@ -13,6 +13,17 @@ public enum TigerState
 
 public class TigerController : MonoBehaviour, IKillable
 {
+    public AudioSource climbingSound;
+    public AudioSource footstepSound;
+    public AudioSource jumpSound;
+    public AudioSource deathSound;
+
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f; // 발자국 간격
+    private float climbSoundTimer = 0f;
+    public float climbSoundInterval = 0.35f; // 벽 오르기 사운드 간격
+
+    
     public float speed = 6.0f;
     public float climbSpeed = 4.0f;
     public float jumpForce = 8.0f;
@@ -180,6 +191,9 @@ public class TigerController : MonoBehaviour, IKillable
             }
 
             ChangeState(TigerState.Floating);
+            
+            if (jumpSound != null)
+                jumpSound.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
@@ -190,6 +204,21 @@ public class TigerController : MonoBehaviour, IKillable
             tagPlayer.transform.localScale = transform.localScale;
             tagPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb2d.linearVelocity;
             gameObject.SetActive(false);
+        }
+        
+        if (onGround && currentState == TigerState.Walk)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                footstepSound.Play();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
         }
     }
 
@@ -245,6 +274,25 @@ public class TigerController : MonoBehaviour, IKillable
                 animator.SetBool("isClimbingUp", false);
             }
         }
+        
+        // 벽 오르기 사운드
+        if (currentState == TigerState.Special && rb2d.linearVelocityY > 0.1f)
+        {
+            climbSoundTimer -= Time.deltaTime;
+
+            if (climbSoundTimer <= 0f)
+            {
+                if (climbingSound != null)
+                    climbingSound.Play();
+
+                climbSoundTimer = climbSoundInterval;
+            }
+        }
+        else
+        {
+            climbSoundTimer = 0f;
+        }
+
 
         if (currentState == TigerState.Special)
             return;
@@ -305,10 +353,11 @@ public class TigerController : MonoBehaviour, IKillable
         }
 
         ChangeState(TigerState.Dead);
-
-        if (GameManager.Instance != null)
-            GameManager.Instance.deathCount++;
-
+        // 🔊 죽음 사운드 재생
+        if (deathSound != null)
+        {
+            deathSound.Play();
+        }
         StartCoroutine(RestartScene());
     }
 

@@ -11,8 +11,6 @@ TagManager:
   - Fade
   - BoxObject
   - EndPoint
-  - TimerText
-  - DeathText
   layers:
   - Default
   - TransparentFX
@@ -55,6 +53,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1446733019
+    locked: 0
+  - name: Lava
+    uniqueID: 2467717291
     locked: 0
   m_RenderingLayers:
   - Default

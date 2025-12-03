@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    public float interactionDistance = 2f; // 상호작용 거리
-    public KeyCode interactionKey = KeyCode.E; // 상호작용 키
+    public float interactionDistance = 2f;
+    public KeyCode interactionKey = KeyCode.E;
 
     public Transform door;
-    public Vector3 doorPos = new Vector3(0, 0, 0); // 문이 이동할 오프셋
+    public Vector3 doorPos = new Vector3(0, 0, 0);
     public float moveSpeed = 2f;
 
     private Vector3 doorClosedPos;
@@ -15,10 +15,18 @@ public class Lever : MonoBehaviour
 
     public LeverManager lever_manager;
 
-    private Quaternion leverDefaultRot; // 초기 회전값
-    private Quaternion leverActivatedRot; // -30도 회전값
+    private Quaternion leverDefaultRot;
+    private Quaternion leverActivatedRot;
 
     private BearController bear;
+
+    // 사운드
+    public AudioClip leverSound;
+    public AudioClip doorOpenSound;
+    public AudioClip doorCloseSound;
+    public float soundVolume = 1f;
+
+    private bool prevActivateState = false;
 
     void Start()
     {
@@ -27,6 +35,8 @@ public class Lever : MonoBehaviour
 
         leverDefaultRot = transform.rotation;
         leverActivatedRot = Quaternion.Euler(0, 0, -30);
+
+        prevActivateState = lever_manager.isActivated;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,11 +53,36 @@ public class Lever : MonoBehaviour
 
     void Update()
     {
+        // 레버를 당길 때
         if (Input.GetKeyDown(interactionKey) && bear)
         {
-            Debug.Log("가져옴");
             lever_manager.isActivated = !lever_manager.isActivated;
+
+            // 레버 당기는 소리
+            if (leverSound != null)
+                AudioSource.PlayClipAtPoint(leverSound, transform.position, soundVolume);
         }
+
+        // 상태가 변화했을 때 문 소리를 재생
+        if (lever_manager.isActivated != prevActivateState)
+        {
+            if (lever_manager.isActivated)
+            {
+                // 문 열림 소리
+                if (doorOpenSound != null)
+                    AudioSource.PlayClipAtPoint(doorOpenSound, door.position, soundVolume);
+            }
+            else
+            {
+                // 문 닫힘 소리
+                if (doorCloseSound != null)
+                    AudioSource.PlayClipAtPoint(doorCloseSound, door.position, soundVolume);
+            }
+
+            prevActivateState = lever_manager.isActivated;
+        }
+
+        // 문 및 레버 애니메이션
         if (lever_manager.isActivated)
         {
             door.position = Vector3.MoveTowards(door.position, doorOpenPos, moveSpeed * Time.deltaTime);
