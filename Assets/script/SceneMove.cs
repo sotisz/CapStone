@@ -1,5 +1,7 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneMove : MonoBehaviour
 {
@@ -27,11 +29,8 @@ public class SceneMove : MonoBehaviour
 
     public void OnExitButton()
     {
-#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#else
-    Application.Quit();
-#endif
+        Application.Quit();
     }
     public void GoToStage(int stageNum)
     {
