@@ -3892,7 +3892,8 @@ Transform:
   m_LocalPosition: {x: 70.9, y: 0.73, z: 0.2}
   m_LocalScale: {x: 1.7885402, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2031371771}
   m_Father: {fileID: 143944472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1243055341
@@ -4540,7 +4541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104344541910318877, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4053756390376855779, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
       propertyPath: m_IsActive
@@ -5218,6 +5219,10 @@ PrefabInstance:
       propertyPath: doorOpenSound
       value: 
       objectReference: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
+    - target: {fileID: 4557975624741870524, guid: 678ca72de6b149e4a9103f7b2300b192, type: 3}
+      propertyPath: lever_manager
+      value: 
+      objectReference: {fileID: 2031371772}
     - target: {fileID: 4557975624741870524, guid: 678ca72de6b149e4a9103f7b2300b192, type: 3}
       propertyPath: doorCloseSound
       value: 
@@ -20774,6 +20779,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa0b5a8caa598b43a3cbaabf667ad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2031371770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031371771}
+  - component: {fileID: 2031371772}
+  m_Layer: 6
+  m_Name: Mgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031371771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031371770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1243055340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031371772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031371770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16694c8e39471443b02bc378ea54fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
 --- !u!1001 &2043940887
 PrefabInstance:
   m_ObjectHideFlags: 0
