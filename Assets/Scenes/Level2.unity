@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2326852966494897268, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_Mass
-      value: 200
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: breakSound
@@ -1108,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2326852966494897268, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_Mass
-      value: 200
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: breakSound
@@ -5977,7 +5977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2326852966494897268, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: m_Mass
-      value: 200
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4554530129341602082, guid: ad1b565807ca4104bb5b07583363d1e5, type: 3}
       propertyPath: breakSound
