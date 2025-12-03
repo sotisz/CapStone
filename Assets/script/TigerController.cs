@@ -353,6 +353,10 @@ public class TigerController : MonoBehaviour, IKillable
         }
 
         ChangeState(TigerState.Dead);
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.deathCount++;
+
         // 🔊 죽음 사운드 재생
         if (deathSound != null)
         {
