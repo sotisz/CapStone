@@ -11,11 +11,13 @@ TagManager:
   - Fade
   - BoxObject
   - EndPoint
+  - TimerText
+  - DeathText
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Block
