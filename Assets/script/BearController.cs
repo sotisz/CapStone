@@ -42,7 +42,8 @@ public class BearController : MonoBehaviour, IKillable
     public Transform pathfindingTarget;
 
     Rigidbody2D rb2d;
-    Collider2D c2d;
+    BoxCollider2D bc2d;
+    private CircleCollider2D cc2d;
     float axisH = 0.0f;
     public BearState currentState = BearState.Idle;
     private float onGroundTimer = 0.1f;
@@ -65,7 +66,8 @@ public class BearController : MonoBehaviour, IKillable
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        c2d = GetComponent<Collider2D>();
+        bc2d = GetComponent<BoxCollider2D>();
+        cc2d = GetComponent<CircleCollider2D>();
     }
 
     protected void Start()
@@ -155,7 +157,8 @@ public class BearController : MonoBehaviour, IKillable
             case BearState.Dead:
                 animator.SetBool("Dead", true);
                 rb2d.linearVelocity = new Vector2(0, 7.0f);
-                c2d.enabled = false;
+                bc2d.enabled = false;
+                cc2d.enabled = false;
                 break;
         }
 
@@ -225,7 +228,7 @@ public class BearController : MonoBehaviour, IKillable
 
         isPushing = false;
 
-        var raySize = c2d.bounds.size;
+        var raySize = bc2d.bounds.size;
         raySize.y -= 0.1f;
         if (!Mathf.Approximately(axisH, 0.0f))
         {

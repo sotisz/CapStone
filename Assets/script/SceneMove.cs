@@ -20,6 +20,7 @@ public class SceneMove : MonoBehaviour
     {
         GameManager.Instance.playTime = 0f;
         GameManager.Instance.deathCount = 0;
+        GameManager.Instance.readDialogs.Clear();
         SceneManager.LoadScene("Intro");
     }
 

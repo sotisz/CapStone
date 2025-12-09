@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9dd0c30d24bf15244a4ace74198d6f60
+guid: 75f8ab3526521cf48bf4326b79e4b9fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3973996158518582179
-    second: trapimg1_0
+      213: 3427069370892688847
+    second: "\uBC94_\uC218\uC601(\uCEEC\uB7EC)3_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trapimg1_0
+      name: "\uBC94_\uC218\uC601(\uCEEC\uB7EC)3_0"
       rect:
         serializedVersion: 2
-        x: 18
-        y: 14
-        width: 37
-        height: 171
+        x: 38
+        y: 105
+        width: 323
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ab54477378762730800000000000000
-      internalID: 3973996158518582179
+      spriteID: fcd1ea87f656f8f20800000000000000
+      internalID: 3427069370892688847
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      trapimg1_0: 3973996158518582179
+      "\uBC94_\uC218\uC601(\uCEEC\uB7EC)3_0": 3427069370892688847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
