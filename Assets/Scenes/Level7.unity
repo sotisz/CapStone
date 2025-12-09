@@ -6466,7 +6466,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -21423,11 +21423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.z
