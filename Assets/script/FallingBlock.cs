@@ -35,7 +35,7 @@ public class FallingPlatform : MonoBehaviour
     private IEnumerator ShakeAndFall()
     {
         if (shakeSound != null)
-            AudioSource.PlayClipAtPoint(shakeSound, transform.position, shakeVolume);
+            SoundManager.Instance.PlaySFX(shakeSound);
 
         float elapsedTime = 0f;
 

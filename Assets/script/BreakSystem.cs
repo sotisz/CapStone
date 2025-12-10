@@ -16,7 +16,7 @@ public class BreakSystem : MonoBehaviour
     public void Break()
     {
         if (breakSound != null)
-            AudioSource.PlayClipAtPoint(breakSound, transform.position, soundVolume);
+            SoundManager.Instance.PlaySFX(breakSound);
 
         if (sourceSprite == null)
             sourceSprite = GetComponent<SpriteRenderer>().sprite;

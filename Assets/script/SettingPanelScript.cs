@@ -1,6 +1,4 @@
 
-// È¯°æ¼³Á¤ Ã¢ prefab >> ÇÏÀÌ¾î¶óÅ° Ã¢¿¡ ¿Ã·ÁµÎ°í,
-// ¶ç¿ì´Â Å° È¤Àº ¹öÆ°¸¸ ÁöÁ¤ÇÏ¸é ¾îµð¼­µç ºÒ·¯¿À±â °¡´É!!
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
@@ -8,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-// ³ªÁß¿¡ À½·®, Å°ÁöÁ¤, ÇØ»óµµ Á¶ÀÛ ÇÊ¿ä
+// ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½, Å°ï¿½ï¿½ï¿½ï¿½, ï¿½Ø»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½
 public class SettingPanelScript : MonoBehaviour
 {
 
@@ -38,7 +36,7 @@ public class SettingPanelScript : MonoBehaviour
         SoundManager.Instance.SetAudioVolume(EAudioMixerType.SFX, volume);
     }
 
-    //  ¹ü¿ë ¹ÂÆ® ÇÔ¼ö
+    //  ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½Ô¼ï¿½
     public void ToggleMuteByIndex(int mixerTypeIndex)
     {
         EAudioMixerType type = (EAudioMixerType)mixerTypeIndex;
