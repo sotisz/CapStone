@@ -4,25 +4,25 @@ public class PBtn : MonoBehaviour
 {
     public enum ButtonType
     {
-        Hold, 
+        Hold,
         OneTime
     }
     public ButtonType buttonType = ButtonType.Hold;
 
-    public Transform Object; 
+    public Transform Object;
     public Transform door;
-    public Vector3 doorPos = new Vector3(0,0,0);
+    public Vector3 doorPos = new Vector3(0, 0, 0);
     public float moveSpeed = 2f;
+
     private Vector3 doorClosedPos;
     private Vector3 doorOpenPos;
     private bool isOpen = false;
     public bool IsOpen => isOpen;
 
-    // 🔊 사운드 추가
+    [Header("SFX")]
     public AudioClip buttonPressSound;
     public AudioClip doorOpenSound;
     public AudioClip doorCloseSound;
-    public float soundVolume = 1f;
 
     void Start()
     {
@@ -41,20 +41,20 @@ public class PBtn : MonoBehaviour
             door.position = Vector3.MoveTowards(door.position, doorClosedPos, moveSpeed * Time.deltaTime);
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player"))
         {
-            if (!isOpen)   // 이미 열려있을 때 소리 중복 방지
+            if (!isOpen)   // ✅ 이미 열려있을 때 소리 중복 방지
             {
                 isOpen = true;
-                
+
                 if (buttonPressSound != null)
-                    AudioSource.PlayClipAtPoint(buttonPressSound, transform.position, soundVolume);
-                
+                    SoundManager.Instance.PlaySFX(buttonPressSound);
+
                 if (doorOpenSound != null)
-                    AudioSource.PlayClipAtPoint(doorOpenSound, door.position, soundVolume);
+                    SoundManager.Instance.PlaySFX(doorOpenSound);
             }
         }
     }
@@ -65,12 +65,12 @@ public class PBtn : MonoBehaviour
         {
             if (other.CompareTag("Breakable") || other.CompareTag("BoxObject") || other.CompareTag("Player"))
             {
-                if (isOpen) // 닫힐 때 딱 한 번만 소리
+                if (isOpen) // ✅ 닫힐 때 딱 한 번만 소리
                 {
                     isOpen = false;
-                    
+
                     if (doorCloseSound != null)
-                        AudioSource.PlayClipAtPoint(doorCloseSound, door.position, soundVolume);
+                        SoundManager.Instance.PlaySFX(doorCloseSound);
                 }
             }
         }
