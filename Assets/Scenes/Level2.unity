@@ -3675,6 +3675,14 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3718380393894186723, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: bgmGroup
+      value: 
+      objectReference: {fileID: 5035570244400136396, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
+    - target: {fileID: 3718380393894186723, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: sfxGroup
+      value: 
+      objectReference: {fileID: 7075549559190729031, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
     - target: {fileID: 4313250331673104348, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3725,19 +3733,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: Loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: dfc35c9d672b7fb47919f6ce7a90237e, type: 3}
     - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: dfc35c9d672b7fb47919f6ce7a90237e, type: 3}
     - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
       propertyPath: OutputAudioMixerGroup

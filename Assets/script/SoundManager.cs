@@ -9,16 +9,14 @@ public class SoundManager : MonoBehaviour
 
     [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
-
-    // ✅ 이거 두 개를 인스펙터에서 반드시 연결
     [SerializeField] private AudioMixerGroup bgmGroup;
     [SerializeField] private AudioMixerGroup sfxGroup;
 
     [Header("Water Sounds")]
     public AudioClip waterEnterSound;
 
-    private AudioSource audioSource;   // ✅ SFX 전용
-    private AudioSource bgmSource;     // ✅ BGM 전용
+    private AudioSource audioSource;   // SFX 전용
+    private AudioSource bgmSource;     // BGM 전용
 
     private bool[] isMute = new bool[3];
     private float[] audioVolumes = new float[3];
@@ -36,16 +34,16 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // ✅ BGM Source 생성
+        // BGM Source 생성
         bgmSource = gameObject.AddComponent<AudioSource>();
-        bgmSource.outputAudioMixerGroup = bgmGroup;   // ✅ BGM Mixer에 강제 연결
+        bgmSource.outputAudioMixerGroup = bgmGroup;   // BGM Mixer에 강제 연결
 
-        // ✅ SFX Source 생성
+        //SFX Source 생성
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.outputAudioMixerGroup = sfxGroup; // ✅ SFX Mixer에 강제 연결
+        audioSource.outputAudioMixerGroup = sfxGroup; // SFX Mixer에 강제 연결
     }
 
-    // ✅ 볼륨 설정 (Master / BGM / SFX)
+    // 볼륨 설정 (Master / BGM / SFX)
     public void SetAudioVolume(EAudioMixerType type, float volume)
     {
         audioMixer.SetFloat(
@@ -72,14 +70,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // ✅ ✅ ✅ SFX 재생 (슬라이더 100% 반응)
+    // SFX 재생 (슬라이더 100% 반응)
     public void PlaySFX(AudioClip clip)
     {
         if (clip != null)
             audioSource.PlayOneShot(clip);
     }
 
-    // ✅ ✅ ✅ BGM 재생 (슬라이더 100% 반응)
+    // BGM 재생 (슬라이더 100% 반응)
     public void PlayBGM(AudioClip clip, bool loop = true)
     {
         if (clip == null) return;
@@ -89,7 +87,7 @@ public class SoundManager : MonoBehaviour
         bgmSource.Play();
     }
 
-    // ✅ 물 진입 효과음
+    // 물 진입 효과음
     public void PlayWaterEnterSound()
     {
         if (waterEnterSound != null)
