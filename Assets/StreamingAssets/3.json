@@ -1,0 +1,74 @@
+[
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "angry",
+    "text": "으아! 뭐야, 이 거대한 바위는? 아무리 높게 뛰어도 넘어갈 수가 없잖아!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "angry",
+    "text": "잠깐 비켜봐, 범. 자세히 보면 바위 표면에 금이 가 있어."
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "default",
+    "text": "이런 건 내 주특기지. 힘을 모아 주먹을 날리면(F) 단번에 부술 수 있을 거야."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
+    "text": "오~ 듬직한데? 어서 그 대단한 힘 좀 보여줘 봐! 길이 뻥 뚫리게 말이야."
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "disappoint",
+    "right_name": "범",
+    "right_avatar_emotional": "default",
+    "text": "(바위를 부쉈지만, 그 뒤엔 높은 절벽이 가로막고 있다) ...길은 뚫렸지만, 저 위는 내 점프력으론 닿지 않아. 혼자선 갈 수 없겠어."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "disappoint",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
+    "text": "흐흥, 비켜봐! 이 몸이 특별히 너를 도와주지! 난 벽타기 고수라고!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "confident",
+    "text": "그래, 이번엔 네 도움이 필요하겠군. 부탁한다."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "default",
+    "right_name": "범",
+    "right_avatar_emotional": "happy",
+    "text": "드디어 내 실력을 인정하는 거야? 내가 얼마나 최강인지 똑똑히 봐두라고!"
+  },
+  {
+    "speaking": "left",
+    "left_name": "환웅",
+    "left_avatar_emotional": "default",
+    "right_name": null,
+    "right_avatar_emotional": "default",
+    "text": "(서로의 부족함을 채워주며, 둘은 처음으로 서로를 인정하기 시작했다.)"
+  }
+]

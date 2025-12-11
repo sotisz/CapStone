@@ -5,38 +5,30 @@
     "left_avatar_emotional": "disappoint",
     "right_name": "범",
     "right_avatar_emotional": "default",
-    "text": "혼자선 이 문을 열 수 없겠어."
+    "text": "으... 비릿하고 축축한 냄새. 설마 앞이 전부 물바다인 건가?"
   },
   {
     "speaking": "right",
     "left_name": "웅",
     "left_avatar_emotional": "disappoint",
     "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "그럼 이 몸이 특별히 너를 도와주지! 난 벽타기 고수라고!"
+    "right_avatar_emotional": "happy",
+    "text": "하하! 드디어 시원한 물이네! 땀 때문에 찝찝하던 참이었는데 잘됐다!"
   },
   {
     "speaking": "left",
     "left_name": "웅",
-    "left_avatar_emotional": "default",
+    "left_avatar_emotional": "angry",
     "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "그래, 이번엔 네 도움이 필요하겠군."
+    "right_avatar_emotional": "happy",
+    "text": "(질색하며) 난 절대 안 들어가. 내 무거운 털이 물을 먹으면... 그대로 돌처럼 가라앉고 말 거야."
   },
   {
     "speaking": "right",
     "left_name": "웅",
-    "left_avatar_emotional": "default",
+    "left_avatar_emotional": "angry",
     "right_name": "범",
-    "right_avatar_emotional": "happy",
-    "text": "드디어 내 실력을 드디어 인정하는 거야? 내가 얼마나 최강인지 보여주지!"
-  },
-  {
-    "speaking": "left",
-    "left_name": "환웅",
-    "left_avatar_emotional": "default",
-    "right_name": null,
-    "right_avatar_emotional": "default",
-    "text": "(둘은 처음으로 서로를 인정하기 시작했다.)"
+    "right_avatar_emotional": "confident",
+    "text": "겁쟁이 곰탱이 같으니라고. 물속에선 내가 왕이야! 네가 발끝 하나 젖지 않게 내가 앞장서지."
   }
 ]
