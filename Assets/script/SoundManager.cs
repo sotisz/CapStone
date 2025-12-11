@@ -9,18 +9,20 @@ public class SoundManager : MonoBehaviour
 
     [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private AudioMixerGroup bgmGroup;
+    [SerializeField] private AudioMixerGroup sfxGroup;
 
     [Header("Water Sounds")]
     public AudioClip waterEnterSound;
 
-    private AudioSource audioSource;
+    private AudioSource audioSource;   // SFX 전용
+    private AudioSource bgmSource;     // BGM 전용
 
     private bool[] isMute = new bool[3];
     private float[] audioVolumes = new float[3];
 
     private void Awake()
     {
-        // 싱글톤 설정
         if (Instance == null)
         {
             Instance = this;
@@ -32,39 +34,25 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // 오디오 소스 설정
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
+        // BGM Source 생성
+        bgmSource = gameObject.AddComponent<AudioSource>();
+        bgmSource.outputAudioMixerGroup = bgmGroup;   // BGM Mixer에 강제 연결
+
+        //SFX Source 생성
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = sfxGroup; // SFX Mixer에 강제 연결
     }
 
-    // 볼륨 설정 (0.0001 ~ 1)
+    // 볼륨 설정 (Master / BGM / SFX)
     public void SetAudioVolume(EAudioMixerType type, float volume)
     {
-        audioMixer.SetFloat(type.ToString(), Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20);
+        audioMixer.SetFloat(
+            type.ToString(),
+            Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20
+        );
     }
 
-    // 뮤트 토글
-    public void SetAudioMute(EAudioMixerType audioMixerType)
-    {
-        int type = (int)audioMixerType;
-
-        if (!isMute[type])
-        {
-            isMute[type] = true;
-            audioMixer.GetFloat(audioMixerType.ToString(), out float curVolume);
-            audioVolumes[type] = curVolume;
-            SetAudioVolume(audioMixerType, 0.001f);
-        }
-        else
-        {
-            isMute[type] = false;
-            SetAudioVolume(audioMixerType, audioVolumes[type]);
-        }
-    }
-
-    // 음소거 토글
-    public void ToggleMute(EAudioMixerType type)
+    public void SetAudioMute(EAudioMixerType type)
     {
         int index = (int)type;
 
@@ -82,11 +70,27 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // 물 진입 사운드
+    // SFX 재생 (슬라이더 100% 반응)
+    public void PlaySFX(AudioClip clip)
+    {
+        if (clip != null)
+            audioSource.PlayOneShot(clip);
+    }
+
+    // BGM 재생 (슬라이더 100% 반응)
+    public void PlayBGM(AudioClip clip, bool loop = true)
+    {
+        if (clip == null) return;
+
+        bgmSource.clip = clip;
+        bgmSource.loop = loop;
+        bgmSource.Play();
+    }
+
+    // 물 진입 효과음
     public void PlayWaterEnterSound()
     {
         if (waterEnterSound != null)
-            audioSource.PlayOneShot(waterEnterSound);
+            PlaySFX(waterEnterSound);
     }
-
 }

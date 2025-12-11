@@ -60,7 +60,7 @@ public class Lever : MonoBehaviour
 
             // 레버 당기는 소리
             if (leverSound != null)
-                AudioSource.PlayClipAtPoint(leverSound, transform.position, soundVolume);
+                SoundManager.Instance.PlaySFX(leverSound);
         }
 
         // 상태가 변화했을 때 문 소리를 재생
@@ -70,13 +70,13 @@ public class Lever : MonoBehaviour
             {
                 // 문 열림 소리
                 if (doorOpenSound != null)
-                    AudioSource.PlayClipAtPoint(doorOpenSound, door.position, soundVolume);
+                    SoundManager.Instance.PlaySFX(doorOpenSound);
             }
             else
             {
                 // 문 닫힘 소리
                 if (doorCloseSound != null)
-                    AudioSource.PlayClipAtPoint(doorCloseSound, door.position, soundVolume);
+                    SoundManager.Instance.PlaySFX(doorCloseSound);
             }
 
             prevActivateState = lever_manager.isActivated;

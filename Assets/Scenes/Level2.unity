@@ -3663,7 +3663,103 @@ MonoBehaviour:
   buttonPressSound: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
-  soundVolume: 1
+--- !u!1001 &1557703122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 952456876039157405, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718380393894186723, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: bgmGroup
+      value: 
+      objectReference: {fileID: 5035570244400136396, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
+    - target: {fileID: 3718380393894186723, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: sfxGroup
+      value: 
+      objectReference: {fileID: 7075549559190729031, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
+    - target: {fileID: 4313250331673104348, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313250331673104348, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380816553670499247, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: dfc35c9d672b7fb47919f6ce7a90237e, type: 3}
+    - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dfc35c9d672b7fb47919f6ce7a90237e, type: 3}
+    - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580891365106442802, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5035570244400136396, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
+    - target: {fileID: 7699271073084949520, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ed04b2ac0b2aec449652665a2c6c9b5, type: 3}
 --- !u!1 &1604359729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,7 +5874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4071222159857605343, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4246934891562728988, guid: 784f24a38afa7644d91e7235c800cb62, type: 3}
       propertyPath: m_Volume
@@ -6127,7 +6223,6 @@ MonoBehaviour:
   buttonPressSound: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
-  soundVolume: 1
 --- !u!114 &1786228555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6148,7 +6243,6 @@ MonoBehaviour:
   buttonPressSound: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
-  soundVolume: 1
 --- !u!1001 &1786884532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23192,3 +23286,4 @@ SceneRoots:
   - {fileID: 340677604}
   - {fileID: 1763274719}
   - {fileID: 1667613936}
+  - {fileID: 1557703122}

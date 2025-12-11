@@ -38,7 +38,7 @@ public class Falling_Spike : MonoBehaviour
             collision.gameObject.tag == "Breakable" || collision.gameObject.tag == "Ground" || collision.gameObject.name.Equals("Ground") ) 
         {   
             if (deactivateSound != null)
-                AudioSource.PlayClipAtPoint(deactivateSound, transform.position);
+                SoundManager.Instance.PlaySFX(deactivateSound);
             
             FSpike.gameObject.SetActive(false);
         }
