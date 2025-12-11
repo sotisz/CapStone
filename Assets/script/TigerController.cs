@@ -14,10 +14,10 @@ public enum TigerState
 
 public class TigerController : MonoBehaviour, IKillable
 {
-    public AudioSource climbingSound;
-    public AudioSource footstepSound;
-    public AudioSource jumpSound;
-    public AudioSource deathSound;
+    public AudioClip climbingSound;
+    public AudioClip footstepSound;
+    public AudioClip jumpSound;
+    public AudioClip deathSound;
 
     private float footstepTimer = 0f;
     public float footstepInterval = 0.4f; // 발자국 간격
@@ -226,7 +226,8 @@ public class TigerController : MonoBehaviour, IKillable
                 }
 
                 ChangeState(TigerState.Floating);
-                if (jumpSound != null) jumpSound.Play();
+                if (jumpSound != null) 
+                    SoundManager.Instance.PlaySFX(jumpSound);
             }
         }
 
@@ -246,7 +247,7 @@ public class TigerController : MonoBehaviour, IKillable
 
             if (footstepTimer <= 0f)
             {
-                footstepSound.Play();
+                SoundManager.Instance.PlaySFX(footstepSound);
                 footstepTimer = footstepInterval;
             }
         }
@@ -335,7 +336,7 @@ public class TigerController : MonoBehaviour, IKillable
             if (climbSoundTimer <= 0f)
             {
                 if (climbingSound != null)
-                    climbingSound.Play();
+                    SoundManager.Instance.PlaySFX(climbingSound);
 
                 climbSoundTimer = climbSoundInterval;
             }
@@ -412,7 +413,7 @@ public class TigerController : MonoBehaviour, IKillable
         // 🔊 죽음 사운드 재생
         if (deathSound != null)
         {
-            deathSound.Play();
+            SoundManager.Instance.PlaySFX(deathSound);
         }
 
         StartCoroutine(RestartScene());

@@ -93,4 +93,19 @@ public class SoundManager : MonoBehaviour
         if (waterEnterSound != null)
             PlaySFX(waterEnterSound);
     }
+    
+    
+    public void PlayLoopSFX(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    public void StopLoopSFX()
+    {
+        audioSource.loop = false;
+        audioSource.Stop();
+    }
+
 }

@@ -114,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4456214058653127630}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.5, y: 2.5, z: 1}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -211,6 +211,8 @@ MonoBehaviour:
   shakeDuration: 0.7
   shakeAmount: 0.2
   fallDelay: 0.5
+  shakeSound: {fileID: 8300000, guid: 2dded9f5986ae094eabed57674589ca9, type: 3}
+  shakeVolume: 1
 --- !u!1 &4543814859563928307
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2662961639692641112}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.9, y: 4.5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.2, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4259965558754026812}
   m_Father: {fileID: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetScaleY: 3
   speed: 3
+  jumpPadSound: {fileID: 8300000, guid: 4c1e0ba1b780fd1439af2413cb737d1c, type: 3}
 --- !u!1 &6855902704014587243
 GameObject:
   m_ObjectHideFlags: 0
