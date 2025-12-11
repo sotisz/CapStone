@@ -62,37 +62,5 @@
     "right_name": "범",
     "right_avatar_emotional": "default",
     "text": "그래, 네가 그렇게만 해준다면 다행이지."
-  },
-  {
-    "speaking": "right",
-    "left_name": "웅",
-    "left_avatar_emotional": "default",
-    "right_name": "범",
-    "right_avatar_emotional": "angry",
-    "text": "뭐야 이거! 이런 걸 먹으면서 100일을 버텨야한다고?"
-  },
-  {
-    "speaking": "left",
-    "left_name": "웅",
-    "left_avatar_emotional": "angry",
-    "right_name": "범",
-    "right_avatar_emotional": "angry",
-    "text": "그럼 인간이 되는게 쉬울 줄 알았니? 괜히 나까지 방해하지 말고 그만두지 그래?"
-  },
-  {
-    "speaking": "right",
-    "left_name": "웅",
-    "left_avatar_emotional": "angry",
-    "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "뭐라고? 난 인간이 되고 말거야! 흥, 인간이 되면 분명 너보다 잘난 인간이 될걸?"
-  },
-  {
-    "speaking": "left",
-    "left_name": "웅",
-    "left_avatar_emotional": "disappoint",
-    "right_name": "범",
-    "right_avatar_emotional": "confident",
-    "text": "굶어죽지 않으려면 어서 움직이기나 해. 다음 쑥과 마늘을 구하지 못하면 우리 둘 다 인간이 될 수 없어."
   }
 ]
