@@ -4,8 +4,24 @@
     "left_name": "웅",
     "left_avatar_emotional": "default",
     "right_name": "범",
+    "right_avatar_emotional": "angry",
+    "text": "으아! 이 레버, 꿈쩍도 안 하잖아! 고장 난 거 아니야?"
+  },
+  {
+    "speaking": "left",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
+    "right_avatar_emotional": "angry",
+    "text": "비켜봐, 범. 그건 묵직한 힘으로 당겨야 해. 레버는 나만 조작할 수 있어."
+  },
+  {
+    "speaking": "right",
+    "left_name": "웅",
+    "left_avatar_emotional": "happy",
+    "right_name": "범",
     "right_avatar_emotional": "default",
-    "text": "발 밑이 이상하게 덜컥거리는데? (자갈 위에서 살짝 점프) 우와! 깜짝이야!"
+    "text": "쳇, 힘자랑은. 그럼 저 바닥에 있는 스위치들은 뭐야? 색깔이 다른데."
   },
   {
     "speaking": "left",
@@ -13,22 +29,22 @@
     "left_avatar_emotional": "default",
     "right_name": "범",
     "right_avatar_emotional": "default",
-    "text": "조심해! 저 자갈은 밟으면 금방 부서져."
+    "text": "잘 봐. 빨간 스위치는 누르고 있을 때만 문이 열려. 계속 밟고 있거나, 무거운 상자를 올려둬야 해."
   },
   {
     "speaking": "right",
     "left_name": "웅",
     "left_avatar_emotional": "default",
     "right_name": "범",
-    "right_avatar_emotional": "happy",
-    "text": "후후, 스릴 있네! 떨어지기 전에 빨리 지나가면 되는 거잖아."
+    "right_avatar_emotional": "confident",
+    "text": "귀찮게 계속 서 있으라고? 난 답답한 건 딱 질색인데!"
   },
   {
     "speaking": "left",
     "left_name": "웅",
-    "left_avatar_emotional": "angry",
+    "left_avatar_emotional": "happy",
     "right_name": "범",
-    "right_avatar_emotional": "happy",
-    "text": "(단호하게) 무모하지 말고, 네 발 밑을 먼저 봐. 이건 힘보다 인내가 필요한 길이야."
+    "right_avatar_emotional": "confident",
+    "text": "그럼 파란 스위치를 찾아봐. 저건 한 번만 딸깍, 눌러두면 계속 작동하니까."
   }
 ]
