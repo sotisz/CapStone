@@ -62,7 +62,6 @@ public class BreakSystem : MonoBehaviour
             var col = piece.AddComponent<PolygonCollider2D>();
             Destroy(piece, 5f);
         }
-
         Destroy(gameObject);
     }
 }

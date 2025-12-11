@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float fadeDuration = 1f; // 페이드에 걸리는 시간(초)
     public List<string> readDialogs = new List<string>();
 
-    public int deathCount = 0;
+    public int deathCount = 0; // 데스 카운트
     public TextMeshProUGUI deathText;
 
     public float playTime = 0f; // 게임 진행 시간
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
             if (canvasGroup == null) yield break;
 
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
 
