@@ -1577,6 +1577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 03c057e35d5b5034fa9a25809eb4d16c, type: 2}
+  bgmGroup: {fileID: 0}
+  sfxGroup: {fileID: 0}
   waterEnterSound: {fileID: 8300000, guid: c8d5be93f648f6449b17d00ad6906df3, type: 3}
 --- !u!4 &401206640
 Transform:
@@ -20845,7 +20847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1948789347317566197, guid: 0b4084c9689948a44aedce043d5635fd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5045693898553666772, guid: 0b4084c9689948a44aedce043d5635fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20910,11 +20912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.37
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.z
