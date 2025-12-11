@@ -16,6 +16,14 @@ public class SceneMove : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
+    public void StageReset()
+    {
+        GameManager.Instance.playTime = 0f;
+        GameManager.Instance.deathCount = 0;
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
     public void MoveToIntroScene()
     {
         GameManager.Instance.playTime = 0f;

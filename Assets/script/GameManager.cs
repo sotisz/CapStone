@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float fadeDuration = 1f; // 페이드에 걸리는 시간(초)
     public List<string> readDialogs = new List<string>();
 
-    public int deathCount = 0;
+    public int deathCount = 0; // 데스 카운트
     public TextMeshProUGUI deathText;
 
     public float playTime = 0f; // 게임 진행 시간
@@ -55,23 +54,23 @@ public class GameManager : MonoBehaviour
             canvasGroup = GameObject.FindWithTag("Fade").transform.GetChild(0).GetComponent<CanvasGroup>();
             FadeOut();
         }
-            if (timerText == null)
-            {
-                GameObject timerObj = GameObject.FindWithTag("TimerText");
-                if (timerObj != null)
-                    timerText = timerObj.GetComponent<TextMeshProUGUI>();
-                else
-                    timerText = null;
-            }
+        if (timerText == null)
+        {
+            GameObject timerObj = GameObject.FindWithTag("TimerText");
+            if (timerObj != null)
+                timerText = timerObj.GetComponent<TextMeshProUGUI>();
+            else
+                timerText = null;
+        }
 
-            if(deathText == null)
-            {
-                GameObject deathObj = GameObject.FindWithTag("DeathText");
-                if (deathObj != null)
-                    deathText = deathObj.GetComponent<TextMeshProUGUI>();
-                else
-                    deathText = null;
-            }
+        if (deathText == null)
+        {
+            GameObject deathObj = GameObject.FindWithTag("DeathText");
+            if (deathObj != null)
+                deathText = deathObj.GetComponent<TextMeshProUGUI>();
+            else
+                deathText = null;
+        }
     }
 
 
@@ -115,7 +114,7 @@ public class GameManager : MonoBehaviour
             if (canvasGroup == null) yield break;
 
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -153,11 +152,11 @@ public class GameManager : MonoBehaviour
 
             if (timerText != null)
             {
-                
+
                 timerText.text = "<color=#FFE4B5>" + (int)playTime + "</color>" + "<color=#B5651D> 초</color>";
             }
 
-            if(deathText != null)
+            if (deathText != null)
             {
                 deathText.text = "<color=#FFE4B5>" + deathCount + "</color>" + "<color=#FF6347> 죽음</color>";
             }
