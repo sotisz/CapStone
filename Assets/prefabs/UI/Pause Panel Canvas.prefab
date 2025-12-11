@@ -270,20 +270,31 @@ PrefabInstance:
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1845845464709074834}
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnRestartButton
+      value: RestartCurrentScene
       objectReference: {fileID: 0}
     - target: {fileID: 9015613641703157643, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PausePanelScript, Assembly-CSharp
+      value: SceneMove, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+--- !u!114 &1845845464709074834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 642164520455336629, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
+  m_PrefabInstance: {fileID: 1257823233304526119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4053756390376855779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d72e1e07ba8b4fb65854b291a7844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3360397428337015089 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4599908295479690262, guid: 2c8df7f426ef98a41b0353e0a57a00ee, type: 3}
