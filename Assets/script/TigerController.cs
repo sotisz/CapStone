@@ -447,4 +447,30 @@ public class TigerController : MonoBehaviour, IKillable
             ChangeState(TigerState.Floating);
         }
     }
+    private void OnEnable()
+    {
+        onGroundTimer = 0.2f; 
+        onGround = true;
+
+        float currentH = Input.GetAxisRaw("Horizontal");
+
+        if (Mathf.Abs(currentH) > 0.01f)
+        {
+            currentState = (this is TigerController ? TigerState.Walk : currentState);
+        
+            if (animator != null)
+            {
+                animator.SetBool("isMoving", true);
+                if (currentH > 0) transform.localScale = new Vector3(1, 1, 1);
+                else transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.SetBool("isMoving", false);
+            }
+        }
+    }
 }

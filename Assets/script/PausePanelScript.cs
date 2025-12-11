@@ -12,15 +12,18 @@ public class PausePanelScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (PausePanel.activeSelf) // 일시정지상태에서
+            if (PausePanel)
             {
-                if (SettingPanel.activeSelf) // 환경설정이 켜져있으면
-                    return;
+                if (PausePanel.activeSelf) // 일시정지상태에서
+                {
+                    if (SettingPanel.activeSelf) // 환경설정이 켜져있으면
+                        return;
+                    else
+                        PausePanel.SetActive(false); // 일시정지 OFF
+                }
                 else
-                    PausePanel.SetActive(false); // 일시정지 OFF
+                    PausePanel.SetActive(true); //  ON
             }
-            else
-                PausePanel.SetActive(true); //  ON
         }
     }
 
