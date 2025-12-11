@@ -3197,6 +3197,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7811857793253151404, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1474002506}
+    - target: {fileID: 7811857793253151404, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811857793253151404, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneMove, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3207,6 +3219,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6312910121847630976, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
   m_PrefabInstance: {fileID: 1474002504}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1474002506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1845845464709074834, guid: 2fff8ed8fa0f12b44ac214ce847c98e0, type: 3}
+  m_PrefabInstance: {fileID: 1474002504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d72e1e07ba8b4fb65854b291a7844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482108140
 GameObject:
   m_ObjectHideFlags: 0
