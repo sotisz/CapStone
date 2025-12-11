@@ -426,13 +426,11 @@ public class TigerController : MonoBehaviour, IKillable
 
     private bool IsWater(GameObject obj)
     {
-        // 내 waterLayer 마스크에 충돌한 객체의 레이어가 포함되어 있는지 비트 연산으로 확인
         return (waterLayer.value & (1 << obj.layer)) > 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // [변경] Tag 대신 Layer 체크
         if (IsWater(collision.gameObject))
         {
             ChangeState(TigerState.Swim);
@@ -441,7 +439,6 @@ public class TigerController : MonoBehaviour, IKillable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // [변경] Tag 대신 Layer 체크
         if (IsWater(collision.gameObject))
         {
             ChangeState(TigerState.Floating);

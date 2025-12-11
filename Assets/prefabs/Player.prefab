@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: groundSize.x
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 179743567912322006, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 340379289021812523, guid: 362f567024026304691f9e9c69abe5c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

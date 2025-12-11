@@ -25,7 +25,8 @@ public class BearController : MonoBehaviour, IKillable
 
     private float footstepTimer = 0f;
     public float footstepInterval = 0.4f; // 발자국 간격
-
+    
+    public LayerMask waterLayer;
 
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
@@ -458,6 +459,18 @@ public class BearController : MonoBehaviour, IKillable
         }   
         
         StartCoroutine(RestartScene());
+    }
+    private bool IsWater(GameObject obj)
+    {
+        return (waterLayer.value & (1 << obj.layer)) > 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsWater(collision.gameObject))
+        {
+            ChangeState(BearState.Dead);
+        }
     }
 
     IEnumerator RestartScene()
