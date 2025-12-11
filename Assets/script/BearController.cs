@@ -18,10 +18,10 @@ public enum BearState
 
 public class BearController : MonoBehaviour, IKillable
 {
-    public AudioSource jumpSound;
+    public AudioClip jumpSound;
     public AudioSource footstepSound;
     public AudioSource pushSound;
-    public AudioSource deathSound;
+    public AudioClip deathSound;
 
     private float footstepTimer = 0f;
     public float footstepInterval = 0.4f; // 발자국 간격
@@ -224,7 +224,7 @@ public class BearController : MonoBehaviour, IKillable
             jumpCount -= 1;
 
             if (jumpSound != null)
-                jumpSound.Play();
+                SoundManager.Instance.PlaySFX(jumpSound);
         }
 
         if (Input.GetKeyDown(KeyCode.R) && onGround && tagbar.tagAble)
@@ -455,7 +455,7 @@ public class BearController : MonoBehaviour, IKillable
         //죽음 사운드 재생
         if (deathSound != null)
         {
-            deathSound.Play();  
+            SoundManager.Instance.PlaySFX(deathSound);
         }   
         
         StartCoroutine(RestartScene());
