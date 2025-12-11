@@ -31402,7 +31402,7 @@ Transform:
   m_GameObject: {fileID: 577535387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.15, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34566,7 +34566,6 @@ MonoBehaviour:
   buttonPressSound: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
-  soundVolume: 1
 --- !u!61 &1031184703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34665,7 +34664,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1062410536
@@ -38499,7 +38498,6 @@ MonoBehaviour:
   buttonPressSound: {fileID: 8300000, guid: 41dc2a1eb60bbf545a9e248ba87b8495, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 43c632ed07d18284c947e660a70f5e7b, type: 3}
-  soundVolume: 1
 --- !u!212 &2852121199794999115
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39990,7 +39988,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &6004112012380491288

@@ -432,10 +432,16 @@ public class TigerController : MonoBehaviour, IKillable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"충돌 감지됨: {collision.gameObject.name}, 레이어 번호: {collision.gameObject.layer}");
         // [변경] Tag 대신 Layer 체크
         if (IsWater(collision.gameObject))
         {
+            Debug.Log("물 인식 성공! 수영 상태로 변경");
             ChangeState(TigerState.Swim);
+        }
+    else
+        {
+            Debug.Log("물 인식 실패.. Water Layer 설정이 맞는지 확인하세요.");
         }
     }
 
