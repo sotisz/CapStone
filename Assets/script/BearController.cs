@@ -24,7 +24,7 @@ public class BearController : MonoBehaviour, IKillable
     public AudioClip deathSound;
 
     private float footstepTimer = 0f;
-    public float footstepInterval = 0.4f; // 발자국 간격
+    public float footstepInterval = 0.4f;
     
     public LayerMask waterLayer;
 
@@ -265,7 +265,6 @@ public class BearController : MonoBehaviour, IKillable
                 isPushing = true;
             }
             
-            // 밀기 사운드 처리
             if (isPushing && onGround && currentState == BearState.Push)
             {
                 if (!pushSound.isPlaying)
@@ -279,7 +278,6 @@ public class BearController : MonoBehaviour, IKillable
 
         }
 
-        // 발자국 사운드
         if (onGround && currentState == BearState.Walk)
         {
             footstepTimer -= Time.deltaTime;
@@ -452,7 +450,6 @@ public class BearController : MonoBehaviour, IKillable
         if (GameManager.Instance != null)
             GameManager.Instance.deathCount++;
 
-        //죽음 사운드 재생
         if (deathSound != null)
         {
             SoundManager.Instance.PlaySFX(deathSound);
@@ -469,7 +466,15 @@ public class BearController : MonoBehaviour, IKillable
     {
         if (IsWater(collision.gameObject))
         {
-            ChangeState(BearState.Dead);
+            Dead();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (IsWater(other.gameObject))
+        {
+            Dead();
         }
     }
 

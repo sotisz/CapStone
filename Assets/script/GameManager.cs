@@ -152,7 +152,6 @@ public class GameManager : MonoBehaviour
 
             if (timerText != null)
             {
-
                 timerText.text = "<color=#FFE4B5>" + (int)playTime + "</color>" + "<color=#B5651D> 초</color>";
             }
 

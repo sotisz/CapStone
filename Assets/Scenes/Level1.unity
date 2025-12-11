@@ -19356,14 +19356,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2000521658}
-    - target: {fileID: 6181328254512597934, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClick_NextScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181328254512597934, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StageClearPanel, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 7451968850783041120, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19446,35 +19438,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8769527340180200714, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
       propertyPath: m_Name
-      value: Stage_Claer_Canvas
+      value: StageClaerCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
---- !u!114 &1330947950 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2670581084192469826, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-  m_PrefabInstance: {fileID: 1330947949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1330947951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5291768499988413348, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-  m_PrefabInstance: {fileID: 1330947949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1330947952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5896531008541757852, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
@@ -22491,11 +22461,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: 58.5
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.85
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: 3724118735463748474, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22676,11 +22646,11 @@ PrefabInstance:
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: clearTimeText
       value: 
-      objectReference: {fileID: 1330947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: clearDeathText
       value: 
-      objectReference: {fileID: 1330947950}
+      objectReference: {fileID: 0}
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: stageClearPanel
       value: 

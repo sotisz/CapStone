@@ -803,6 +803,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 685027554}
     - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020925316013322776, guid: 1a1df5c04fc737840bf0aad0bf464514, type: 3}
       propertyPath: special.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 214919343}
@@ -1126,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e7360f3631cf4ebae39a66537cb72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterTrigger: {fileID: 1169937277}
+  waterTrigger: {fileID: 0}
   isRaiseButton: 1
 --- !u!61 &577562320
 BoxCollider2D:
@@ -1174,7 +1178,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!43 &577587968
+--- !u!43 &588810116
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1577,7 +1581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e7360f3631cf4ebae39a66537cb72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterTrigger: {fileID: 1169937277}
+  waterTrigger: {fileID: 0}
   isRaiseButton: 0
 --- !u!61 &621630993
 BoxCollider2D:
@@ -2314,7 +2318,7 @@ PrefabInstance:
     - target: {fileID: 270394267970809002, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 577587968}
+      objectReference: {fileID: 588810116}
     - target: {fileID: 270394267970809003, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
       propertyPath: waveStep
       value: 20
@@ -11006,37 +11010,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 270394267970809006, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1169937277}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
---- !u!1 &1169937275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 270394267970809006, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
-  m_PrefabInstance: {fileID: 1169937274}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1169937276 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 270394267970809000, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
-  m_PrefabInstance: {fileID: 1169937274}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1169937277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169937275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ffc56e96b74a44295c6dd6c3afe679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterTransform: {fileID: 1169937276}
-  targetHeight: -11
-  originalHeight: -19
-  fillSpeed: 2.5
 --- !u!1001 &1302767959
 PrefabInstance:
   m_ObjectHideFlags: 0

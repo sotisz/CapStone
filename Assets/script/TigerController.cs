@@ -20,9 +20,9 @@ public class TigerController : MonoBehaviour, IKillable
     public AudioClip deathSound;
 
     private float footstepTimer = 0f;
-    public float footstepInterval = 0.4f; // 발자국 간격
+    public float footstepInterval = 0.4f;
     private float climbSoundTimer = 0f;
-    public float climbSoundInterval = 0.35f; // 벽 오르기 사운드 간격
+    public float climbSoundInterval = 0.35f;
 
 
     public float speed = 6.0f;
@@ -35,12 +35,13 @@ public class TigerController : MonoBehaviour, IKillable
     public Vector2 groundSize = new Vector2(0.4f, 0.2f);
     public Vector2 groundOffset = new Vector2(0.4f, -0.73f);
 
-    [Header("Swim Settings")] public LayerMask waterLayer; // [추가] 물 레이어를 지정할 변수
+    [Header("Swim Settings")] public LayerMask waterLayer;
     public float swimSpeed = 4.0f;
     public float waterJumpForce = 10.0f;
     public float waterDrag = 2.0f;
     private float defaultDrag;
     private float defaultGravity;
+    private float waterExitCooldown = 0f;
 
     Rigidbody2D rb2d;
     Collider2D c2d;
@@ -92,10 +93,10 @@ public class TigerController : MonoBehaviour, IKillable
                 if (rb2d.linearVelocity.y > 0)
                     rb2d.AddForce(Vector2.up * 3.0f, ForceMode2D.Impulse);
                 break;
-            case TigerState.Swim: // [추가됨] 물에서 나갈 때
-                rb2d.gravityScale = defaultGravity; // 중력 복구
-                rb2d.linearDamping = defaultDrag; // 저항 복구
-                animator.SetBool("isSwimming", false); // 애니메이션 파라미터 (필요시)
+            case TigerState.Swim:
+                rb2d.gravityScale = defaultGravity;
+                rb2d.linearDamping = defaultDrag;
+                animator.SetBool("isSwimming", false);
                 break;
         }
 
@@ -123,13 +124,20 @@ public class TigerController : MonoBehaviour, IKillable
                 rb2d.linearVelocity = new Vector2(0, 7.0f);
                 c2d.enabled = false;
                 break;
-            case TigerState.Swim: // [추가됨] 물에 들어왔을 때
-                rb2d.gravityScale = 0.5f; // 중력 제거 (둥둥 뜨거나 가라앉지 않음)
-                rb2d.linearDamping = waterDrag; // 물의 저항 적용
-                rb2d.linearVelocity = Vector2.zero; // 들어오는 순간 속도 감속
+            case TigerState.Swim:
+                rb2d.gravityScale = 0.5f;
+                rb2d.linearDamping = waterDrag;
+                if (rb2d.linearVelocity.y > 0.1f)
+                {
+                    isWaterJumping = true;
+                }
+                else
+                {
+                    isWaterJumping = false;
+                    rb2d.linearVelocity *= 0.8f;
+                }
+
                 animator.SetBool("isSwimming", true);
-                // 점프 카운트 초기화가 필요하다면 여기서 처리
-                isWaterJumping = false;
                 jumpCount = true;
                 break;
         }
@@ -149,12 +157,15 @@ public class TigerController : MonoBehaviour, IKillable
         Gizmos.DrawWireCube(transform.position + (Vector3)offset, groundSize);
     }
 
-    // Update is called once per frame
     public void Update()
     {
         if (GameManager.Instance.gameState != "playing" || currentState.Equals(TigerState.Dead))
         {
             return;
+        }
+        if (waterExitCooldown > 0)
+        {
+            waterExitCooldown -= Time.deltaTime;
         }
 
         rb2d.bodyType = RigidbodyType2D.Dynamic;
@@ -203,16 +214,12 @@ public class TigerController : MonoBehaviour, IKillable
         {
             if (currentState == TigerState.Swim && !isWaterJumping)
             {
-                isWaterJumping = true; // 점프 시작 플래그 ON
-        
-                // [중요] 점프 힘을 주기 전에 기존 Y축 속도를 0으로 초기화 (일정한 높이 보장)
+                isWaterJumping = true;
                 rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, 0);
-        
                 rb2d.AddForce(Vector2.up * waterJumpForce, ForceMode2D.Impulse);
             }
-            else if (jumpCount) 
+            else if (jumpCount)
             {
-                // ... 기존 지상 점프 로직 ...
                 if (currentState != TigerState.Special)
                 {
                     rb2d.linearVelocityY = jumpForce;
@@ -226,7 +233,7 @@ public class TigerController : MonoBehaviour, IKillable
                 }
 
                 ChangeState(TigerState.Floating);
-                if (jumpSound != null) 
+                if (jumpSound != null)
                     SoundManager.Instance.PlaySFX(jumpSound);
             }
         }
@@ -271,20 +278,24 @@ public class TigerController : MonoBehaviour, IKillable
 
         if (currentState == TigerState.Swim)
         {
-            if (rb2d.linearVelocity.y < -0.1f)
+            if (isWaterJumping)
             {
-                isWaterJumping = false;
-            }
-            if (isWaterJumping) 
-                return;
-            // 상하좌우 모든 방향으로 속도 적용
-            rb2d.linearVelocity = new Vector2(axisH * swimSpeed, axisV * swimSpeed);
+                rb2d.linearVelocity = new Vector2(axisH * swimSpeed, rb2d.linearVelocity.y);
 
-            // 물속 방향 전환 (좌우)
+                if (rb2d.linearVelocity.y <= 0)
+                {
+                    isWaterJumping = false;
+                }
+            }
+            else
+            {
+                rb2d.linearVelocity = new Vector2(axisH * swimSpeed, axisV * swimSpeed);
+            }
+
             if (axisH > 0) transform.localScale = new Vector2(1, 1);
             else if (axisH < 0) transform.localScale = new Vector2(-1, 1);
 
-            return; // 수영 중에는 아래의 중력 기반 이동 로직을 실행하지 않음
+            return;
         }
 
         if (Physics2D.OverlapBox(transform.position + (Vector3)offset, groundSize, 0f, groundLayer))
@@ -328,7 +339,6 @@ public class TigerController : MonoBehaviour, IKillable
             }
         }
 
-        // 벽 오르기 사운드
         if (currentState == TigerState.Special && rb2d.linearVelocityY > 0.1f)
         {
             climbSoundTimer -= Time.deltaTime;
@@ -410,7 +420,6 @@ public class TigerController : MonoBehaviour, IKillable
         if (GameManager.Instance != null)
             GameManager.Instance.deathCount++;
 
-        // 🔊 죽음 사운드 재생
         if (deathSound != null)
         {
             SoundManager.Instance.PlaySFX(deathSound);
@@ -432,8 +441,20 @@ public class TigerController : MonoBehaviour, IKillable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (IsWater(collision.gameObject) && waterExitCooldown <= 0)
+        {
+            ChangeState(TigerState.Swim);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (IsWater(collision.gameObject))
         {
+            if (currentState == TigerState.Swim || currentState == TigerState.Dead)
+                return;
+            if (waterExitCooldown > 0)
+                return;
+
             ChangeState(TigerState.Swim);
         }
     }
@@ -443,11 +464,16 @@ public class TigerController : MonoBehaviour, IKillable
         if (IsWater(collision.gameObject))
         {
             ChangeState(TigerState.Floating);
+
+            waterExitCooldown = 0.5f;
+            jumpCount = true;
+            rb2d.linearDamping = 0f;
         }
     }
+
     private void OnEnable()
     {
-        onGroundTimer = 0.2f; 
+        onGroundTimer = 0.2f;
         onGround = true;
 
         float currentH = Input.GetAxisRaw("Horizontal");
@@ -455,7 +481,7 @@ public class TigerController : MonoBehaviour, IKillable
         if (Mathf.Abs(currentH) > 0.01f)
         {
             currentState = (this is TigerController ? TigerState.Walk : currentState);
-        
+
             if (animator != null)
             {
                 animator.SetBool("isMoving", true);
