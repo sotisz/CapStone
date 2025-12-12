@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1765034152998773282, guid: 24170e8eaadcbf244ad422f27a02d923, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.66
+      value: -22.13
       objectReference: {fileID: 0}
     - target: {fileID: 1765034152998773282, guid: 24170e8eaadcbf244ad422f27a02d923, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1215,11 +1215,11 @@ PrefabInstance:
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: clearTimeText
       value: 
-      objectReference: {fileID: 2037423223}
+      objectReference: {fileID: 0}
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: clearDeathText
       value: 
-      objectReference: {fileID: 2037423222}
+      objectReference: {fileID: 0}
     - target: {fileID: 8746549833006628290, guid: 49bc9d47f23849f42b3cec72c4432a90, type: 3}
       propertyPath: stageClearPanel
       value: 
@@ -23050,28 +23050,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
---- !u!114 &2037423222 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2670581084192469826, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-  m_PrefabInstance: {fileID: 2037423221}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2037423223 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5291768499988413348, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
-  m_PrefabInstance: {fileID: 2037423221}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2037423224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5896531008541757852, guid: f34ef96b483af5845adc341ef0aab733, type: 3}
